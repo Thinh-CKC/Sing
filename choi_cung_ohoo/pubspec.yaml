@@ -66,6 +66,13 @@ flutter:
     - images/Chế độ Du mục.png
     - images/Dovui.png
     - images/linhvuc.png
+    - images/Chemistry.png
+    - images/Geography.png
+    - images/History.png
+    - images/Literature.png
+    - images/Math.png
+    - images/Physics.png
+
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware
