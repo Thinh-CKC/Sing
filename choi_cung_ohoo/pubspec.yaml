@@ -64,6 +64,8 @@ flutter:
     - images/Logo.png
     - images/Icon-Google.png
     - images/Chế độ Du mục.png
+    - images/Dovui.png
+    - images/linhvuc.png
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware
