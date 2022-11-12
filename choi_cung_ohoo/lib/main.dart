@@ -6,6 +6,7 @@ import 'package:choi_cung_ohoo/screens/bat_dau_linh_vuc.dart';
 import 'package:choi_cung_ohoo/screens/che_do_du_muc.dart';
 import 'package:choi_cung_ohoo/screens/chu_de_cau_hoi.dart';
 import 'package:choi_cung_ohoo/screens/chu_de_linh_vuc.dart';
+import 'package:choi_cung_ohoo/screens/ket_ban.dart';
 
 import 'package:flutter/material.dart';
 
@@ -21,7 +22,7 @@ class MyApp extends StatelessWidget {
       title: 'Chơi cùng Ohoo',
       //theme: ThemeData(fontFamily: 'Verdana'),
       debugShowCheckedModeBanner: false,
-      home: ChuDeLinhVucScreen(),
+      home: KetBanScreen(),
       routes: {},
     );
   }
