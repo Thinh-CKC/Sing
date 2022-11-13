@@ -16,7 +16,7 @@ class _KetBanState extends State<KetBanScreen> {
         height: MediaQuery.of(context).size.height,
         decoration: BoxDecoration(
           image: DecorationImage(
-              image: AssetImage('images/BackgroundBlue.png'),
+              image: AssetImage('images/background-blue.png'),
               fit: BoxFit.cover),
         ),
         child: Column(
@@ -85,23 +85,17 @@ class _KetBanState extends State<KetBanScreen> {
                                         child: Row(
                                           children: [
                                             Expanded(
-                                              child: Container(
-                                                width: 40,
-                                                height: 40,
-                                                margin: EdgeInsets.fromLTRB(
-                                                    20, 5, 9, 5),
-                                                child: ElevatedButton(
-                                                  onPressed: () {},
-                                                  child: Image(
-                                                    image: AssetImage(
-                                                      'background.png',
-                                                    ),
-                                                    fit: BoxFit.fill,
-                                                  ),
-                                                  style:
-                                                      ElevatedButton.styleFrom(
-                                                    shape: CircleBorder(),
-                                                  ),
+                                              child: InkWell(
+                                                onTap: () {},
+                                                child: Container(
+                                                  width: 40,
+                                                  height: 40,
+                                                  decoration: BoxDecoration(
+                                                      image: DecorationImage(
+                                                          image: AssetImage(
+                                                              'images/avatar-1.png'))),
+                                                  margin: EdgeInsets.fromLTRB(
+                                                      20, 5, 9, 5),
                                                 ),
                                               ),
                                             ),
@@ -152,8 +146,7 @@ class _KetBanState extends State<KetBanScreen> {
                                   ),
                                 ),
                                 Container(
-                                  //Container của nhân vật 2
-                                  margin: EdgeInsets.fromLTRB(0, 10, 0, 0),
+                                  //Container của nhân vật 1
                                   width: 314,
                                   height: 51,
                                   color: Color.fromARGB(255, 255, 255, 255),
@@ -165,20 +158,17 @@ class _KetBanState extends State<KetBanScreen> {
                                         child: Row(
                                           children: [
                                             Expanded(
-                                              child: Container(
-                                                width: 40,
-                                                height: 40,
-                                                margin: EdgeInsets.fromLTRB(
-                                                    20, 5, 9, 5),
-                                                child: ElevatedButton(
-                                                  onPressed: () {},
-                                                  child: Image(
-                                                      image: AssetImage(
-                                                          'background.png')),
-                                                  style:
-                                                      ElevatedButton.styleFrom(
-                                                          shape:
-                                                              CircleBorder()),
+                                              child: InkWell(
+                                                onTap: () {},
+                                                child: Container(
+                                                  width: 40,
+                                                  height: 40,
+                                                  decoration: BoxDecoration(
+                                                      image: DecorationImage(
+                                                          image: AssetImage(
+                                                              'images/avatar-11.png'))),
+                                                  margin: EdgeInsets.fromLTRB(
+                                                      20, 5, 9, 5),
                                                 ),
                                               ),
                                             ),
@@ -229,8 +219,7 @@ class _KetBanState extends State<KetBanScreen> {
                                   ),
                                 ),
                                 Container(
-                                  //Container của nhân vật 2
-                                  margin: EdgeInsets.fromLTRB(0, 10, 0, 0),
+                                  //Container của nhân vật 1
                                   width: 314,
                                   height: 51,
                                   color: Color.fromARGB(255, 255, 255, 255),
@@ -242,20 +231,17 @@ class _KetBanState extends State<KetBanScreen> {
                                         child: Row(
                                           children: [
                                             Expanded(
-                                              child: Container(
-                                                width: 40,
-                                                height: 40,
-                                                margin: EdgeInsets.fromLTRB(
-                                                    20, 5, 9, 5),
-                                                child: ElevatedButton(
-                                                  onPressed: () {},
-                                                  child: Image(
-                                                      image: AssetImage(
-                                                          'background.png')),
-                                                  style:
-                                                      ElevatedButton.styleFrom(
-                                                          shape:
-                                                              CircleBorder()),
+                                              child: InkWell(
+                                                onTap: () {},
+                                                child: Container(
+                                                  width: 40,
+                                                  height: 40,
+                                                  decoration: BoxDecoration(
+                                                      image: DecorationImage(
+                                                          image: AssetImage(
+                                                              'images/avatar-3.png'))),
+                                                  margin: EdgeInsets.fromLTRB(
+                                                      20, 5, 9, 5),
                                                 ),
                                               ),
                                             ),
@@ -306,8 +292,7 @@ class _KetBanState extends State<KetBanScreen> {
                                   ),
                                 ),
                                 Container(
-                                  //Container của nhân vật 2
-                                  margin: EdgeInsets.fromLTRB(0, 10, 0, 0),
+                                  //Container của nhân vật 1
                                   width: 314,
                                   height: 51,
                                   color: Color.fromARGB(255, 255, 255, 255),
@@ -319,20 +304,17 @@ class _KetBanState extends State<KetBanScreen> {
                                         child: Row(
                                           children: [
                                             Expanded(
-                                              child: Container(
-                                                width: 40,
-                                                height: 40,
-                                                margin: EdgeInsets.fromLTRB(
-                                                    20, 5, 9, 5),
-                                                child: ElevatedButton(
-                                                  onPressed: () {},
-                                                  child: Image(
-                                                      image: AssetImage(
-                                                          'background.png')),
-                                                  style:
-                                                      ElevatedButton.styleFrom(
-                                                          shape:
-                                                              CircleBorder()),
+                                              child: InkWell(
+                                                onTap: () {},
+                                                child: Container(
+                                                  width: 40,
+                                                  height: 40,
+                                                  decoration: BoxDecoration(
+                                                      image: DecorationImage(
+                                                          image: AssetImage(
+                                                              'images/avatar-12.png'))),
+                                                  margin: EdgeInsets.fromLTRB(
+                                                      20, 5, 9, 5),
                                                 ),
                                               ),
                                             ),
@@ -383,8 +365,7 @@ class _KetBanState extends State<KetBanScreen> {
                                   ),
                                 ),
                                 Container(
-                                  //Container của nhân vật 2
-                                  margin: EdgeInsets.fromLTRB(0, 10, 0, 0),
+                                  //Container của nhân vật 1
                                   width: 314,
                                   height: 51,
                                   color: Color.fromARGB(255, 255, 255, 255),
@@ -396,20 +377,17 @@ class _KetBanState extends State<KetBanScreen> {
                                         child: Row(
                                           children: [
                                             Expanded(
-                                              child: Container(
-                                                width: 40,
-                                                height: 40,
-                                                margin: EdgeInsets.fromLTRB(
-                                                    20, 5, 9, 5),
-                                                child: ElevatedButton(
-                                                  onPressed: () {},
-                                                  child: Image(
-                                                      image: AssetImage(
-                                                          'background.png')),
-                                                  style:
-                                                      ElevatedButton.styleFrom(
-                                                          shape:
-                                                              CircleBorder()),
+                                              child: InkWell(
+                                                onTap: () {},
+                                                child: Container(
+                                                  width: 40,
+                                                  height: 40,
+                                                  decoration: BoxDecoration(
+                                                      image: DecorationImage(
+                                                          image: AssetImage(
+                                                              'images/avatar-5.png'))),
+                                                  margin: EdgeInsets.fromLTRB(
+                                                      20, 5, 9, 5),
                                                 ),
                                               ),
                                             ),
@@ -460,8 +438,7 @@ class _KetBanState extends State<KetBanScreen> {
                                   ),
                                 ),
                                 Container(
-                                  //Container của nhân vật 2
-                                  margin: EdgeInsets.fromLTRB(0, 10, 0, 0),
+                                  //Container của nhân vật 1
                                   width: 314,
                                   height: 51,
                                   color: Color.fromARGB(255, 255, 255, 255),
@@ -473,20 +450,17 @@ class _KetBanState extends State<KetBanScreen> {
                                         child: Row(
                                           children: [
                                             Expanded(
-                                              child: Container(
-                                                width: 40,
-                                                height: 40,
-                                                margin: EdgeInsets.fromLTRB(
-                                                    20, 5, 9, 5),
-                                                child: ElevatedButton(
-                                                  onPressed: () {},
-                                                  child: Image(
-                                                      image: AssetImage(
-                                                          'background.png')),
-                                                  style:
-                                                      ElevatedButton.styleFrom(
-                                                          shape:
-                                                              CircleBorder()),
+                                              child: InkWell(
+                                                onTap: () {},
+                                                child: Container(
+                                                  width: 40,
+                                                  height: 40,
+                                                  decoration: BoxDecoration(
+                                                      image: DecorationImage(
+                                                          image: AssetImage(
+                                                              'images/avatar-6.png'))),
+                                                  margin: EdgeInsets.fromLTRB(
+                                                      20, 5, 9, 5),
                                                 ),
                                               ),
                                             ),
@@ -537,8 +511,7 @@ class _KetBanState extends State<KetBanScreen> {
                                   ),
                                 ),
                                 Container(
-                                  //Container của nhân vật 2
-                                  margin: EdgeInsets.fromLTRB(0, 10, 0, 0),
+                                  //Container của nhân vật 1
                                   width: 314,
                                   height: 51,
                                   color: Color.fromARGB(255, 255, 255, 255),
@@ -550,20 +523,17 @@ class _KetBanState extends State<KetBanScreen> {
                                         child: Row(
                                           children: [
                                             Expanded(
-                                              child: Container(
-                                                width: 40,
-                                                height: 40,
-                                                margin: EdgeInsets.fromLTRB(
-                                                    20, 5, 9, 5),
-                                                child: ElevatedButton(
-                                                  onPressed: () {},
-                                                  child: Image(
-                                                      image: AssetImage(
-                                                          'background.png')),
-                                                  style:
-                                                      ElevatedButton.styleFrom(
-                                                          shape:
-                                                              CircleBorder()),
+                                              child: InkWell(
+                                                onTap: () {},
+                                                child: Container(
+                                                  width: 40,
+                                                  height: 40,
+                                                  decoration: BoxDecoration(
+                                                      image: DecorationImage(
+                                                          image: AssetImage(
+                                                              'images/avatar-7.png'))),
+                                                  margin: EdgeInsets.fromLTRB(
+                                                      20, 5, 9, 5),
                                                 ),
                                               ),
                                             ),
@@ -614,8 +584,7 @@ class _KetBanState extends State<KetBanScreen> {
                                   ),
                                 ),
                                 Container(
-                                  //Container của nhân vật 2
-                                  margin: EdgeInsets.fromLTRB(0, 10, 0, 0),
+                                  //Container của nhân vật 1
                                   width: 314,
                                   height: 51,
                                   color: Color.fromARGB(255, 255, 255, 255),
@@ -627,20 +596,163 @@ class _KetBanState extends State<KetBanScreen> {
                                         child: Row(
                                           children: [
                                             Expanded(
-                                              child: Container(
-                                                width: 40,
-                                                height: 40,
-                                                margin: EdgeInsets.fromLTRB(
-                                                    20, 5, 9, 5),
-                                                child: ElevatedButton(
-                                                  onPressed: () {},
-                                                  child: Image(
-                                                      image: AssetImage(
-                                                          'background.png')),
-                                                  style:
-                                                      ElevatedButton.styleFrom(
-                                                          shape:
-                                                              CircleBorder()),
+                                              child: InkWell(
+                                                onTap: () {},
+                                                child: Container(
+                                                  width: 40,
+                                                  height: 40,
+                                                  decoration: BoxDecoration(
+                                                      image: DecorationImage(
+                                                          image: AssetImage(
+                                                              'images/avatar-7.png'))),
+                                                  margin: EdgeInsets.fromLTRB(
+                                                      20, 5, 9, 5),
+                                                ),
+                                              ),
+                                            ),
+                                            Container(
+                                              margin: EdgeInsets.fromLTRB(
+                                                  0, 0, 160, 0),
+                                              child: Column(
+                                                children: [
+                                                  Row(
+                                                    children: [
+                                                      Text(
+                                                        'Lorem',
+                                                        style: TextStyle(
+                                                            color: Colors.black,
+                                                            fontWeight:
+                                                                FontWeight.bold,
+                                                            fontSize: 15),
+                                                      ),
+                                                    ],
+                                                  ),
+                                                  Row(
+                                                    children: [
+                                                      Text(
+                                                        'Lorem',
+                                                        style: TextStyle(
+                                                            color: Colors.black,
+                                                            fontSize: 13),
+                                                      )
+                                                    ],
+                                                  )
+                                                ],
+                                              ),
+                                            ),
+                                            Container(
+                                              child: IconButton(
+                                                onPressed: () {},
+                                                icon: Icon(
+                                                  Icons.add,
+                                                  color: Color.fromARGB(
+                                                      255, 255, 0, 136),
+                                                ),
+                                              ),
+                                            ),
+                                          ],
+                                        ),
+                                      ),
+                                    ],
+                                  ),
+                                ),
+                                Container(
+                                  //Container của nhân vật 1
+                                  width: 314,
+                                  height: 51,
+                                  color: Color.fromARGB(255, 255, 255, 255),
+                                  child: Column(
+                                    children: [
+                                      Container(
+                                        decoration: BoxDecoration(
+                                            border: Border.all(width: 0.5)),
+                                        child: Row(
+                                          children: [
+                                            Expanded(
+                                              child: InkWell(
+                                                onTap: () {},
+                                                child: Container(
+                                                  width: 40,
+                                                  height: 40,
+                                                  decoration: BoxDecoration(
+                                                      image: DecorationImage(
+                                                          image: AssetImage(
+                                                              'images/avatar-8.png'))),
+                                                  margin: EdgeInsets.fromLTRB(
+                                                      20, 5, 9, 5),
+                                                ),
+                                              ),
+                                            ),
+                                            Container(
+                                              margin: EdgeInsets.fromLTRB(
+                                                  0, 0, 160, 0),
+                                              child: Column(
+                                                children: [
+                                                  Row(
+                                                    children: [
+                                                      Text(
+                                                        'Lorem',
+                                                        style: TextStyle(
+                                                            color: Colors.black,
+                                                            fontWeight:
+                                                                FontWeight.bold,
+                                                            fontSize: 15),
+                                                      ),
+                                                    ],
+                                                  ),
+                                                  Row(
+                                                    children: [
+                                                      Text(
+                                                        'Lorem',
+                                                        style: TextStyle(
+                                                            color: Colors.black,
+                                                            fontSize: 13),
+                                                      )
+                                                    ],
+                                                  )
+                                                ],
+                                              ),
+                                            ),
+                                            Container(
+                                              child: IconButton(
+                                                onPressed: () {},
+                                                icon: Icon(
+                                                  Icons.add,
+                                                  color: Color.fromARGB(
+                                                      255, 255, 0, 136),
+                                                ),
+                                              ),
+                                            ),
+                                          ],
+                                        ),
+                                      ),
+                                    ],
+                                  ),
+                                ),
+                                Container(
+                                  //Container của nhân vật 1
+                                  width: 314,
+                                  height: 51,
+                                  color: Color.fromARGB(255, 255, 255, 255),
+                                  child: Column(
+                                    children: [
+                                      Container(
+                                        decoration: BoxDecoration(
+                                            border: Border.all(width: 0.5)),
+                                        child: Row(
+                                          children: [
+                                            Expanded(
+                                              child: InkWell(
+                                                onTap: () {},
+                                                child: Container(
+                                                  width: 40,
+                                                  height: 40,
+                                                  decoration: BoxDecoration(
+                                                      image: DecorationImage(
+                                                          image: AssetImage(
+                                                              'images/avatar-9.png'))),
+                                                  margin: EdgeInsets.fromLTRB(
+                                                      20, 5, 9, 5),
                                                 ),
                                               ),
                                             ),
