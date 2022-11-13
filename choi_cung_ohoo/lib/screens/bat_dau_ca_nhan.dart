@@ -92,9 +92,10 @@ class _BatDauCaNhanState extends State<BatDauCaNhanScreen> {
             height: 100,
             margin: EdgeInsets.fromLTRB(0, 107, 0, 0),
             decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(60), color: Colors.white,
-                image: DecorationImage(image: AssetImage('images/avatar-1.png'))),
-                
+                borderRadius: BorderRadius.circular(60),
+                color: Colors.white,
+                image:
+                    DecorationImage(image: AssetImage('images/avatar-1.png'))),
             child: Container(
               padding: EdgeInsets.fromLTRB(20, 80, 20, 0),
               child: ElevatedButton(
@@ -133,7 +134,5 @@ class _BatDauCaNhanState extends State<BatDauCaNhanScreen> {
         ],
       ),
     ));
-    
   }
 }
-
