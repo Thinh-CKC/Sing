@@ -59,19 +59,20 @@ flutter:
 
   # To add assets to your application, add an assets section, like this:
   assets:
-    - images/BackgroundBlue.png
-    - images/BackgroundGrey.png
+    - images/background-blue.png
+    - images/background-grey.png
     - images/Logo.png
     - images/Icon-Google.png
-    - images/Chế độ Du mục.png
-    - images/Dovui.png
-    - images/linhvuc.png
-    - images/Chemistry.png
-    - images/Geography.png
-    - images/History.png
-    - images/Literature.png
-    - images/Math.png
-    - images/Physics.png
+    - images/che-do-du-muc.png
+    - images/do-vui.png
+    - images/linh-vuc.png
+    - images/chemistry.png
+    - images/geography.png
+    - images/history.png
+    - images/literature.png
+    - images/math.png
+    - images/physics.png
+    - images/avatar-1.png
 
 
   # An image asset can refer to one or more resolution-specific "variants", see
