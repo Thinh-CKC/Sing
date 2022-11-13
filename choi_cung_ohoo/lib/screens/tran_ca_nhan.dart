@@ -16,7 +16,7 @@ class _TranCaNhanState extends State<TranCaNhanScreen> {
       height: MediaQuery.of(context).size.height,
       decoration: BoxDecoration(
         image: DecorationImage(
-          image: AssetImage('images/BackgroundBlue.png'),
+          image: AssetImage('images/background-blue.png'),
           fit: BoxFit.cover,
         ),
       ),
@@ -28,12 +28,11 @@ class _TranCaNhanState extends State<TranCaNhanScreen> {
                   margin: EdgeInsets.fromLTRB(340, 30, 0, 0),
                   child: Container(
                       decoration: BoxDecoration(
-                          
                           borderRadius: BorderRadius.circular(80)),
                       child: IconButton(
                         onPressed: () {},
                         icon: Icon(
-                          Icons.format_list_bulleted,
+                          Icons.more_vert,
                           color: Colors.white,
                         ),
                       )))
@@ -50,23 +49,21 @@ class _TranCaNhanState extends State<TranCaNhanScreen> {
                     borderRadius: BorderRadius.circular(8.0),
                     color: Colors.white,
                   ),
-                  child: Row(
+                  child: Column(
                     children: [
-                      Expanded(
-                        child: Icon(Icons.access_alarm),
-                      ),
-                      Container(
-                        margin: EdgeInsets.fromLTRB(0, 0, 10, 0),
-                        child: DefaultTextStyle(
-                          style: TextStyle(
-                            color: Colors.black,
-                            fontSize: 20,
-                            fontWeight: FontWeight.bold,
+                      Column(
+                        children: [
+                          DefaultTextStyle(
+                            style: TextStyle(
+                              color: Colors.black,
+                              fontSize: 20,
+                              fontWeight: FontWeight.bold,
+                            ),
+                            child: Text(
+                              '00:25',
+                            ),
                           ),
-                          child: Text(
-                            '00:25',
-                          ),
-                        ),
+                        ],
                       )
                     ],
                   )),
@@ -99,7 +96,7 @@ class _TranCaNhanState extends State<TranCaNhanScreen> {
               margin: EdgeInsets.fromLTRB(0, 20, 0, 0),
               child: Container(
                 decoration: BoxDecoration(
-                  border: Border.all(),
+                
                   borderRadius: BorderRadius.circular(8.0),
                   color: Colors.white,
                 ),
@@ -117,13 +114,15 @@ class _TranCaNhanState extends State<TranCaNhanScreen> {
                   children: [
                     Container(
                       child: Expanded(
+                          child: InkWell(
+                        onTap: () {},
                         child: Container(
                           margin: EdgeInsets.fromLTRB(20, 0, 0, 0),
                           height: 130,
                           width: 170,
                           child: Container(
                             decoration: BoxDecoration(
-                                border: Border.all(),
+                           
                                 color: Colors.white,
                                 borderRadius: BorderRadius.circular(8.0)),
                             child: DefaultTextStyle(
@@ -134,24 +133,27 @@ class _TranCaNhanState extends State<TranCaNhanScreen> {
                             ),
                           ),
                         ),
-                      ),
+                      )),
                     ),
                     Container(
                         margin: EdgeInsets.fromLTRB(15, 0, 26, 0),
                         padding: EdgeInsets.fromLTRB(0, 0, 0, 0),
                         width: 170,
                         height: 130,
-                        child: Container(
-                          decoration: BoxDecoration(
-                              border: Border.all(),
-                              color: Colors.white,
-                              borderRadius: BorderRadius.circular(8.0)),
-                          child: DefaultTextStyle(
-                            child: Text('B: Gà có trước'),
-                            style: TextStyle(color: Colors.black, fontSize: 20),
-                            textAlign: TextAlign.center,
-                          ),
-                        )),
+                        child: InkWell(
+                            onTap: () {},
+                            child: Container(
+                              decoration: BoxDecoration(
+                            
+                                  color: Colors.white,
+                                  borderRadius: BorderRadius.circular(8.0)),
+                              child: DefaultTextStyle(
+                                child: Text('B: Gà có trước'),
+                                style: TextStyle(
+                                    color: Colors.black, fontSize: 20),
+                                textAlign: TextAlign.center,
+                              ),
+                            ))),
                   ],
                 ),
               ],
@@ -165,13 +167,18 @@ class _TranCaNhanState extends State<TranCaNhanScreen> {
                   children: [
                     Container(
                       child: Expanded(
-                        child: Container(
+                        child: 
+                        InkWell(
+                          onTap: (){
+
+                          },
+                          child: Container(
                           margin: EdgeInsets.fromLTRB(20, 0, 0, 0),
                           height: 130,
                           width: 170,
                           child: Container(
                             decoration: BoxDecoration(
-                                border: Border.all(),
+                           
                                 color: Colors.white,
                                 borderRadius: BorderRadius.circular(8.0)),
                             child: DefaultTextStyle(
@@ -182,6 +189,7 @@ class _TranCaNhanState extends State<TranCaNhanScreen> {
                             ),
                           ),
                         ),
+                        )
                       ),
                     ),
                     Container(
@@ -189,9 +197,13 @@ class _TranCaNhanState extends State<TranCaNhanScreen> {
                         padding: EdgeInsets.fromLTRB(0, 0, 0, 0),
                         width: 170,
                         height: 130,
-                        child: Container(
+                        child: InkWell(
+                          onTap: (){
+
+                          },
+                          child: Container(
                           decoration: BoxDecoration(
-                              border: Border.all(),
+                            
                               color: Colors.white,
                               borderRadius: BorderRadius.circular(8.0)),
                           child: DefaultTextStyle(
@@ -199,7 +211,9 @@ class _TranCaNhanState extends State<TranCaNhanScreen> {
                             style: TextStyle(color: Colors.black, fontSize: 20),
                             textAlign: TextAlign.center,
                           ),
-                        )),
+                        ),
+                        )
+                        ),
                   ],
                 ),
               ],
