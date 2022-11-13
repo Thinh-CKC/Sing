@@ -16,7 +16,7 @@ class _BatDauLinhVucState extends State<BatDauLinhVucScreen> {
       height: MediaQuery.of(context).size.height,
       decoration: const BoxDecoration(
         image: DecorationImage(
-          image: AssetImage('images/BackgroundBlue.png'),
+          image: AssetImage('images/background-blue.png'),
           fit: BoxFit.cover,
         ),
       ),
@@ -92,7 +92,10 @@ class _BatDauLinhVucState extends State<BatDauLinhVucScreen> {
             height: 100,
             margin: EdgeInsets.fromLTRB(0, 107, 0, 0),
             decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(60), color: Colors.white),
+                borderRadius: BorderRadius.circular(60),
+                color: Colors.white,
+                image:
+                    DecorationImage(image: AssetImage('images/avatar-1.png'))),
             child: Container(
               padding: EdgeInsets.fromLTRB(20, 80, 20, 0),
               child: ElevatedButton(

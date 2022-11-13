@@ -146,6 +146,7 @@ class _KetBanState extends State<KetBanScreen> {
                                   ),
                                 ),
                                 Container(
+                                  margin: EdgeInsets.fromLTRB(0, 10, 0, 0),
                                   //Container của nhân vật 1
                                   width: 314,
                                   height: 51,
@@ -219,6 +220,7 @@ class _KetBanState extends State<KetBanScreen> {
                                   ),
                                 ),
                                 Container(
+                                  margin: EdgeInsets.fromLTRB(0, 10, 0, 0),
                                   //Container của nhân vật 1
                                   width: 314,
                                   height: 51,
@@ -292,6 +294,7 @@ class _KetBanState extends State<KetBanScreen> {
                                   ),
                                 ),
                                 Container(
+                                  margin: EdgeInsets.fromLTRB(0, 10, 0, 0),
                                   //Container của nhân vật 1
                                   width: 314,
                                   height: 51,
@@ -365,6 +368,7 @@ class _KetBanState extends State<KetBanScreen> {
                                   ),
                                 ),
                                 Container(
+                                  margin: EdgeInsets.fromLTRB(0, 10, 0, 0),
                                   //Container của nhân vật 1
                                   width: 314,
                                   height: 51,
@@ -438,6 +442,7 @@ class _KetBanState extends State<KetBanScreen> {
                                   ),
                                 ),
                                 Container(
+                                  margin: EdgeInsets.fromLTRB(0, 10, 0, 0),
                                   //Container của nhân vật 1
                                   width: 314,
                                   height: 51,
@@ -511,6 +516,7 @@ class _KetBanState extends State<KetBanScreen> {
                                   ),
                                 ),
                                 Container(
+                                  margin: EdgeInsets.fromLTRB(0, 10, 0, 0),
                                   //Container của nhân vật 1
                                   width: 314,
                                   height: 51,
@@ -584,6 +590,7 @@ class _KetBanState extends State<KetBanScreen> {
                                   ),
                                 ),
                                 Container(
+                                  margin: EdgeInsets.fromLTRB(0, 10, 0, 0),
                                   //Container của nhân vật 1
                                   width: 314,
                                   height: 51,
@@ -657,6 +664,7 @@ class _KetBanState extends State<KetBanScreen> {
                                   ),
                                 ),
                                 Container(
+                                  margin: EdgeInsets.fromLTRB(0, 10, 0, 0),
                                   //Container của nhân vật 1
                                   width: 314,
                                   height: 51,
@@ -730,6 +738,7 @@ class _KetBanState extends State<KetBanScreen> {
                                   ),
                                 ),
                                 Container(
+                                  margin: EdgeInsets.fromLTRB(0, 10, 0, 0),
                                   //Container của nhân vật 1
                                   width: 314,
                                   height: 51,
