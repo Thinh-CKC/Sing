@@ -19,7 +19,7 @@ class _ChuDeLinhVucState extends State<ChuDeLinhVucScreen> {
       height: MediaQuery.of(context).size.height,
       decoration: const BoxDecoration(
         image: DecorationImage(
-          image: AssetImage('images/BackgroundBlue.png'),
+          image: AssetImage('images/background-blue.png'),
           fit: BoxFit.cover,
         ),
       ),
@@ -38,14 +38,54 @@ class _ChuDeLinhVucState extends State<ChuDeLinhVucScreen> {
                   )
                 ],
               )),
-          Container(
-              margin: EdgeInsets.fromLTRB(14, 50, 0, 0),
-              child: DefaultTextStyle(
+          Column(children: [
+              Container(margin: EdgeInsets.fromLTRB(0, 33, 0, 0),
+                child: DefaultTextStyle(
                 child: Text('LĨNH VỰC CÂU HỎI'),
                 style: TextStyle(
                     color: Colors.white,
                     fontWeight: FontWeight.bold,
                     fontSize: 26),
+              ))
+          ],),
+          Container(
+              margin: EdgeInsets.fromLTRB(0, 33, 0, 0),
+              child: Column(
+                children: [
+                  Row(
+                    children: [
+                      Container(
+                        child: Expanded(
+                            child: Container(
+                          margin: EdgeInsets.fromLTRB(30, 0, 33, 0),
+                          height: 150,
+                          child: InkWell(
+                            onTap: () {},
+                            child: Container(
+                              width: 150,
+                              decoration: BoxDecoration(
+                                  image: DecorationImage(
+                                      image: AssetImage('images/math.png'),
+                                      fit: BoxFit.fill)),
+                            ),
+                          ),
+                        )),
+                      ),
+                      InkWell(
+                        onTap: () {},
+                        child: Container(
+                          margin: EdgeInsets.fromLTRB(0, 20, 30, 0),
+                          width: 150,
+                          height: 127,
+                          decoration: BoxDecoration(
+                              image: DecorationImage(
+                                  image: AssetImage('images/literature.png'),
+                                  fit: BoxFit.fill)),
+                        ),
+                      ),
+                    ],
+                  )
+                ],
               )),
           Container(
               margin: EdgeInsets.fromLTRB(0, 56, 0, 0),
@@ -56,30 +96,30 @@ class _ChuDeLinhVucState extends State<ChuDeLinhVucScreen> {
                       Container(
                         child: Expanded(
                             child: Container(
-                          margin: EdgeInsets.fromLTRB(0, 0, 0, 0),
+                          margin: EdgeInsets.fromLTRB(30, 0, 33, 0),
                           height: 150,
-                          child: MaterialButton(
-                            onPressed: () {},
+                          child: InkWell(
+                            onTap: () {},
                             child: Container(
                               width: 150,
-                              height: 1500,
                               decoration: BoxDecoration(
                                   image: DecorationImage(
-                                      image: AssetImage('images/Math.png'),
+                                      image: AssetImage('images/history.png'),
                                       fit: BoxFit.fill)),
                             ),
                           ),
                         )),
                       ),
-                      MaterialButton(
-                        onPressed: () {},
+                      InkWell(
+                        onTap: () {},
                         child: Container(
-                          margin: EdgeInsets.fromLTRB(0, 20, 0, 0),
+                          
+                          margin: EdgeInsets.fromLTRB(0, 0, 30, 0),
                           width: 150,
-                          height: 127,
+                          height: 150,
                           decoration: BoxDecoration(
                               image: DecorationImage(
-                                  image: AssetImage('images/Literature.png'),
+                                  image: AssetImage('images/geography.png'),
                                   fit: BoxFit.fill)),
                         ),
                       ),
@@ -87,8 +127,8 @@ class _ChuDeLinhVucState extends State<ChuDeLinhVucScreen> {
                   )
                 ],
               )),
-          Container(
-              margin: EdgeInsets.fromLTRB(0, 32, 0, 0),
+              Container(
+              margin: EdgeInsets.fromLTRB(0, 56, 0, 0),
               child: Column(
                 children: [
                   Row(
@@ -96,70 +136,29 @@ class _ChuDeLinhVucState extends State<ChuDeLinhVucScreen> {
                       Container(
                         child: Expanded(
                             child: Container(
-                          margin: EdgeInsets.fromLTRB(0, 0, 0, 0),
+                          margin: EdgeInsets.fromLTRB(30, 0, 33, 0),
                           height: 150,
-                          child: MaterialButton(
-                            onPressed: () {},
+                          child: InkWell(
+                            onTap: () {},
                             child: Container(
                               width: 150,
-                              height: 138,
                               decoration: BoxDecoration(
                                   image: DecorationImage(
-                                      image: AssetImage('images/History.png'),
+                                      image: AssetImage('images/physics.png'),
                                       fit: BoxFit.fill)),
                             ),
                           ),
                         )),
                       ),
-                      MaterialButton(
-                        onPressed: () {},
+                      InkWell(
+                        onTap: () {},
                         child: Container(
-                          margin: EdgeInsets.fromLTRB(0, 0, 0, 0),
+                          margin: EdgeInsets.fromLTRB(0, 5, 30, 0),
                           width: 150,
-                          height: 138,
+                          height: 145,
                           decoration: BoxDecoration(
                               image: DecorationImage(
-                                  image: AssetImage('images/Geography.png'),
-                                  fit: BoxFit.fill)),
-                        ),
-                      ),
-                    ],
-                  )
-                ],
-              )),
-          Container(
-              margin: EdgeInsets.fromLTRB(0, 32, 0, 0),
-              child: Column(
-                children: [
-                  Row(
-                    children: [
-                      Container(
-                        child: Expanded(
-                            child: Container(
-                          margin: EdgeInsets.fromLTRB(0, 0, 0, 0),
-                          height: 150,
-                          child: MaterialButton(
-                            onPressed: () {},
-                            child: Container(
-                              width: 150,
-                              height: 153,
-                              decoration: BoxDecoration(
-                                  image: DecorationImage(
-                                      image: AssetImage('images/Physics.png'),
-                                      fit: BoxFit.fill)),
-                            ),
-                          ),
-                        )),
-                      ),
-                      MaterialButton(
-                        onPressed: () {},
-                        child: Container(
-                          margin: EdgeInsets.fromLTRB(0, 0, 0, 0),
-                          width: 150,
-                          height: 148,
-                          decoration: BoxDecoration(
-                              image: DecorationImage(
-                                  image: AssetImage('images/Chemistry.png'),
+                                  image: AssetImage('images/chemistry.png'),
                                   fit: BoxFit.fill)),
                         ),
                       ),
