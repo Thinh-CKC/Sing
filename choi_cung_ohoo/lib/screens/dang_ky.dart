@@ -1,5 +1,6 @@
+import 'package:choi_cung_ohoo/screens/dang_nhap.dart';
+import 'package:choi_cung_ohoo/screens/giao_dien_dau_tien.dart';
 import 'package:flutter/material.dart';
-import '../components/logo.dart';
 
 class SignUpScreen extends StatefulWidget {
   const SignUpScreen({Key? key}) : super(key: key);
@@ -17,14 +18,20 @@ class _SignUpScreenState extends State<SignUpScreen> {
         height: MediaQuery.of(context).size.height,
         decoration: BoxDecoration(
           image: DecorationImage(
-              image: AssetImage('images/BackgroundBlue.png'), fit: BoxFit.fill),
+              image: AssetImage('images/background-blue.png'), fit: BoxFit.fill),
         ),
         child: Column(children: [
           Container(
             margin: EdgeInsets.fromLTRB(10, 15, 0, 0),
             child: Row(children: [
               IconButton(
-                  onPressed: () {},
+                  onPressed: () {
+                    Navigator.pop(
+                      context,
+                      MaterialPageRoute(
+                          builder: (context) => const FirstScreen()),
+                    );
+                  },
                   icon: Icon(Icons.arrow_back, color: Colors.white, size: 25)),
             ]),
           ),
@@ -230,7 +237,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
                           Image(
-                            image: AssetImage('images/Icon-Google.png'),
+                            image: AssetImage('images/icon-google.png'),
                             width: 27,
                             height: 27,
                           ),
@@ -264,7 +271,13 @@ class _SignUpScreenState extends State<SignUpScreen> {
                 ),
               ),
               TextButton(
-                  onPressed: () {},
+                  onPressed: () {
+                    Navigator.pop(
+                      context,
+                      MaterialPageRoute(
+                          builder: (context) => const SignInScreen()),
+                    );
+                  },
                   child: Text(
                     'Đăng nhập',
                     style: TextStyle(

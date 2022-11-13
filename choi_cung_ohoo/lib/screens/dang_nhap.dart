@@ -1,3 +1,5 @@
+import 'package:choi_cung_ohoo/screens/dang_ky.dart';
+import 'package:choi_cung_ohoo/screens/giao_dien_dau_tien.dart';
 import 'package:flutter/material.dart';
 import '../components/logo.dart';
 
@@ -17,14 +19,20 @@ class _SignInScreenState extends State<SignInScreen> {
         height: MediaQuery.of(context).size.height,
         decoration: BoxDecoration(
           image: DecorationImage(
-              image: AssetImage('images/BackgroundBlue.png'), fit: BoxFit.fill),
+              image: AssetImage('images/background-blue.png'), fit: BoxFit.fill),
         ),
         child: Column(children: [
           Container(
             margin: EdgeInsets.fromLTRB(10, 15, 0, 0),
             child: Row(children: [
               IconButton(
-                  onPressed: () {},
+                  onPressed: () {
+                    Navigator.pop(
+                      context,
+                      MaterialPageRoute(
+                          builder: (context) => const FirstScreen()),
+                    );
+                  },
                   icon: Icon(Icons.arrow_back, color: Colors.white, size: 25)),
             ]),
           ),
@@ -163,7 +171,7 @@ class _SignInScreenState extends State<SignInScreen> {
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
                           Image(
-                            image: AssetImage('images/Icon-Google.png'),
+                            image: AssetImage('images/icon-google.png'),
                             width: 27,
                             height: 27,
                           ),
@@ -197,7 +205,13 @@ class _SignInScreenState extends State<SignInScreen> {
                 ),
               ),
               TextButton(
-                  onPressed: () {},
+                  onPressed: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                          builder: (context) => const SignUpScreen()),
+                    );
+                  },
                   child: Text(
                     'Đăng ký',
                     style: TextStyle(

@@ -1,6 +1,7 @@
+import 'package:choi_cung_ohoo/screens/dang_ky.dart';
+import 'package:choi_cung_ohoo/screens/dang_nhap.dart';
 import 'package:flutter/material.dart';
-import '../components/background.dart';
-import '../components/logo.dart';
+import 'package:choi_cung_ohoo/components/logo.dart';
 
 class FirstScreen extends StatefulWidget {
   const FirstScreen({Key? key}) : super(key: key);
@@ -18,7 +19,7 @@ class _FirstScreenState extends State<FirstScreen> {
         height: MediaQuery.of(context).size.height,
         decoration: BoxDecoration(
           image: DecorationImage(
-            image: AssetImage('images/BackgroundBlue.png'),
+            image: AssetImage('images/background-blue.png'),
             fit: BoxFit.fill,
           ),
         ),
@@ -47,7 +48,12 @@ class _FirstScreenState extends State<FirstScreen> {
                   borderRadius: BorderRadius.all(Radius.circular(10)),
                 ),
               ),
-              onPressed: () {},
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => const SignInScreen()),
+                );
+              },
               child: Text(
                 'ĐĂNG NHẬP',
                 style: TextStyle(fontWeight: FontWeight.bold, fontSize: 18),
@@ -74,7 +80,12 @@ class _FirstScreenState extends State<FirstScreen> {
                   borderRadius: BorderRadius.all(Radius.circular(10)),
                 ),
               ),
-              onPressed: () {},
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => const SignUpScreen()),
+                );
+              },
               child: Text(
                 'ĐĂNG KÝ',
                 style: TextStyle(fontWeight: FontWeight.bold, fontSize: 18),

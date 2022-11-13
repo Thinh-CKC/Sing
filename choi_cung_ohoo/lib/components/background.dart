@@ -11,7 +11,7 @@ class _BackgroundBlueState extends State<BackgroundBlue> {
   @override
   Widget build(BuildContext context) {
     return Image(
-      image: AssetImage('images/BackgroundBlue.png'),
+      image: AssetImage('images/background-blue.png'),
       fit: BoxFit.fill,
     );
   }
@@ -28,7 +28,7 @@ class _BackgroundGreyState extends State<BackgroundGrey> {
   @override
   Widget build(BuildContext context) {
     return Image(
-      image: AssetImage('images/BackgroundGrey.png'),
+      image: AssetImage('images/background-grey.png'),
       fit: BoxFit.fill,
     );
   }

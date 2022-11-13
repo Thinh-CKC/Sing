@@ -59,10 +59,17 @@ flutter:
 
   # To add assets to your application, add an assets section, like this:
   assets:
-    - images/BackgroundBlue.png
-    - images/BackgroundGrey.png
-    - images/Logo.png
-    - images/Icon-Google.png
+    - images/background-blue.png
+    - images/background-grey.png
+    - images/logo.png
+    - images/icon-google.png
+    - images/text-effect.png
+    - images/xu.png
+    - images/nang-luong.png
+    - images/che-do-ca-nhan.png
+    - images/che-do-doi-khang.png
+    - images/che-do-du-muc.png
+    - images/chu-de-cau-hoi.png
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware

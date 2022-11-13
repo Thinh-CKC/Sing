@@ -18,7 +18,7 @@ class MyApp extends StatelessWidget {
       title: 'Chơi cùng Ohoo',
       //theme: ThemeData(fontFamily: 'Verdana'),
       debugShowCheckedModeBanner: false,
-      home: FirstScreen(),
+      home: LobbyScreen(),
       routes: {},
     );
   }

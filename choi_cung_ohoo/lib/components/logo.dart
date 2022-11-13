@@ -12,9 +12,29 @@ class _LogoState extends State<Logo> {
   Widget build(BuildContext context) {
     return Row(mainAxisAlignment: MainAxisAlignment.center, children: [
       Image(
-        image: AssetImage('images/Logo.png'),
+        image: AssetImage('images/logo.png'),
         width: 340,
         height: 190,
+      ),
+    ]);
+  }
+}
+
+class TextEffect extends StatefulWidget {
+  TextEffect({Key? key}) : super(key: key);
+
+  @override
+  State<TextEffect> createState() => _TextEffectState();
+}
+
+class _TextEffectState extends State<TextEffect> {
+  @override
+  Widget build(BuildContext context) {
+    return Row(mainAxisAlignment: MainAxisAlignment.center, children: [
+      Image(
+        image: AssetImage('images/text-effect.png'),
+        width: 336,
+        height: 115,
       ),
     ]);
   }
