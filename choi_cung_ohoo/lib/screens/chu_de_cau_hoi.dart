@@ -16,7 +16,7 @@ class _ChuDeCauHoiState extends State<ChuDeCauHoiScreen> {
       height: MediaQuery.of(context).size.height,
       decoration: const BoxDecoration(
         image: DecorationImage(
-          image: AssetImage('images/BackgroundBlue.png'),
+          image: AssetImage('images/background-blue.png'),
           fit: BoxFit.cover,
         ),
       ),
@@ -56,7 +56,7 @@ class _ChuDeCauHoiState extends State<ChuDeCauHoiScreen> {
                     height: 150,
                     decoration: BoxDecoration(
                       image: DecorationImage(
-                          image: AssetImage('images/linhvuc.png'),
+                          image: AssetImage('images/linh-vuc.png'),
                           fit: BoxFit.fill),
                     ),
                     child: Padding(
@@ -101,7 +101,7 @@ class _ChuDeCauHoiState extends State<ChuDeCauHoiScreen> {
                     height: 150,
                     decoration: BoxDecoration(
                       image: DecorationImage(
-                          image: AssetImage('images/Dovui.png'),
+                          image: AssetImage('images/do-vui.png'),
                           fit: BoxFit.fill),
                     ),
                     child: Padding(
