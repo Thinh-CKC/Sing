@@ -1,3 +1,4 @@
+import 'package:choi_cung_ohoo/screens/sua_ho_so.dart';
 import 'package:flutter/material.dart';
 
 class HoSoScreen extends StatefulWidget {
@@ -59,7 +60,9 @@ class _HoSoScreen extends State<HoSoScreen> {
                   Container(
                     margin: EdgeInsets.fromLTRB(85, 0, 0, 0),
                     child: IconButton(
-                      onPressed: () {},
+                      onPressed: () {
+                       Navigator.push(context,MaterialPageRoute(builder: (context) => SuaHoSoScreen()));
+                      },
                       icon: Icon(
                         Icons.edit,
                         size: 25,

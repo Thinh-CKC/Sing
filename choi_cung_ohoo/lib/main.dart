@@ -9,6 +9,7 @@ import 'package:choi_cung_ohoo/screens/chu_de_cau_hoi.dart';
 import 'package:choi_cung_ohoo/screens/chu_de_linh_vuc.dart';
 import 'package:choi_cung_ohoo/screens/ho_so.dart';
 import 'package:choi_cung_ohoo/screens/ket_ban.dart';
+import 'package:choi_cung_ohoo/screens/sua_ho_so.dart';
 import 'package:choi_cung_ohoo/screens/tran_ca_nhan.dart';
 
 import 'package:flutter/material.dart';
@@ -25,7 +26,7 @@ class MyApp extends StatelessWidget {
       title: 'Chơi cùng Ohoo',
       //theme: ThemeData(fontFamily: 'Verdana'),
       debugShowCheckedModeBanner: false,
-      home: HoSoScreen(),
+      home: BangXepHangScreen(),
       routes: {},
     );
   }

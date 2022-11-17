@@ -16,7 +16,7 @@ class _CheDoDuMucState extends State<CheDoDuMucScreen> {
       height: MediaQuery.of(context).size.height,
       decoration: const BoxDecoration(
         image: DecorationImage(
-          image: AssetImage('images/che-do-du-muc.png'),
+          image: AssetImage('images/che-do-du-muc.png'),  
           fit: BoxFit.cover,
         ),
       ),
