@@ -88,7 +88,7 @@ class _BatDauCaNhanState extends State<BatDauCaNhanScreen> {
                 ],
               )),
           Container(
-            width: 100,
+            width: 112,
             height: 100,
             margin: EdgeInsets.fromLTRB(0, 107, 0, 0),
             decoration: BoxDecoration(
@@ -97,12 +97,18 @@ class _BatDauCaNhanState extends State<BatDauCaNhanScreen> {
                 image:
                     DecorationImage(image: AssetImage('images/avatar-1.png'))),
             child: Container(
-              padding: EdgeInsets.fromLTRB(20, 80, 20, 0),
-              child: ElevatedButton(
-                onPressed: () {},
-                child: Text('10'),
-              ),
-            ),
+                margin: EdgeInsets.fromLTRB(50, 50, 0, 0),
+                child: Column(
+                  children: [
+                    Container(
+                      width: 50,
+                      height: 22,
+                      decoration: BoxDecoration(
+                          border: Border.all(), color: Colors.white),
+                      child: Text('10'),
+                    )
+                  ],
+                )),
           ),
           Container(
               child: DefaultTextStyle(

@@ -67,6 +67,7 @@ class _KetBanState extends State<KetBanScreen> {
                       height: 460,
                       margin: EdgeInsets.fromLTRB(0, 20, 0, 0),
                       child: SingleChildScrollView(
+                        
                           padding: EdgeInsets.fromLTRB(0, 0, 0, 0),
                           child: Container(
                             margin: EdgeInsets.fromLTRB(0, 0, 10, 0),
