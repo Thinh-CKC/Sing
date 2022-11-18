@@ -19,19 +19,19 @@ class _FirstScreenState extends State<FirstScreen> {
         height: MediaQuery.of(context).size.height,
         decoration: BoxDecoration(
           image: DecorationImage(
-            image: AssetImage('images/background-blue.png'),
+            image: AssetImage('images/backgrounds/background.png'),
             fit: BoxFit.fill,
           ),
         ),
         child: Column(children: [
           Container(
-            margin: EdgeInsets.fromLTRB(0, 133, 0, 0),
+            margin: EdgeInsets.fromLTRB(0, 135, 0, 0),
             child: Logo(),
           ),
           Container(
-            margin: EdgeInsets.fromLTRB(0, 48, 0, 0),
+            margin: EdgeInsets.fromLTRB(0, 50, 0, 0),
             decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(10),
+                borderRadius: BorderRadius.circular(15),
                 boxShadow: [
                   BoxShadow(
                     color: Colors.black.withOpacity(0.2),
@@ -42,10 +42,10 @@ class _FirstScreenState extends State<FirstScreen> {
               style: ElevatedButton.styleFrom(
                 onPrimary: Colors.white,
                 primary: Color.fromARGB(255, 255, 0, 136),
-                minimumSize: Size(250, 50),
+                minimumSize: Size(220, 65),
                 padding: EdgeInsets.fromLTRB(0, 13, 0, 13),
                 shape: RoundedRectangleBorder(
-                  borderRadius: BorderRadius.all(Radius.circular(10)),
+                  borderRadius: BorderRadius.all(Radius.circular(15)),
                 ),
               ),
               onPressed: () {
@@ -61,9 +61,9 @@ class _FirstScreenState extends State<FirstScreen> {
             ),
           ),
           Container(
-            margin: EdgeInsets.fromLTRB(0, 20, 0, 0),
+            margin: EdgeInsets.fromLTRB(0, 30, 0, 0),
             decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(10),
+                borderRadius: BorderRadius.circular(15),
                 boxShadow: [
                   BoxShadow(
                     color: Colors.black.withOpacity(0.2),
@@ -73,11 +73,11 @@ class _FirstScreenState extends State<FirstScreen> {
             child: ElevatedButton(
               style: ElevatedButton.styleFrom(
                 onPrimary: Colors.white,
-                primary: Color(0xFF6560FF),
-                minimumSize: Size(250, 50),
+                primary: Colors.amber,
+                minimumSize: Size(220, 65),
                 padding: EdgeInsets.fromLTRB(0, 13, 0, 13),
                 shape: RoundedRectangleBorder(
-                  borderRadius: BorderRadius.all(Radius.circular(10)),
+                  borderRadius: BorderRadius.all(Radius.circular(15)),
                 ),
               ),
               onPressed: () {
@@ -93,34 +93,7 @@ class _FirstScreenState extends State<FirstScreen> {
             ),
           ),
           Container(
-            margin: EdgeInsets.fromLTRB(0, 20, 0, 0),
-            decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(10),
-                boxShadow: [
-                  BoxShadow(
-                    color: Colors.black.withOpacity(0.2),
-                    offset: Offset(5, 5),
-                  ),
-                ]),
-            child: ElevatedButton(
-              style: ElevatedButton.styleFrom(
-                onPrimary: Colors.white,
-                primary: Color(0xFFFFC400),
-                minimumSize: Size(250, 50),
-                padding: EdgeInsets.fromLTRB(0, 13, 0, 13),
-                shape: RoundedRectangleBorder(
-                  borderRadius: BorderRadius.all(Radius.circular(10)),
-                ),
-              ),
-              onPressed: () {},
-              child: Text(
-                'TÀI KHOẢN KHÁCH',
-                style: TextStyle(fontWeight: FontWeight.bold, fontSize: 18),
-              ),
-            ),
-          ),
-          Container(
-            margin: EdgeInsets.only(top: 175),
+            margin: EdgeInsets.only(top: 195),
             child: Row(mainAxisAlignment: MainAxisAlignment.center, children: [
               RichText(
                 text: TextSpan(
