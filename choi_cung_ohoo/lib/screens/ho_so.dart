@@ -11,7 +11,7 @@ class HoSoScreen extends StatefulWidget {
 class _HoSoScreen extends State<HoSoScreen> {
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
+    return Scaffold( backgroundColor: Color(0xFFEEEEEE),
       body: Container(
         decoration: BoxDecoration(
             image: DecorationImage(

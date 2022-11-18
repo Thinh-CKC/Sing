@@ -10,7 +10,7 @@ class SuaHoSoScreen extends StatefulWidget {
 class _SuaHoSoState extends State<SuaHoSoScreen> {
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
+    return Scaffold(backgroundColor: Color(0xFFEEEEEE),
       body: Container(
         decoration: BoxDecoration(
             image: DecorationImage(

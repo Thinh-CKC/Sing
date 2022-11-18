@@ -7,6 +7,7 @@ import 'package:choi_cung_ohoo/screens/bat_dau_linh_vuc.dart';
 import 'package:choi_cung_ohoo/screens/che_do_du_muc.dart';
 import 'package:choi_cung_ohoo/screens/chu_de_cau_hoi.dart';
 import 'package:choi_cung_ohoo/screens/chu_de_linh_vuc.dart';
+import 'package:choi_cung_ohoo/screens/giao_dien_choi_ca_nhan.dart';
 import 'package:choi_cung_ohoo/screens/ho_so.dart';
 import 'package:choi_cung_ohoo/screens/ket_ban.dart';
 import 'package:choi_cung_ohoo/screens/sua_ho_so.dart';
@@ -26,7 +27,7 @@ class MyApp extends StatelessWidget {
       title: 'Chơi cùng Ohoo',
       //theme: ThemeData(fontFamily: 'Verdana'),
       debugShowCheckedModeBanner: false,
-      home: BangXepHangScreen(),
+      home: GiaoDienChoiCaNhanScreen(),
       routes: {},
     );
   }
