@@ -18,21 +18,33 @@ class _SignUpScreenState extends State<SignUpScreen> {
         height: MediaQuery.of(context).size.height,
         decoration: BoxDecoration(
           image: DecorationImage(
-              image: AssetImage('images/background-blue.png'), fit: BoxFit.fill),
+              image: AssetImage('images/backgrounds/background.png'),
+              fit: BoxFit.fill),
         ),
         child: Column(children: [
           Container(
-            margin: EdgeInsets.fromLTRB(10, 15, 0, 0),
+            margin: EdgeInsets.fromLTRB(5, 15, 0, 0),
             child: Row(children: [
               IconButton(
-                  onPressed: () {
-                    Navigator.pop(
-                      context,
-                      MaterialPageRoute(
-                          builder: (context) => const FirstScreen()),
-                    );
-                  },
-                  icon: Icon(Icons.arrow_back, color: Colors.white, size: 25)),
+                onPressed: () {
+                  Navigator.pop(
+                    context,
+                    MaterialPageRoute(
+                        builder: (context) => const FirstScreen()),
+                  );
+                },
+                icon: Icon(
+                  Icons.arrow_back,
+                  color: Colors.white,
+                  shadows: <Shadow>[
+                    Shadow(
+                      color: Colors.black.withOpacity(0.2),
+                      blurRadius: 0,
+                      offset: Offset(2, 2),
+                    ),
+                  ],
+                ),
+              ),
             ]),
           ),
           Container(
@@ -61,16 +73,16 @@ class _SignUpScreenState extends State<SignUpScreen> {
                 ),
               ],
             ),
-            padding: EdgeInsets.fromLTRB(26, 0, 0, 0),
+            padding: EdgeInsets.fromLTRB(25, 0, 0, 0),
             margin: EdgeInsets.only(top: 42),
             child: TextField(
               style: TextStyle(
                 color: Color(0xFFA2A2A2),
                 fontWeight: FontWeight.bold,
-                fontSize: 19,
+                fontSize: 20,
               ),
               decoration: InputDecoration(
-                contentPadding: EdgeInsets.fromLTRB(-10, 0, 30, 0),
+                contentPadding: EdgeInsets.fromLTRB(-5, 0, 30, 0),
                 border: OutlineInputBorder(
                   borderSide: BorderSide(width: 0, style: BorderStyle.none),
                 ),
@@ -94,21 +106,21 @@ class _SignUpScreenState extends State<SignUpScreen> {
                 ),
               ],
             ),
-            padding: EdgeInsets.fromLTRB(22, 0, 0, 0),
+            padding: EdgeInsets.fromLTRB(23, 0, 0, 0),
             margin: EdgeInsets.only(top: 17),
             child: TextField(
               obscureText: true,
               style: TextStyle(
                 color: Color(0xFFA2A2A2),
                 fontWeight: FontWeight.bold,
-                fontSize: 19,
+                fontSize: 20,
               ),
               decoration: InputDecoration(
-                contentPadding: EdgeInsets.fromLTRB(-15, 0, 30, 0),
+                contentPadding: EdgeInsets.fromLTRB(-8, 0, 30, 0),
                 border: OutlineInputBorder(
                   borderSide: BorderSide(width: 0, style: BorderStyle.none),
                 ),
-                icon: Icon(Icons.person, color: Color(0xFF68C2E8), size: 40),
+                icon: Icon(Icons.person, color: Color(0xFF68C2E8), size: 35),
                 hintText: 'Tên',
                 hintStyle: TextStyle(color: Color(0xFFA2A2A2)),
               ),
@@ -128,21 +140,21 @@ class _SignUpScreenState extends State<SignUpScreen> {
                 ),
               ],
             ),
-            padding: EdgeInsets.fromLTRB(22, 0, 0, 0),
+            padding: EdgeInsets.fromLTRB(23, 0, 0, 0),
             margin: EdgeInsets.only(top: 17),
             child: TextField(
               style: TextStyle(
                 color: Color(0xFFA2A2A2),
                 fontWeight: FontWeight.bold,
-                fontSize: 19,
+                fontSize: 20,
               ),
               decoration: InputDecoration(
-                contentPadding: EdgeInsets.fromLTRB(-15, 0, 30, 0),
+                contentPadding: EdgeInsets.fromLTRB(-8, 0, 30, 0),
                 border: OutlineInputBorder(
                   borderSide: BorderSide(width: 0, style: BorderStyle.none),
                 ),
-                icon: Icon(Icons.person, color: Color(0xFF68C2E8), size: 40),
-                hintText: 'Username',
+                icon: Icon(Icons.person, color: Color(0xFF68C2E8), size: 35),
+                hintText: 'Tài khoản',
                 hintStyle: TextStyle(color: Color(0xFFA2A2A2)),
               ),
             ),
@@ -168,15 +180,15 @@ class _SignUpScreenState extends State<SignUpScreen> {
               style: TextStyle(
                 color: Color(0xFFA2A2A2),
                 fontWeight: FontWeight.bold,
-                fontSize: 19,
+                fontSize: 20,
               ),
               decoration: InputDecoration(
-                contentPadding: EdgeInsets.fromLTRB(-10, 0, 30, 0),
+                contentPadding: EdgeInsets.fromLTRB(-5, 0, 30, 0),
                 border: OutlineInputBorder(
                   borderSide: BorderSide(width: 0, style: BorderStyle.none),
                 ),
-                icon: Icon(Icons.lock, color: Color(0xFF68C2E8), size: 32),
-                hintText: 'Password',
+                icon: Icon(Icons.lock, color: Color(0xFF68C2E8), size: 30),
+                hintText: 'Mật khẩu',
                 hintStyle: TextStyle(color: Color(0xFFA2A2A2)),
               ),
             ),
@@ -184,7 +196,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
           Container(
             margin: EdgeInsets.only(top: 40),
             decoration: BoxDecoration(
-              borderRadius: BorderRadius.circular(40),
+              borderRadius: BorderRadius.circular(20),
               boxShadow: [
                 BoxShadow(
                   color: Colors.black.withOpacity(0.2),
@@ -195,78 +207,27 @@ class _SignUpScreenState extends State<SignUpScreen> {
             child: ElevatedButton(
               style: ElevatedButton.styleFrom(
                 onPrimary: Colors.white,
-                primary: Color(0xFFFFC400),
+                primary: Color(0xFFFF0088),
                 minimumSize: Size(183, 70),
                 shape: RoundedRectangleBorder(
-                  borderRadius: BorderRadius.all(Radius.circular(40)),
+                  borderRadius: BorderRadius.all(Radius.circular(20)),
                 ),
               ),
               onPressed: () {},
               child: Text(
                 'ĐĂNG KÝ',
-                style: TextStyle(fontWeight: FontWeight.bold, fontSize: 19),
+                style: TextStyle(fontWeight: FontWeight.bold, fontSize: 20),
               ),
             ),
           ),
           Container(
-            margin: EdgeInsets.only(top: 40),
-            decoration: BoxDecoration(
-              borderRadius: BorderRadius.circular(10),
-              boxShadow: [
-                BoxShadow(
-                  color: Colors.black.withOpacity(0.2),
-                  offset: Offset(5, 5),
-                ),
-              ],
-            ),
-            child: ElevatedButton(
-              style: ElevatedButton.styleFrom(
-                onPrimary: Colors.white,
-                primary: Color(0xFF6560FF),
-                minimumSize: Size(300, 50),
-                shape: RoundedRectangleBorder(
-                  borderRadius: BorderRadius.all(Radius.circular(10)),
-                ),
-              ),
-              onPressed: () {},
-              child: Row(
-                  mainAxisSize: MainAxisSize.min,
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-                    Column(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        children: [
-                          Image(
-                            image: AssetImage('images/icon-google.png'),
-                            width: 27,
-                            height: 27,
-                          ),
-                        ]),
-                    Column(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        children: [
-                          Padding(
-                            padding: EdgeInsets.fromLTRB(10, 0, 0, 0),
-                            child: Text(
-                              'Đăng ký bằng Google',
-                              style: TextStyle(
-                                fontWeight: FontWeight.bold,
-                                fontSize: 19,
-                              ),
-                            ),
-                          ),
-                        ]),
-                  ]),
-            ),
-          ),
-          Container(
-            margin: EdgeInsets.fromLTRB(0, 15, 0, 0),
+            margin: EdgeInsets.fromLTRB(0, 40, 0, 0),
             child: Row(mainAxisAlignment: MainAxisAlignment.center, children: [
               Text(
                 'Đã có tài khoản?',
                 style: TextStyle(
                   color: Colors.white,
-                  fontSize: 19,
+                  fontSize: 20,
                   fontWeight: FontWeight.bold,
                 ),
               ),
@@ -282,14 +243,14 @@ class _SignUpScreenState extends State<SignUpScreen> {
                     'Đăng nhập',
                     style: TextStyle(
                       color: Color(0xFFFF0088),
-                      fontSize: 19,
+                      fontSize: 20,
                       fontWeight: FontWeight.bold,
                     ),
                   ))
             ]),
           ),
           Container(
-            margin: EdgeInsets.fromLTRB(0, 100, 0, 0),
+            margin: EdgeInsets.fromLTRB(0, 155, 0, 0),
             child: Row(mainAxisAlignment: MainAxisAlignment.center, children: [
               Text(
                 'Copyright',

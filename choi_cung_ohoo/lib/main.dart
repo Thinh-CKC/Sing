@@ -19,7 +19,7 @@ class MyApp extends StatelessWidget {
       title: 'QuizQuest',
       //theme: ThemeData(fontFamily: 'Verdana'),
       debugShowCheckedModeBanner: false,
-      home: SignInScreen(),
+      home: SignUpScreen(),
       routes: {},
     );
   }
