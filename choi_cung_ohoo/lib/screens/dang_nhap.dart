@@ -1,5 +1,6 @@
 import 'package:choi_cung_ohoo/screens/dang_ky.dart';
 import 'package:choi_cung_ohoo/screens/giao_dien_dau_tien.dart';
+import 'package:choi_cung_ohoo/screens/giao_dien_sanh.dart';
 import 'package:flutter/material.dart';
 import '../components/logo.dart';
 
@@ -19,32 +20,44 @@ class _SignInScreenState extends State<SignInScreen> {
         height: MediaQuery.of(context).size.height,
         decoration: BoxDecoration(
           image: DecorationImage(
-              image: AssetImage('images/background-blue.png'), fit: BoxFit.fill),
+              image: AssetImage('images/backgrounds/background.png'),
+              fit: BoxFit.fill),
         ),
         child: Column(children: [
           Container(
-            margin: EdgeInsets.fromLTRB(10, 15, 0, 0),
+            margin: EdgeInsets.fromLTRB(5, 15, 0, 0),
             child: Row(children: [
               IconButton(
-                  onPressed: () {
-                    Navigator.pop(
-                      context,
-                      MaterialPageRoute(
-                          builder: (context) => const FirstScreen()),
-                    );
-                  },
-                  icon: Icon(Icons.arrow_back, color: Colors.white, size: 25)),
+                onPressed: () {
+                  Navigator.pop(
+                    context,
+                    MaterialPageRoute(
+                        builder: (context) => const FirstScreen()),
+                  );
+                },
+                icon: Icon(
+                  Icons.arrow_back,
+                  color: Colors.white,
+                  shadows: <Shadow>[
+                    Shadow(
+                      color: Colors.black.withOpacity(0.2),
+                      blurRadius: 0,
+                      offset: Offset(2, 2),
+                    ),
+                  ],
+                ),
+              ),
             ]),
           ),
           Container(
-            margin: EdgeInsets.only(top: 35),
+            margin: EdgeInsets.only(top: 30),
             child: Row(mainAxisAlignment: MainAxisAlignment.center, children: [
               Text(
                 'ĐĂNG NHẬP',
                 style: TextStyle(
                     color: Colors.white,
                     fontWeight: FontWeight.bold,
-                    fontSize: 25),
+                    fontSize: 28),
               ),
             ]),
           ),
@@ -62,13 +75,13 @@ class _SignInScreenState extends State<SignInScreen> {
                 ),
               ],
             ),
-            padding: EdgeInsets.fromLTRB(25, 0, 0, 0),
-            margin: EdgeInsets.only(top: 87),
+            padding: EdgeInsets.fromLTRB(20, 0, 0, 0),
+            margin: EdgeInsets.only(top: 100),
             child: TextField(
               style: TextStyle(
                 color: Color(0xFFA2A2A2),
                 fontWeight: FontWeight.bold,
-                fontSize: 17,
+                fontSize: 20,
               ),
               decoration: InputDecoration(
                 contentPadding: EdgeInsets.fromLTRB(-10, 0, 30, 0),
@@ -76,7 +89,7 @@ class _SignInScreenState extends State<SignInScreen> {
                   borderSide: BorderSide(width: 0, style: BorderStyle.none),
                 ),
                 icon: Icon(Icons.person, color: Color(0xFF68C2E8), size: 35),
-                hintText: 'Username',
+                hintText: 'Tài khoản',
                 hintStyle: TextStyle(color: Color(0xFFA2A2A2)),
               ),
             ),
@@ -95,14 +108,14 @@ class _SignInScreenState extends State<SignInScreen> {
                 ),
               ],
             ),
-            padding: EdgeInsets.fromLTRB(27, 0, 0, 0),
-            margin: EdgeInsets.only(top: 27),
+            padding: EdgeInsets.fromLTRB(22, 0, 0, 0),
+            margin: EdgeInsets.only(top: 25),
             child: TextField(
               obscureText: true,
               style: TextStyle(
                 color: Color(0xFFA2A2A2),
                 fontWeight: FontWeight.bold,
-                fontSize: 17,
+                fontSize: 20,
               ),
               decoration: InputDecoration(
                 contentPadding: EdgeInsets.fromLTRB(-8, 0, 0, 0),
@@ -110,15 +123,15 @@ class _SignInScreenState extends State<SignInScreen> {
                   borderSide: BorderSide(width: 0, style: BorderStyle.none),
                 ),
                 icon: Icon(Icons.lock, color: Color(0xFF68C2E8), size: 32),
-                hintText: 'Password',
+                hintText: 'Mật khẩu',
                 hintStyle: TextStyle(color: Color(0xFFA2A2A2)),
               ),
             ),
           ),
           Container(
-            margin: EdgeInsets.only(top: 40),
+            margin: EdgeInsets.only(top: 45),
             decoration: BoxDecoration(
-              borderRadius: BorderRadius.circular(40),
+              borderRadius: BorderRadius.circular(15),
               boxShadow: [
                 BoxShadow(
                   color: Colors.black.withOpacity(0.2),
@@ -129,78 +142,32 @@ class _SignInScreenState extends State<SignInScreen> {
             child: ElevatedButton(
               style: ElevatedButton.styleFrom(
                 onPrimary: Colors.white,
-                primary: Color(0xFFFFC400),
-                minimumSize: Size(183, 70),
+                primary: Color(0xFFFF0088),
+                minimumSize: Size(180, 65),
                 shape: RoundedRectangleBorder(
-                  borderRadius: BorderRadius.all(Radius.circular(40)),
+                  borderRadius: BorderRadius.all(Radius.circular(15)),
                 ),
               ),
-              onPressed: () {},
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => const LobbyScreen()),
+                );
+              },
               child: Text(
                 'ĐĂNG NHẬP',
-                style: TextStyle(fontWeight: FontWeight.bold, fontSize: 17),
+                style: TextStyle(fontWeight: FontWeight.bold, fontSize: 20),
               ),
             ),
           ),
           Container(
-            margin: EdgeInsets.only(top: 40),
-            decoration: BoxDecoration(
-              borderRadius: BorderRadius.circular(10),
-              boxShadow: [
-                BoxShadow(
-                  color: Colors.black.withOpacity(0.2),
-                  offset: Offset(5, 5),
-                ),
-              ],
-            ),
-            child: ElevatedButton(
-              style: ElevatedButton.styleFrom(
-                onPrimary: Colors.white,
-                primary: Color(0xFF6560FF),
-                minimumSize: Size(300, 50),
-                shape: RoundedRectangleBorder(
-                  borderRadius: BorderRadius.all(Radius.circular(10)),
-                ),
-              ),
-              onPressed: () {},
-              child: Row(
-                  mainAxisSize: MainAxisSize.min,
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-                    Column(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        children: [
-                          Image(
-                            image: AssetImage('images/icon-google.png'),
-                            width: 27,
-                            height: 27,
-                          ),
-                        ]),
-                    Column(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        children: [
-                          Padding(
-                            padding: EdgeInsets.fromLTRB(10, 0, 0, 0),
-                            child: Text(
-                              'Đăng nhập bằng Google',
-                              style: TextStyle(
-                                fontWeight: FontWeight.bold,
-                                fontSize: 17,
-                              ),
-                            ),
-                          ),
-                        ]),
-                  ]),
-            ),
-          ),
-          Container(
-            margin: EdgeInsets.fromLTRB(0, 20, 0, 0),
+            margin: EdgeInsets.fromLTRB(0, 45, 0, 0),
             child: Row(mainAxisAlignment: MainAxisAlignment.center, children: [
               Text(
                 'Chưa có tài khoản?',
                 style: TextStyle(
                   color: Colors.white,
-                  fontSize: 17,
+                  fontSize: 20,
                   fontWeight: FontWeight.bold,
                 ),
               ),
@@ -216,14 +183,14 @@ class _SignInScreenState extends State<SignInScreen> {
                     'Đăng ký',
                     style: TextStyle(
                       color: Color(0xFFFF0088),
-                      fontSize: 17,
+                      fontSize: 20,
                       fontWeight: FontWeight.bold,
                     ),
                   ))
             ]),
           ),
           Container(
-            margin: EdgeInsets.fromLTRB(0, 160, 0, 0),
+            margin: EdgeInsets.fromLTRB(0, 205, 0, 0),
             child: Row(mainAxisAlignment: MainAxisAlignment.center, children: [
               Text(
                 'Copyright',
