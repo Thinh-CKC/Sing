@@ -1,3 +1,5 @@
+import 'package:choi_cung_ohoo/screens/cai_dat.dart';
+import 'package:choi_cung_ohoo/screens/ho_so.dart';
 import 'package:flutter/material.dart';
 
 class GiaoDienChoiCaNhanScreen extends StatefulWidget {
@@ -41,7 +43,9 @@ class _GiaoDienChoiCaNhanState extends State<GiaoDienChoiCaNhanScreen> {
                       alignment: Alignment.center,
                       margin: EdgeInsets.fromLTRB(255, 20, 0, 0),
                       child: IconButton(
-                        onPressed: () {},
+                        onPressed: () {
+                          Navigator.push(context,MaterialPageRoute(builder: (context) => CaiDatScreen()));
+                        },
                         icon: Icon(
                           Icons.settings,
                           color: Colors.white,
