@@ -93,7 +93,7 @@ class _SuaHoSoState extends State<SuaHoSoScreen> {
                 height: 34,
                 child: TextField(
                   decoration: InputDecoration(
-                      border: OutlineInputBorder(), labelText: 'Bella'),
+                       labelText: 'Bella'),
                 ),
               )
             ],

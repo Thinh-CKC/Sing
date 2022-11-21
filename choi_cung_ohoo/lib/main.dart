@@ -7,7 +7,10 @@ import 'package:choi_cung_ohoo/screens/danh_sach_ban_be.dart';
 import 'package:choi_cung_ohoo/screens/giao_dien_choi_ca_nhan.dart';
 import 'package:choi_cung_ohoo/screens/ho_so.dart';
 
+
+
 import 'package:choi_cung_ohoo/screens/sua_ho_so.dart';
+import 'package:choi_cung_ohoo/screens/test.dart';
 
 
 import 'package:flutter/material.dart';
@@ -24,7 +27,7 @@ class MyApp extends StatelessWidget {
       title: 'Chơi cùng Ohoo',
       //theme: ThemeData(fontFamily: 'Verdana'),
       debugShowCheckedModeBanner: false,
-      home: DanhSachBanBeScreen(),
+      home: HoSoScreen(),
       routes: {},
     );
   }
