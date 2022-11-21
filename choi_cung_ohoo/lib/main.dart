@@ -20,7 +20,7 @@ class MyApp extends StatelessWidget {
       title: 'QuizQuest',
       //theme: ThemeData(fontFamily: 'Verdana'),
       debugShowCheckedModeBanner: false,
-      home: LobbyScreen(),
+      home: DoiKhangScreen(),
       routes: {},
     );
   }
