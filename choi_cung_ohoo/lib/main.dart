@@ -2,6 +2,7 @@ import 'package:choi_cung_ohoo/components/background.dart';
 import 'package:choi_cung_ohoo/components/logo.dart';
 import 'package:choi_cung_ohoo/screens/dang_ky.dart';
 import 'package:choi_cung_ohoo/screens/dang_nhap.dart';
+import 'package:choi_cung_ohoo/screens/doi_khang/che_do_doi_khang.dart';
 import 'package:choi_cung_ohoo/screens/giao_dien_dau_tien.dart';
 import 'package:choi_cung_ohoo/screens/giao_dien_sanh.dart';
 import 'package:choi_cung_ohoo/screens/doi_khang/moi_nguoi_choi.dart';
@@ -19,7 +20,7 @@ class MyApp extends StatelessWidget {
       title: 'QuizQuest',
       //theme: ThemeData(fontFamily: 'Verdana'),
       debugShowCheckedModeBanner: false,
-      home: SignUpScreen(),
+      home: LobbyScreen(),
       routes: {},
     );
   }

@@ -1,8 +1,5 @@
-import 'dart:ffi';
-
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:choi_cung_ohoo/components/logo.dart';
+import 'package:flutter/rendering.dart';
 
 class LobbyScreen extends StatefulWidget {
   const LobbyScreen({Key? key}) : super(key: key);
@@ -11,342 +8,642 @@ class LobbyScreen extends StatefulWidget {
   State<LobbyScreen> createState() => _LobbyScreenState();
 }
 
-enum Options { profile, notification, scoreboard, setting, report }
-
 class _LobbyScreenState extends State<LobbyScreen> {
-  var _popupMenuItemIndex = 0;
-  Color _changeColorAccordingToMenuItem = Colors.white.withOpacity(0.4);
-  PopupMenuItem _buildPopupMenuItem(
-      String title, IconData iconData, int position) {
-    return PopupMenuItem(
-      value: position,
-      height: 40,
-      padding: EdgeInsets.fromLTRB(5, 0, 0, 0),
-      textStyle: TextStyle(color: Colors.white, fontSize: 17),
-      child: Row(crossAxisAlignment: CrossAxisAlignment.center, children: [
-        Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
-          Icon(
-            iconData,
-            color: Colors.white,
-            size: 25,
-          ),
-        ]),
-        Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
-          Padding(
-            padding: EdgeInsets.only(left: 10),
-            child: Text(title),
-          ),
-        ]),
-      ]),
-    );
-  }
-
-  _onMenuItemSelected(int value) {
-    setState(() {
-      _popupMenuItemIndex = value;
-    });
-
-    if (value == Options.profile.index) {
-      _changeColorAccordingToMenuItem = Colors.white.withOpacity(0.4);
-    } else if (value == Options.notification.index) {
-      _changeColorAccordingToMenuItem = Colors.white.withOpacity(0.4);
-    } else if (value == Options.scoreboard.index) {
-      _changeColorAccordingToMenuItem = Colors.white.withOpacity(0.4);
-    } else if (value == Options.setting.index) {
-      _changeColorAccordingToMenuItem = Colors.white.withOpacity(0.4);
-    } else if (value == Options.report.index) {
-      _changeColorAccordingToMenuItem = Colors.white.withOpacity(0.4);
-    }
-  }
-
-  int _currentIndex = 2;
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Color(0xFFEEEEEE),
       body: SingleChildScrollView(
         scrollDirection: Axis.vertical,
-        child: Container(
-          width: MediaQuery.of(context).size.width,
-          height: MediaQuery.of(context).size.height,
-          decoration: BoxDecoration(
-            image: DecorationImage(
-                image: AssetImage('images/background-blue.png'),
-                fit: BoxFit.fill),
-          ),
-          child: Column(children: [
+        child: Column(
+          children: [
+            //Header
             Container(
-              margin: EdgeInsets.fromLTRB(5, 12, 0, 0),
+              width: 350,
+              margin: EdgeInsets.fromLTRB(15, 25, 15, 0),
               child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    Column(children: [
-                      PopupMenuButton(
-                        icon: Icon(Icons.sort, color: Colors.white, size: 35),
-                        color: Color(0xFFA2A2A2).withOpacity(0.8),
-                        constraints:
-                            BoxConstraints(maxHeight: 220, maxWidth: 130),
-                        shape: RoundedRectangleBorder(
-                          borderRadius: BorderRadius.all(Radius.circular(10)),
-                        ),
-                        onSelected: (value) {
-                          _onMenuItemSelected(value as int);
-                        },
-                        itemBuilder: (ctx) => [
-                          _buildPopupMenuItem(
-                              'Hồ sơ', Icons.person, Options.profile.index),
-                          _buildPopupMenuItem('Thông báo', Icons.notifications,
-                              Options.notification.index),
-                          _buildPopupMenuItem('Xếp hạng', Icons.leaderboard,
-                              Options.scoreboard.index),
-                          _buildPopupMenuItem(
-                              'Cài đặt', Icons.settings, Options.setting.index),
-                          _buildPopupMenuItem(
-                              'Phản hồi', Icons.feedback, Options.report.index),
-                        ],
-                      ),
-                    ]),
-                    Column(children: [
-                      Container(
-                        margin: EdgeInsets.only(top: 15),
-                        child: Row(children: [
-                          Container(
-                            width: 70,
-                            height: 25,
-                            margin: EdgeInsets.fromLTRB(0, 0, 10, 0),
-                            decoration: BoxDecoration(
-                              image: DecorationImage(
-                                image: AssetImage('images/nang-luong.png'),
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  Column(
+                    children: [
+                      Row(
+                        children: [
+                          Column(
+                            children: [
+                              InkWell(
+                                onTap: () {},
+                                child: Container(
+                                  width: 50,
+                                  height: 50,
+                                  decoration: BoxDecoration(
+                                    color: Colors.white,
+                                    border: Border.all(
+                                      color: Color(0xFF707070),
+                                    ),
+                                    borderRadius: BorderRadius.circular(10),
+                                    image: DecorationImage(
+                                      image: AssetImage(
+                                          'images/avatars/avatar-1.png'),
+                                    ),
+                                  ),
+                                ),
                               ),
-                            ),
-                            child: Row(
-                                mainAxisAlignment: MainAxisAlignment.end,
-                                children: [
-                                  Padding(
-                                    padding: EdgeInsets.fromLTRB(0, 0, 10, 1),
-                                    child: RichText(
+                            ],
+                          ),
+                          Padding(
+                            padding: EdgeInsets.only(left: 5),
+                            child: Column(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: [
+                                Row(
+                                  mainAxisAlignment: MainAxisAlignment.start,
+                                  children: [
+                                    RichText(
                                       text: TextSpan(
-                                        text: '30',
+                                        text: 'Xin chào ',
                                         style: TextStyle(
                                           color: Color(0xFF707070),
+                                          fontSize: 18,
                                           fontWeight: FontWeight.bold,
-                                          fontSize: 15,
                                         ),
-                                        children: [TextSpan(text: '/30')],
+                                        children: [
+                                          TextSpan(
+                                            text: 'Bella',
+                                            style: TextStyle(
+                                              color: Color(0xFFFF0088),
+                                            ),
+                                          ),
+                                        ],
                                       ),
                                     ),
+                                  ],
+                                ),
+                                Padding(
+                                  padding: EdgeInsets.only(top: 5),
+                                  child: Row(
+                                    mainAxisAlignment: MainAxisAlignment.start,
+                                    children: [
+                                      RichText(
+                                        text: TextSpan(
+                                          text: 'Level: ',
+                                          style: TextStyle(
+                                              color: Color(0xFF707070),
+                                              fontSize: 15),
+                                          children: [
+                                            TextSpan(text: '10'),
+                                          ],
+                                        ),
+                                      ),
+                                    ],
                                   ),
-                                ]),
-                          ),
-                          Container(
-                            width: 90,
-                            height: 25,
-                            margin: EdgeInsets.fromLTRB(0, 0, 15, 0),
-                            decoration: BoxDecoration(
-                              image: DecorationImage(
-                                image: AssetImage('images/xu.png'),
-                              ),
+                                ),
+                              ],
                             ),
-                            child: Row(
-                                mainAxisAlignment: MainAxisAlignment.end,
-                                children: [
-                                  Padding(
-                                    padding: EdgeInsets.fromLTRB(0, 0, 10, 1),
-                                    child: Text(
-                                      '3000',
-                                      style: TextStyle(
-                                        color: Color(0xFF707070),
-                                        fontWeight: FontWeight.bold,
-                                        fontSize: 15,
+                          ),
+                        ],
+                      ),
+                    ],
+                  ),
+                  Column(
+                    children: [
+                      IconButton(
+                        splashRadius: 1,
+                        padding: EdgeInsets.only(bottom: 20),
+                        alignment: Alignment.topRight,
+                        onPressed: () {},
+                        icon: Icon(
+                          Icons.settings,
+                          shadows: <Shadow>[
+                            Shadow(
+                              color: Colors.black.withOpacity(0.2),
+                              blurRadius: 0,
+                              offset: Offset(2, 2),
+                            ),
+                          ],
+                        ),
+                        color: Color(0xFF6560FF),
+                        iconSize: 27,
+                      ),
+                    ],
+                  ),
+                ],
+              ),
+            ),
+            //Bảng thông tin
+            Container(
+              width: 350,
+              height: 100,
+              margin: EdgeInsets.fromLTRB(15, 15, 15, 0),
+              padding: EdgeInsets.fromLTRB(20, 15, 20, 15),
+              alignment: Alignment.center,
+              decoration: BoxDecoration(
+                borderRadius: BorderRadius.circular(20),
+                gradient: LinearGradient(
+                  begin: Alignment.centerLeft,
+                  end: Alignment.centerRight,
+                  colors: <Color>[
+                    Color(0xFF6560FF),
+                    Color(0xFF333080),
+                  ],
+                ),
+                boxShadow: [
+                  BoxShadow(
+                    color: Colors.black.withOpacity(0.2),
+                    offset: Offset(0, 3),
+                    blurRadius: 6,
+                  ),
+                ],
+              ),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  Column(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      Text(
+                        'Hạng',
+                        style: TextStyle(
+                          color: Colors.white,
+                          fontSize: 18,
+                        ),
+                      ),
+                      Divider(
+                        height: 0,
+                        thickness: 2,
+                        color: Colors.white,
+                        indent: 10,
+                        endIndent: 10,
+                      ),
+                      Text(
+                        '30',
+                        style: TextStyle(
+                          color: Colors.white,
+                          fontSize: 18,
+                          fontWeight: FontWeight.bold,
+                        ),
+                      ),
+                    ],
+                  ),
+                  Column(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      Text(
+                        'Trận thắng',
+                        style: TextStyle(
+                          color: Colors.white,
+                          fontSize: 18,
+                        ),
+                      ),
+                      Divider(
+                        height: 0,
+                        thickness: 2,
+                        color: Colors.white,
+                        indent: 10,
+                        endIndent: 10,
+                      ),
+                      Text(
+                        '10',
+                        style: TextStyle(
+                          color: Colors.white,
+                          fontSize: 18,
+                          fontWeight: FontWeight.bold,
+                        ),
+                      ),
+                    ],
+                  ),
+                  Column(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      Text(
+                        'Điểm',
+                        style: TextStyle(
+                          color: Colors.white,
+                          fontSize: 18,
+                        ),
+                      ),
+                      Divider(
+                        height: 0,
+                        thickness: 2,
+                        color: Colors.white,
+                        indent: 10,
+                        endIndent: 10,
+                      ),
+                      Text(
+                        '2000',
+                        style: TextStyle(
+                          color: Colors.white,
+                          fontSize: 18,
+                          fontWeight: FontWeight.bold,
+                        ),
+                      ),
+                    ],
+                  ),
+                ],
+              ),
+            ),
+            //Logo & nút
+            Container(
+              width: 350,
+              margin: EdgeInsets.fromLTRB(15, 10, 15, 0),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Expanded(
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Image(
+                          image: AssetImage('images/logo.png'),
+                          width: 105,
+                          height: 70,
+                        )
+                      ],
+                    ),
+                  ),
+                  Column(
+                    children: [
+                      Row(
+                        children: [
+                          Column(
+                            children: [
+                              Container(
+                                margin: EdgeInsets.only(right: 15),
+                                decoration: BoxDecoration(
+                                  borderRadius: BorderRadius.circular(10),
+                                  boxShadow: [
+                                    BoxShadow(
+                                      color: Color(0xFF6560FF),
+                                      offset: Offset(3, 3),
+                                    ),
+                                  ],
+                                ),
+                                child: ElevatedButton(
+                                  style: ElevatedButton.styleFrom(
+                                    minimumSize: Size(50, 50),
+                                    primary: Colors.white,
+                                    shape: RoundedRectangleBorder(
+                                      borderRadius:
+                                          BorderRadius.all(Radius.circular(10)),
+                                    ),
+                                    padding: EdgeInsets.only(left: 5, right: 5),
+                                  ),
+                                  onPressed: () {},
+                                  child: Image(
+                                    image: AssetImage('images/icons/award.png'),
+                                    width: 27,
+                                    height: 27,
+                                    fit: BoxFit.cover,
+                                  ),
+                                ),
+                              ),
+                            ],
+                          ),
+                          Column(
+                            children: [
+                              Container(
+                                margin: EdgeInsets.only(right: 15),
+                                decoration: BoxDecoration(
+                                  borderRadius: BorderRadius.circular(10),
+                                  boxShadow: [
+                                    BoxShadow(
+                                      color: Color(0xFF6560FF),
+                                      offset: Offset(3, 3),
+                                    ),
+                                  ],
+                                ),
+                                child: ElevatedButton(
+                                  style: ElevatedButton.styleFrom(
+                                    minimumSize: Size(50, 50),
+                                    primary: Colors.white,
+                                    shape: RoundedRectangleBorder(
+                                      borderRadius:
+                                          BorderRadius.all(Radius.circular(10)),
+                                    ),
+                                    padding: EdgeInsets.only(left: 5, right: 5),
+                                  ),
+                                  onPressed: () {},
+                                  child: Icon(
+                                    Icons.people,
+                                    color: Color(0xFF6560FF),
+                                    size: 30,
+                                  ),
+                                ),
+                              ),
+                            ],
+                          ),
+                          Column(
+                            children: [
+                              Container(
+                                decoration: BoxDecoration(
+                                  borderRadius: BorderRadius.circular(10),
+                                  boxShadow: [
+                                    BoxShadow(
+                                      color: Color(0xFF6560FF),
+                                      offset: Offset(3, 3),
+                                    ),
+                                  ],
+                                ),
+                                child: ElevatedButton(
+                                  style: ElevatedButton.styleFrom(
+                                    minimumSize: Size(50, 50),
+                                    primary: Colors.white,
+                                    shape: RoundedRectangleBorder(
+                                      borderRadius: BorderRadius.all(
+                                        Radius.circular(10),
                                       ),
                                     ),
+                                    padding:
+                                        EdgeInsets.only(left: 10, right: 10),
                                   ),
-                                ]),
+                                  onPressed: () {},
+                                  child: Image(
+                                    image: AssetImage('images/icons/chat.png'),
+                                    width: 23,
+                                    height: 23,
+                                    fit: BoxFit.cover,
+                                  ),
+                                ),
+                              ),
+                            ],
                           ),
-                        ]),
+                        ],
                       ),
-                    ]),
-                  ]),
+                    ],
+                  ),
+                ],
+              ),
             ),
+            //Chế độ cá nhân
             Container(
-              margin: EdgeInsets.only(top: 38),
-              child: TextEffect(),
+              width: 350,
+              height: 30,
+              alignment: Alignment.center,
+              margin: EdgeInsets.fromLTRB(15, 10, 15, 0),
+              decoration: BoxDecoration(
+                color: Colors.white,
+                borderRadius: BorderRadius.circular(10),
+                boxShadow: [
+                  BoxShadow(
+                    color: Colors.black.withOpacity(0.2),
+                    offset: Offset(0, 3),
+                    blurRadius: 6,
+                  ),
+                ],
+              ),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Text(
+                    'Chế Độ Cá Nhân',
+                    style: TextStyle(
+                      color: Color(0xFF6560FF),
+                      fontSize: 20,
+                      fontWeight: FontWeight.bold,
+                    ),
+                  )
+                ],
+              ),
             ),
             Container(
               width: 350,
-              height: 530,
-              decoration: BoxDecoration(
-                color: Colors.white,
-                borderRadius: BorderRadius.only(
-                  topLeft: Radius.circular(50),
-                  topRight: Radius.circular(50),
+              margin: EdgeInsets.fromLTRB(15, 10, 15, 0),
+              child: Column(
+                children: [
+                  Row(
+                    children: [
+                      Text(
+                        'Môn Học',
+                        style: TextStyle(
+                          color: Color(0xFF6560FF),
+                          fontSize: 18,
+                        ),
+                      ),
+                    ],
+                  ),
+                ],
+              ),
+            ),
+            //Chủ đề môn học
+            Container(
+              height: 130,
+              margin: EdgeInsets.fromLTRB(15, 10, 15, 0),
+              child: ListView(
+                scrollDirection: Axis.horizontal,
+                children: [
+                  Container(
+                    margin: EdgeInsets.only(right: 10),
+                    child: InkWell(
+                      onTap: () {},
+                      child: Image(
+                        image: AssetImage('images/buttons/math.png'),
+                      ),
+                    ),
+                  ),
+                  Container(
+                    margin: EdgeInsets.only(right: 10),
+                    child: InkWell(
+                      onTap: () {},
+                      child: Image(
+                        image: AssetImage('images/buttons/physics.png'),
+                      ),
+                    ),
+                  ),
+                  Container(
+                    margin: EdgeInsets.only(right: 10),
+                    child: InkWell(
+                      onTap: () {},
+                      child: Image(
+                        image: AssetImage('images/buttons/chermistry.png'),
+                      ),
+                    ),
+                  ),
+                  Container(
+                    margin: EdgeInsets.only(right: 10),
+                    child: InkWell(
+                      onTap: () {},
+                      child: Image(
+                        image: AssetImage('images/buttons/history.png'),
+                      ),
+                    ),
+                  ),
+                  Container(
+                    child: InkWell(
+                      onTap: () {},
+                      child: Image(
+                        image: AssetImage('images/buttons/geography.png'),
+                      ),
+                    ),
+                  ),
+                ],
+              ),
+            ),
+            Container(
+              width: 350,
+              margin: EdgeInsets.fromLTRB(15, 10, 15, 0),
+              child: Column(
+                children: [
+                  Row(
+                    children: [
+                      Text(
+                        'Lĩnh Vực',
+                        style: TextStyle(
+                          color: Color(0xFF6560FF),
+                          fontSize: 18,
+                        ),
+                      ),
+                    ],
+                  ),
+                ],
+              ),
+            ),
+            //Chủ đề lĩnh vực
+            Container(
+              height: 130,
+              margin: EdgeInsets.fromLTRB(15, 10, 15, 0),
+              child: ListView(
+                scrollDirection: Axis.horizontal,
+                children: [
+                  Container(
+                    margin: EdgeInsets.only(right: 10),
+                    child: InkWell(
+                      onTap: () {},
+                      child: Image(
+                        image: AssetImage('images/buttons/it.png'),
+                      ),
+                    ),
+                  ),
+                  Container(
+                    margin: EdgeInsets.only(right: 10),
+                    child: InkWell(
+                      onTap: () {},
+                      child: Image(
+                        image: AssetImage('images/buttons/cinema.png'),
+                      ),
+                    ),
+                  ),
+                  Container(
+                    margin: EdgeInsets.only(right: 10),
+                    child: InkWell(
+                      onTap: () {},
+                      child: Image(
+                        image: AssetImage('images/buttons/cartoon.png'),
+                      ),
+                    ),
+                  ),
+                ],
+              ),
+            ),
+            Container(
+              width: 350,
+              margin: EdgeInsets.fromLTRB(15, 10, 15, 0),
+              child: Column(
+                children: [
+                  Row(
+                    children: [
+                      Text(
+                        'Đố Vui',
+                        style: TextStyle(
+                          color: Color(0xFF6560FF),
+                          fontSize: 18,
+                        ),
+                      ),
+                    ],
+                  ),
+                ],
+              ),
+            ),
+            //Đố vui
+            Container(
+              margin: EdgeInsets.fromLTRB(15, 10, 10, 0),
+              child: InkWell(
+                onTap: () {},
+                child: Image(
+                  image: AssetImage('images/buttons/funny.png'),
                 ),
               ),
-              child: Column(children: [
-                Container(
-                  decoration: BoxDecoration(
-                    boxShadow: [
-                      BoxShadow(
-                        color: Colors.black.withOpacity(0.2),
-                        offset: Offset(0, 5),
-                      ),
-                    ],
-                    borderRadius: BorderRadius.circular(10),
-                  ),
-                  margin: EdgeInsets.fromLTRB(0, 15, 0, 0),
-                  child: SizedBox(
-                    width: 285,
-                    height: 98,
-                    child: ElevatedButton(
-                      style: ElevatedButton.styleFrom(
-                        primary: Color(0),
-                        shadowColor: Color(0),
-                        padding: EdgeInsets.all(0),
-                        shape: RoundedRectangleBorder(
-                          borderRadius: BorderRadius.circular(10),
-                        ),
-                      ),
-                      onPressed: () {},
-                      child: Image(
-                        image: AssetImage('images/che-do-ca-nhan.png'),
-                        fit: BoxFit.fill,
-                      ),
-                    ),
-                  ),
-                ),
-                Container(
-                  decoration: BoxDecoration(
-                    boxShadow: [
-                      BoxShadow(
-                        color: Colors.black.withOpacity(0.2),
-                        offset: Offset(0, 5),
-                      ),
-                    ],
-                    borderRadius: BorderRadius.circular(10),
-                  ),
-                  margin: EdgeInsets.fromLTRB(0, 12, 0, 0),
-                  child: SizedBox(
-                    width: 285,
-                    height: 98,
-                    child: ElevatedButton(
-                      style: ElevatedButton.styleFrom(
-                        primary: Color(0),
-                        shadowColor: Color(0),
-                        padding: EdgeInsets.all(0),
-                        shape: RoundedRectangleBorder(
-                          borderRadius: BorderRadius.circular(10),
-                        ),
-                      ),
-                      onPressed: () {},
-                      child: Image(
-                        image: AssetImage('images/che-do-doi-khang.png'),
-                        fit: BoxFit.fill,
-                      ),
-                    ),
-                  ),
-                ),
-                Container(
-                  decoration: BoxDecoration(
-                    boxShadow: [
-                      BoxShadow(
-                        color: Colors.black.withOpacity(0.2),
-                        offset: Offset(0, 5),
-                      ),
-                    ],
-                    borderRadius: BorderRadius.circular(10),
-                  ),
-                  margin: EdgeInsets.fromLTRB(0, 12, 0, 0),
-                  child: SizedBox(
-                    width: 285,
-                    height: 98,
-                    child: ElevatedButton(
-                      style: ElevatedButton.styleFrom(
-                        primary: Color(0),
-                        shadowColor: Color(0),
-                        padding: EdgeInsets.all(0),
-                        shape: RoundedRectangleBorder(
-                          borderRadius: BorderRadius.circular(10),
-                        ),
-                      ),
-                      onPressed: () {},
-                      child: Image(
-                        image: AssetImage('images/che-do-du-muc.png'),
-                        fit: BoxFit.fill,
-                      ),
-                    ),
-                  ),
-                ),
-                Container(
-                  decoration: BoxDecoration(
-                    boxShadow: [
-                      BoxShadow(
-                        color: Colors.black.withOpacity(0.2),
-                        offset: Offset(0, 5),
-                      ),
-                    ],
-                    borderRadius: BorderRadius.circular(10),
-                  ),
-                  margin: EdgeInsets.fromLTRB(0, 12, 0, 0),
-                  child: SizedBox(
-                    width: 285,
-                    height: 98,
-                    child: ElevatedButton(
-                      style: ElevatedButton.styleFrom(
-                        primary: Color(0),
-                        shadowColor: Color(0),
-                        padding: EdgeInsets.all(0),
-                        shape: RoundedRectangleBorder(
-                          borderRadius: BorderRadius.circular(10),
-                        ),
-                      ),
-                      onPressed: () {},
-                      child: Image(
-                        image: AssetImage('images/chu-de-cau-hoi.png'),
-                        fit: BoxFit.fill,
-                      ),
-                    ),
-                  ),
-                ),
-              ]),
             ),
-          ]),
+            //Chế độ đối kháng
+            Container(
+              width: 350,
+              height: 30,
+              alignment: Alignment.center,
+              margin: EdgeInsets.fromLTRB(15, 20, 15, 0),
+              decoration: BoxDecoration(
+                color: Colors.white,
+                borderRadius: BorderRadius.circular(10),
+                boxShadow: [
+                  BoxShadow(
+                    color: Colors.black.withOpacity(0.2),
+                    offset: Offset(0, 3),
+                    blurRadius: 6,
+                  ),
+                ],
+              ),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Text(
+                    'Chế Độ Đối Kháng',
+                    style: TextStyle(
+                      color: Color(0xFF6560FF),
+                      fontSize: 20,
+                      fontWeight: FontWeight.bold,
+                    ),
+                  )
+                ],
+              ),
+            ),
+            Container(
+              margin: EdgeInsets.fromLTRB(15, 10, 10, 0),
+              child: InkWell(
+                onTap: () {},
+                child: Image(
+                  image: AssetImage('images/buttons/battle.png'),
+                ),
+              ),
+            ),
+            //Chế độ du mục
+            Container(
+              width: 350,
+              height: 30,
+              alignment: Alignment.center,
+              margin: EdgeInsets.fromLTRB(15, 20, 15, 0),
+              decoration: BoxDecoration(
+                color: Colors.white,
+                borderRadius: BorderRadius.circular(10),
+                boxShadow: [
+                  BoxShadow(
+                    color: Colors.black.withOpacity(0.2),
+                    offset: Offset(0, 3),
+                    blurRadius: 6,
+                  ),
+                ],
+              ),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Text(
+                    'Chế Độ Du Mục',
+                    style: TextStyle(
+                      color: Color(0xFF6560FF),
+                      fontSize: 20,
+                      fontWeight: FontWeight.bold,
+                    ),
+                  )
+                ],
+              ),
+            ),
+            Container(
+              margin: EdgeInsets.fromLTRB(15, 10, 10, 20),
+              child: InkWell(
+                onTap: () {},
+                child: Image(
+                  image: AssetImage('images/buttons/adventure.png'),
+                ),
+              ),
+            ),
+          ],
         ),
-      ),
-      bottomNavigationBar: BottomNavigationBar(
-        iconSize: 35,
-        currentIndex: _currentIndex,
-        type: BottomNavigationBarType.fixed,
-        backgroundColor: Color(0xFF68C2E8),
-        showUnselectedLabels: false,
-        selectedItemColor: Color(0xFFFF0088),
-        unselectedItemColor: Colors.white,
-        selectedLabelStyle:
-            TextStyle(color: Color(0xFFFF0088), fontWeight: FontWeight.bold),
-        onTap: (value) {
-          setState(() => _currentIndex = value);
-        },
-        items: const <BottomNavigationBarItem>[
-          BottomNavigationBarItem(
-            label: 'Túi đồ',
-            icon: Icon(Icons.backpack),
-          ),
-          BottomNavigationBarItem(
-            label: 'Cửa hàng',
-            icon: Icon(Icons.store),
-          ),
-          BottomNavigationBarItem(
-            label: 'Sảnh',
-            icon: Icon(Icons.home),
-          ),
-          BottomNavigationBarItem(
-            label: 'Sự kiện',
-            icon: Icon(Icons.redeem),
-          ),
-          BottomNavigationBarItem(
-            label: 'Bạn bè',
-            icon: Icon(Icons.people),
-          ),
-        ],
       ),
     );
   }

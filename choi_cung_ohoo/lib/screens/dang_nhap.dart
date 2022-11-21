@@ -76,7 +76,7 @@ class _SignInScreenState extends State<SignInScreen> {
               ],
             ),
             padding: EdgeInsets.fromLTRB(20, 0, 0, 0),
-            margin: EdgeInsets.only(top: 100),
+            margin: EdgeInsets.only(top: 108),
             child: TextField(
               style: TextStyle(
                 color: Color(0xFFA2A2A2),
@@ -88,7 +88,7 @@ class _SignInScreenState extends State<SignInScreen> {
                 border: OutlineInputBorder(
                   borderSide: BorderSide(width: 0, style: BorderStyle.none),
                 ),
-                icon: Icon(Icons.person, color: Color(0xFF68C2E8), size: 35),
+                icon: Icon(Icons.person, color: Color(0xFF6560FF), size: 35),
                 hintText: 'Tài khoản',
                 hintStyle: TextStyle(color: Color(0xFFA2A2A2)),
               ),
@@ -122,7 +122,7 @@ class _SignInScreenState extends State<SignInScreen> {
                 border: OutlineInputBorder(
                   borderSide: BorderSide(width: 0, style: BorderStyle.none),
                 ),
-                icon: Icon(Icons.lock, color: Color(0xFF68C2E8), size: 32),
+                icon: Icon(Icons.lock, color: Color(0xFF6560FF), size: 32),
                 hintText: 'Mật khẩu',
                 hintStyle: TextStyle(color: Color(0xFFA2A2A2)),
               ),
@@ -131,7 +131,7 @@ class _SignInScreenState extends State<SignInScreen> {
           Container(
             margin: EdgeInsets.only(top: 45),
             decoration: BoxDecoration(
-              borderRadius: BorderRadius.circular(15),
+              borderRadius: BorderRadius.circular(20),
               boxShadow: [
                 BoxShadow(
                   color: Colors.black.withOpacity(0.2),
@@ -143,9 +143,9 @@ class _SignInScreenState extends State<SignInScreen> {
               style: ElevatedButton.styleFrom(
                 onPrimary: Colors.white,
                 primary: Color(0xFFFF0088),
-                minimumSize: Size(180, 65),
+                minimumSize: Size(183, 70),
                 shape: RoundedRectangleBorder(
-                  borderRadius: BorderRadius.all(Radius.circular(15)),
+                  borderRadius: BorderRadius.all(Radius.circular(20)),
                 ),
               ),
               onPressed: () {
@@ -190,7 +190,7 @@ class _SignInScreenState extends State<SignInScreen> {
             ]),
           ),
           Container(
-            margin: EdgeInsets.fromLTRB(0, 205, 0, 0),
+            margin: EdgeInsets.fromLTRB(0, 190, 0, 0),
             child: Row(mainAxisAlignment: MainAxisAlignment.center, children: [
               Text(
                 'Copyright',

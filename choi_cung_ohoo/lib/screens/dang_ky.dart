@@ -74,7 +74,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
               ],
             ),
             padding: EdgeInsets.fromLTRB(25, 0, 0, 0),
-            margin: EdgeInsets.only(top: 42),
+            margin: EdgeInsets.only(top: 52),
             child: TextField(
               style: TextStyle(
                 color: Color(0xFFA2A2A2),
@@ -86,7 +86,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
                 border: OutlineInputBorder(
                   borderSide: BorderSide(width: 0, style: BorderStyle.none),
                 ),
-                icon: Icon(Icons.email, color: Color(0xFF68C2E8), size: 30),
+                icon: Icon(Icons.email, color: Color(0xFF6560FF), size: 30),
                 hintText: 'Email',
                 hintStyle: TextStyle(color: Color(0xFFA2A2A2)),
               ),
@@ -120,7 +120,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
                 border: OutlineInputBorder(
                   borderSide: BorderSide(width: 0, style: BorderStyle.none),
                 ),
-                icon: Icon(Icons.person, color: Color(0xFF68C2E8), size: 35),
+                icon: Icon(Icons.person, color: Color(0xFF6560FF), size: 35),
                 hintText: 'Tên',
                 hintStyle: TextStyle(color: Color(0xFFA2A2A2)),
               ),
@@ -153,7 +153,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
                 border: OutlineInputBorder(
                   borderSide: BorderSide(width: 0, style: BorderStyle.none),
                 ),
-                icon: Icon(Icons.person, color: Color(0xFF68C2E8), size: 35),
+                icon: Icon(Icons.person, color: Color(0xFF6560FF), size: 35),
                 hintText: 'Tài khoản',
                 hintStyle: TextStyle(color: Color(0xFFA2A2A2)),
               ),
@@ -187,7 +187,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
                 border: OutlineInputBorder(
                   borderSide: BorderSide(width: 0, style: BorderStyle.none),
                 ),
-                icon: Icon(Icons.lock, color: Color(0xFF68C2E8), size: 30),
+                icon: Icon(Icons.lock, color: Color(0xFF6560FF), size: 30),
                 hintText: 'Mật khẩu',
                 hintStyle: TextStyle(color: Color(0xFFA2A2A2)),
               ),
@@ -250,7 +250,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
             ]),
           ),
           Container(
-            margin: EdgeInsets.fromLTRB(0, 155, 0, 0),
+            margin: EdgeInsets.fromLTRB(0, 145, 0, 0),
             child: Row(mainAxisAlignment: MainAxisAlignment.center, children: [
               Text(
                 'Copyright',
