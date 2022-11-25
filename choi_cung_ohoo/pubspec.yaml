@@ -69,6 +69,13 @@ flutter:
 
     - images/icons/award.png
     - images/icons/chat.png
+
+    - images/rank/bac-hoc.png
+    - images/rank/nghiep-du.png
+    - images/rank/sang-suot.png
+    - images/rank/thang-dong.png
+    - images/rank/thien-tai.png
+    - images/rank/thong-minh.png
     
     - images/buttons/math.png
     - images/buttons/physics.png

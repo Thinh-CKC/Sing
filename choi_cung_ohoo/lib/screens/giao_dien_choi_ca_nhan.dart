@@ -17,7 +17,7 @@ class _GiaoDienChoiCaNhanState extends State<GiaoDienChoiCaNhanScreen> {
       body: Container(
         decoration: BoxDecoration(
           image: DecorationImage(
-              image: AssetImage('images/background.png'), fit: BoxFit.cover),
+              image: AssetImage('images/backgrounds/background.png'), fit: BoxFit.cover),
         ),
         child: Column(
           children: [

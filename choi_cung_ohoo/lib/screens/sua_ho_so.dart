@@ -67,7 +67,7 @@ class _SuaHoSoState extends State<SuaHoSoScreen> {
                   height: 90,
                   decoration: BoxDecoration(
                     image: DecorationImage(
-                      image: AssetImage('images/avatar-1.png'),
+                      image: AssetImage('images/avatars/avatar-1.png'),
                     ),
                   ),
                 ),

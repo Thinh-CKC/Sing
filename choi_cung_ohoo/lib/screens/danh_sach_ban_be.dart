@@ -128,7 +128,7 @@ class _DanhSachBanBeState extends State<DanhSachBanBeScreen> {
                                           decoration: BoxDecoration(
                                               image: DecorationImage(
                                                   image: AssetImage(
-                                                      'images/avatar-1.png'))),
+                                                      'images/avatars/avatar-1.png'))),
                                         )
                                       ],
                                     ),
@@ -180,7 +180,7 @@ class _DanhSachBanBeState extends State<DanhSachBanBeScreen> {
                                           decoration: BoxDecoration(
                                               image: DecorationImage(
                                                   image: AssetImage(
-                                                      'images/avatar-7.png'))),
+                                                      'images/avatars/avatar-7.png'))),
                                         )
                                       ],
                                     ),
@@ -232,7 +232,7 @@ class _DanhSachBanBeState extends State<DanhSachBanBeScreen> {
                                           decoration: BoxDecoration(
                                               image: DecorationImage(
                                                   image: AssetImage(
-                                                      'images/avatar-3.png'))),
+                                                      'images/avatars/avatar-3.png'))),
                                         )
                                       ],
                                     ),
@@ -284,7 +284,7 @@ class _DanhSachBanBeState extends State<DanhSachBanBeScreen> {
                                           decoration: BoxDecoration(
                                               image: DecorationImage(
                                                   image: AssetImage(
-                                                      'images/avatar-6.png'))),
+                                                      'images/avatars/avatar-6.png'))),
                                         )
                                       ],
                                     ),
@@ -336,7 +336,7 @@ class _DanhSachBanBeState extends State<DanhSachBanBeScreen> {
                                           decoration: BoxDecoration(
                                               image: DecorationImage(
                                                   image: AssetImage(
-                                                      'images/avatar-5.png'))),
+                                                      'images/avatars/avatar-5.png'))),
                                         )
                                       ],
                                     ),
@@ -388,7 +388,7 @@ class _DanhSachBanBeState extends State<DanhSachBanBeScreen> {
                                           decoration: BoxDecoration(
                                               image: DecorationImage(
                                                   image: AssetImage(
-                                                      'images/avatar-8.png'))),
+                                                      'images/avatars/avatar-8.png'))),
                                         )
                                       ],
                                     ),
@@ -440,7 +440,7 @@ class _DanhSachBanBeState extends State<DanhSachBanBeScreen> {
                                           decoration: BoxDecoration(
                                               image: DecorationImage(
                                                   image: AssetImage(
-                                                      'images/avatar-9.png'))),
+                                                      'images/avatars/avatar-9.png'))),
                                         )
                                       ],
                                     ),
@@ -492,7 +492,7 @@ class _DanhSachBanBeState extends State<DanhSachBanBeScreen> {
                                           decoration: BoxDecoration(
                                               image: DecorationImage(
                                                   image: AssetImage(
-                                                      'images/avatar-10.png'))),
+                                                      'images/avatars/avatar-10.png'))),
                                         )
                                       ],
                                     ),

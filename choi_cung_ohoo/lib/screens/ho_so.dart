@@ -121,7 +121,7 @@ class _HoSostate extends State<HoSoScreen> {
                         height: 90,
                         decoration: BoxDecoration(
                           image: DecorationImage(
-                            image: AssetImage('images/avatar-1.png'),
+                            image: AssetImage('images/avatars/avatar-1.png'),
                           ),
                         ),
                       )
@@ -236,7 +236,7 @@ class _HoSostate extends State<HoSoScreen> {
                                                     decoration: BoxDecoration(
                                                         image: DecorationImage(
                                                       image: AssetImage(
-                                                          'images/thien-tai.png'),
+                                                          'images/rank/thien-tai.png'),
                                                     )),
                                                   )
                                                 ],
