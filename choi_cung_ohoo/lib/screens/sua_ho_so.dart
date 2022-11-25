@@ -10,7 +10,8 @@ class SuaHoSoScreen extends StatefulWidget {
 class _SuaHoSoState extends State<SuaHoSoScreen> {
   @override
   Widget build(BuildContext context) {
-    return Scaffold(backgroundColor: Color(0xFFEEEEEE),
+    return Scaffold(
+      backgroundColor: Color(0xFFEEEEEE),
       body: Container(
         decoration: BoxDecoration(
             image: DecorationImage(
@@ -92,8 +93,7 @@ class _SuaHoSoState extends State<SuaHoSoScreen> {
                 width: 300,
                 height: 34,
                 child: TextField(
-                  decoration: InputDecoration(
-                       labelText: 'Bella'),
+                  decoration: InputDecoration(labelText: 'Bella'),
                 ),
               )
             ],

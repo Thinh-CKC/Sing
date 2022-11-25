@@ -62,7 +62,13 @@ flutter:
   assets:
     - images/backgrounds/background.png
     - images/backgrounds/map.png
-
+    - images/confettibackground.png
+    - images/counter.png
+    - images/map.png
+    - images/group127.png
+    - images/sua-ho-so.png
+    - images/time-choi-ca-nhan.png
+    - images/bang-xep-hang.png
     - images/logo.png
 
     - images/items/vs.png

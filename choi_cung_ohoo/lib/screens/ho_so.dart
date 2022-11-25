@@ -45,6 +45,7 @@ class _HoSostate extends State<HoSoScreen> {
     return DefaultTabController(
       length: 3,
       child: Scaffold(
+        backgroundColor: Color(0xFFEEEEEE),
         body: Column(
           children: <Widget>[
             Container(
@@ -338,26 +339,28 @@ class _HoSostate extends State<HoSoScreen> {
                             )),
                       )),
                   Container(
-                      margin: EdgeInsets.all(40),
-                      child: Container(
-                          width: 100,
-                          height: 100,
-                          decoration: BoxDecoration(
-                              color: Colors.white,
-                              borderRadius: BorderRadius.circular(20),
-                              boxShadow: [
-                                BoxShadow(
-                                    spreadRadius: 0,
-                                    blurRadius: 0,
-                                    offset: Offset(5, 5),
-                                    color: Color(0xFF6560FF))
-                              ]),
-                          child:  Container(child: Column(
+                    margin: EdgeInsets.all(40),
+                    child: Container(
+                        width: 100,
+                        height: 100,
+                        decoration: BoxDecoration(
+                            color: Colors.white,
+                            borderRadius: BorderRadius.circular(20),
+                            boxShadow: [
+                              BoxShadow(
+                                  spreadRadius: 0,
+                                  blurRadius: 0,
+                                  offset: Offset(5, 5),
+                                  color: Color(0xFF6560FF))
+                            ]),
+                        child: Container(
+                          child: Column(
                             children: [
                               CircularProgressIndicator(),
-                      
                             ],
-                          ),)),),
+                          ),
+                        )),
+                  ),
                 ],
               ),
             ),
