@@ -1,3 +1,6 @@
+import 'package:choi_cung_ohoo/screens/giao_dien_dau_tien.dart';
+import 'package:choi_cung_ohoo/screens/giao_dien_sanh.dart';
+import 'package:choi_cung_ohoo/screens/tim-doi-thu.dart';
 import 'package:flutter/material.dart';
 import 'package:choi_cung_ohoo/main.dart';
 
@@ -255,7 +258,14 @@ class _TinhDiemDoiKhangScreenState extends State<TinhDiemDoiKhangScreen> {
               Column(
                 children: [
                   InkWell(
-                    onTap: () {},
+                    onTap: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => const TimDoiThuScreen(),
+                        ),
+                      );
+                    },
                     child: Container(
                       alignment: Alignment.center,
                       margin: EdgeInsets.fromLTRB(10, 35, 0, 0),
@@ -315,7 +325,14 @@ class _TinhDiemDoiKhangScreenState extends State<TinhDiemDoiKhangScreen> {
               Column(
                 children: [
                   InkWell(
-                    onTap: () {},
+                    onTap: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => const LobbyScreen(),
+                        ),
+                      );
+                    },
                     child: Container(
                       alignment: Alignment.center,
                       margin: EdgeInsets.fromLTRB(10, 20, 0, 0),

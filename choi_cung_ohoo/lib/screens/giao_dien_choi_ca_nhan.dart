@@ -1,5 +1,7 @@
 import 'package:choi_cung_ohoo/screens/cai_dat.dart';
+import 'package:choi_cung_ohoo/screens/giao_dien_sanh.dart';
 import 'package:choi_cung_ohoo/screens/ho_so.dart';
+import 'package:choi_cung_ohoo/screens/tinh-diem-ca-nhan.dart';
 import 'package:flutter/material.dart';
 
 class GiaoDienChoiCaNhanScreen extends StatefulWidget {
@@ -17,7 +19,8 @@ class _GiaoDienChoiCaNhanState extends State<GiaoDienChoiCaNhanScreen> {
       body: Container(
         decoration: BoxDecoration(
           image: DecorationImage(
-              image: AssetImage('images/backgrounds/background.png'), fit: BoxFit.cover),
+              image: AssetImage('images/backgrounds/background.png'),
+              fit: BoxFit.cover),
         ),
         child: Column(
           children: [
@@ -33,9 +36,9 @@ class _GiaoDienChoiCaNhanState extends State<GiaoDienChoiCaNhanScreen> {
                                 showDialog(
                                   context: context,
                                   builder: (ctx) => AlertDialog(
-                                    iconPadding: EdgeInsets.fromLTRB(240, 0, 0, 0),
+                                    iconPadding:
+                                        EdgeInsets.fromLTRB(240, 0, 0, 0),
                                     icon: IconButton(
-                                    
                                       onPressed: () {
                                         Navigator.pop(context);
                                       },
@@ -49,21 +52,29 @@ class _GiaoDienChoiCaNhanState extends State<GiaoDienChoiCaNhanScreen> {
                                       width: 184,
                                       height: 55,
                                       child: Text(
-                                      'Bạn có chắc muốn thoát trận?',
-                                      style: TextStyle(
-                                          color: Color(0xFF707070),
-                                          fontSize: 20),
-                                      textAlign: TextAlign.center,
-                                    ),
+                                        'Bạn có chắc muốn thoát trận?',
+                                        style: TextStyle(
+                                            color: Color(0xFF707070),
+                                            fontSize: 20),
+                                        textAlign: TextAlign.center,
+                                      ),
                                     ),
                                     actions: <Widget>[
                                       TextButton(
-                                          onPressed: () {},
+                                          onPressed: () {
+                                            Navigator.push(
+                                              context,
+                                              MaterialPageRoute(
+                                                builder: (context) =>
+                                                    const LobbyScreen(),
+                                              ),
+                                            );
+                                          },
                                           child: Container(
                                             margin: EdgeInsets.fromLTRB(
                                                 0, 0, 65, 0),
-                                           height: 40,
-                                           width: 130,
+                                            height: 40,
+                                            width: 130,
                                             alignment: Alignment.center,
                                             decoration: BoxDecoration(
                                                 borderRadius:
@@ -77,7 +88,8 @@ class _GiaoDienChoiCaNhanState extends State<GiaoDienChoiCaNhanScreen> {
                                             ),
                                           )),
                                     ],
-                                  actionsPadding: EdgeInsets.fromLTRB(0, 0, 0, 20),
+                                    actionsPadding:
+                                        EdgeInsets.fromLTRB(0, 0, 0, 20),
                                   ),
                                 );
                               },
@@ -196,7 +208,15 @@ class _GiaoDienChoiCaNhanState extends State<GiaoDienChoiCaNhanScreen> {
                       Column(
                         children: [
                           InkWell(
-                            onTap: () {},
+                            onTap: () {
+                              Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                  builder: (context) =>
+                                      const TinhDiemCaNhanScreen(),
+                                ),
+                              );
+                            },
                             child: Container(
                                 width: 290,
                                 height: 70,

@@ -1,4 +1,5 @@
 import 'package:choi_cung_ohoo/main.dart';
+import 'package:choi_cung_ohoo/screens/doi_khang/che_do_doi_khang.dart';
 import 'package:flutter/material.dart';
 
 class InviteDoiKhangScreen extends StatefulWidget {
@@ -39,7 +40,9 @@ class _InviteDoiKhangScreenState extends State<InviteDoiKhangScreen> {
                   IconButton(
                     splashRadius: 1,
                     padding: EdgeInsets.zero,
-                    onPressed: () {},
+                    onPressed: () {
+                      Navigator.pop(context);
+                    },
                     icon: Icon(
                       Icons.arrow_back,
                       color: Color(0xFF6560FF),
@@ -164,7 +167,14 @@ class _InviteDoiKhangScreenState extends State<InviteDoiKhangScreen> {
                     borderRadius: BorderRadius.all(Radius.circular(10)),
                   ),
                 ),
-                onPressed: () {},
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => const DoiKhangScreen(),
+                    ),
+                  );
+                },
                 child: Text(
                   'Bắt đầu',
                   style: TextStyle(

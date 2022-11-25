@@ -1,3 +1,5 @@
+import 'package:choi_cung_ohoo/screens/cai_dat.dart';
+import 'package:choi_cung_ohoo/screens/tinh-diem-doi-khang.dart';
 import 'package:flutter/material.dart';
 import 'package:percent_indicator/percent_indicator.dart';
 
@@ -28,7 +30,9 @@ class _DoiKhangScreenState extends State<DoiKhangScreen> {
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
                   IconButton(
-                    onPressed: () {},
+                    onPressed: () {
+                      Navigator.pop(context);
+                    },
                     icon: Icon(
                       Icons.arrow_back,
                       color: Colors.white,
@@ -42,7 +46,14 @@ class _DoiKhangScreenState extends State<DoiKhangScreen> {
                     ),
                   ),
                   IconButton(
-                    onPressed: () {},
+                    onPressed: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => const CaiDatScreen(),
+                        ),
+                      );
+                    },
                     icon: Icon(
                       Icons.settings,
                       color: Colors.white,
@@ -146,7 +157,15 @@ class _DoiKhangScreenState extends State<DoiKhangScreen> {
                                   ),
                                   alignment: Alignment.centerLeft,
                                 ),
-                                onPressed: () {},
+                                onPressed: () {
+                                  Navigator.push(
+                                    context,
+                                    MaterialPageRoute(
+                                      builder: (context) =>
+                                          const TinhDiemDoiKhangScreen(),
+                                    ),
+                                  );
+                                },
                                 child: Text(
                                   'Đua xe',
                                   style: TextStyle(

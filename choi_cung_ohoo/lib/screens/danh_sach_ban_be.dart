@@ -32,7 +32,9 @@ class _DanhSachBanBeState extends State<DanhSachBanBeScreen> {
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   IconButton(
-                      onPressed: () {},
+                      onPressed: () {
+                        Navigator.pop(context);
+                      },
                       icon: Icon(
                         Icons.arrow_back,
                         size: 25,

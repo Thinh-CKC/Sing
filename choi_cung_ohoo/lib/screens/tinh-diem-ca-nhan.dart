@@ -1,4 +1,5 @@
 import 'package:choi_cung_ohoo/components/group127.dart';
+import 'package:choi_cung_ohoo/screens/giao_dien_sanh.dart';
 import 'package:flutter/material.dart';
 import 'package:choi_cung_ohoo/main.dart';
 import 'package:choi_cung_ohoo/components/avatar3.dart';
@@ -230,7 +231,14 @@ class _TinhDiemCaNhanScreenState extends State<TinhDiemCaNhanScreen> {
               Column(
                 children: [
                   InkWell(
-                    onTap: () {},
+                    onTap: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => const LobbyScreen(),
+                        ),
+                      );
+                    },
                     child: Container(
                       alignment: Alignment.center,
                       margin: EdgeInsets.fromLTRB(10, 20, 0, 0),

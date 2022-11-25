@@ -1,5 +1,7 @@
 import 'package:choi_cung_ohoo/components/group127.dart';
 import 'package:choi_cung_ohoo/components/logo.dart';
+import 'package:choi_cung_ohoo/screens/doi_khang/che_do_doi_khang.dart';
+import 'package:choi_cung_ohoo/screens/doi_khang/moi_nguoi_choi.dart';
 import 'package:flutter/material.dart';
 import 'package:choi_cung_ohoo/main.dart';
 import 'package:choi_cung_ohoo/components/map.dart';
@@ -39,7 +41,9 @@ class _TimDoiThuScreenState extends State<TimDoiThuScreen> {
                     Row(
                       children: [
                         IconButton(
-                            onPressed: () {},
+                            onPressed: () {
+                              Navigator.pop(context);
+                            },
                             icon: Icon(
                               Icons.arrow_back,
                               size: 25,
@@ -62,7 +66,15 @@ class _TimDoiThuScreenState extends State<TimDoiThuScreen> {
                     Row(
                       children: [
                         IconButton(
-                            onPressed: () {},
+                            onPressed: () {
+                              Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                  builder: (context) =>
+                                      const InviteDoiKhangScreen(),
+                                ),
+                              );
+                            },
                             icon: Icon(
                               Icons.people,
                               size: 25,
@@ -83,7 +95,14 @@ class _TimDoiThuScreenState extends State<TimDoiThuScreen> {
             Column(
               children: [
                 InkWell(
-                  onTap: () {},
+                  onTap: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => const DoiKhangScreen(),
+                      ),
+                    );
+                  },
                   child: Container(
                     alignment: Alignment.center,
                     margin: EdgeInsets.fromLTRB(10, 5, 0, 0),

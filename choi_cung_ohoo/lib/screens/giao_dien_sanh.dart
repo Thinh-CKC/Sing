@@ -1,5 +1,11 @@
+import 'package:choi_cung_ohoo/screens/cai_dat.dart';
+import 'package:choi_cung_ohoo/screens/danh_sach_ban_be.dart';
+import 'package:choi_cung_ohoo/screens/giao_dien_choi_ca_nhan.dart';
+import 'package:choi_cung_ohoo/screens/tim-doi-thu.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
+
+import 'bang_xep_hang.dart';
 
 class LobbyScreen extends StatefulWidget {
   const LobbyScreen({Key? key}) : super(key: key);
@@ -110,7 +116,14 @@ class _LobbyScreenState extends State<LobbyScreen> {
                         splashRadius: 1,
                         padding: EdgeInsets.only(bottom: 20),
                         alignment: Alignment.topRight,
-                        onPressed: () {},
+                        onPressed: () {
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                              builder: (context) => const CaiDatScreen(),
+                            ),
+                          );
+                        },
                         icon: Icon(
                           Icons.settings,
                           shadows: <Shadow>[
@@ -287,7 +300,15 @@ class _LobbyScreenState extends State<LobbyScreen> {
                                     ),
                                     padding: EdgeInsets.only(left: 5, right: 5),
                                   ),
-                                  onPressed: () {},
+                                  onPressed: () {
+                                    Navigator.push(
+                                      context,
+                                      MaterialPageRoute(
+                                        builder: (context) =>
+                                            const BangXepHangScreen(),
+                                      ),
+                                    );
+                                  },
                                   child: Image(
                                     image: AssetImage('images/icons/award.png'),
                                     width: 27,
@@ -321,7 +342,15 @@ class _LobbyScreenState extends State<LobbyScreen> {
                                     ),
                                     padding: EdgeInsets.only(left: 5, right: 5),
                                   ),
-                                  onPressed: () {},
+                                  onPressed: () {
+                                    Navigator.push(
+                                      context,
+                                      MaterialPageRoute(
+                                        builder: (context) =>
+                                            const DanhSachBanBeScreen(),
+                                      ),
+                                    );
+                                  },
                                   child: Icon(
                                     Icons.people,
                                     color: Color(0xFF6560FF),
@@ -556,7 +585,14 @@ class _LobbyScreenState extends State<LobbyScreen> {
             Container(
               margin: EdgeInsets.fromLTRB(15, 10, 10, 0),
               child: InkWell(
-                onTap: () {},
+                onTap: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => const GiaoDienChoiCaNhanScreen(),
+                    ),
+                  );
+                },
                 child: Image(
                   image: AssetImage('images/buttons/funny.png'),
                 ),
@@ -596,7 +632,14 @@ class _LobbyScreenState extends State<LobbyScreen> {
             Container(
               margin: EdgeInsets.fromLTRB(15, 10, 10, 0),
               child: InkWell(
-                onTap: () {},
+                onTap: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => const TimDoiThuScreen(),
+                    ),
+                  );
+                },
                 child: Image(
                   image: AssetImage('images/buttons/battle.png'),
                 ),
