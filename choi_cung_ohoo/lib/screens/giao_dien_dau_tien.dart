@@ -26,108 +26,119 @@ class _FirstScreenState extends State<FirstScreen> {
         child: Column(
           children: [
             Container(
-              margin: EdgeInsets.fromLTRB(0, 135, 0, 0),
+              margin: EdgeInsets.fromLTRB(0, 100, 0, 0),
               child: Logo(),
             ),
-            Container(
-              margin: EdgeInsets.fromLTRB(0, 50, 0, 0),
-              decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(15),
-                boxShadow: [
-                  BoxShadow(
-                    color: Colors.black.withOpacity(0.2),
-                    offset: Offset(5, 5),
-                  )
-                ],
-              ),
-              child: ElevatedButton(
-                style: ElevatedButton.styleFrom(
-                  onPrimary: Colors.white,
-                  primary: Color(0xFFFF0088),
-                  minimumSize: Size(220, 65),
-                  padding: EdgeInsets.fromLTRB(0, 13, 0, 13),
-                  shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.all(Radius.circular(15)),
-                  ),
-                ),
-                onPressed: () {
-                  Navigator.push(
-                    context,
-                    MaterialPageRoute(
-                      builder: (context) => const SignInScreen(),
-                    ),
-                  );
-                },
-                child: Text(
-                  'ĐĂNG NHẬP',
-                  style: TextStyle(fontWeight: FontWeight.bold, fontSize: 18),
-                ),
-              ),
-            ),
-            Container(
-              margin: EdgeInsets.fromLTRB(0, 30, 0, 0),
-              decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(15),
-                boxShadow: [
-                  BoxShadow(
-                    color: Colors.black.withOpacity(0.2),
-                    offset: Offset(5, 5),
-                  ),
-                ],
-              ),
-              child: ElevatedButton(
-                style: ElevatedButton.styleFrom(
-                  onPrimary: Colors.white,
-                  primary: Colors.amber,
-                  minimumSize: Size(220, 65),
-                  padding: EdgeInsets.fromLTRB(0, 13, 0, 13),
-                  shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.all(Radius.circular(15)),
-                  ),
-                ),
-                onPressed: () {
-                  Navigator.push(
-                    context,
-                    MaterialPageRoute(
-                      builder: (context) => const SignUpScreen(),
-                    ),
-                  );
-                },
-                child: Text(
-                  'ĐĂNG KÝ',
-                  style: TextStyle(fontWeight: FontWeight.bold, fontSize: 18),
-                ),
-              ),
-            ),
-            Container(
-              margin: EdgeInsets.only(top: 195),
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.center,
+            Expanded(
+              child: Column(
                 children: [
-                  RichText(
-                    text: TextSpan(
-                      text: 'Copyright',
-                      style: TextStyle(fontSize: 12),
-                      children: [
-                        WidgetSpan(
-                          child: Padding(
-                            padding: EdgeInsets.fromLTRB(0, 0, 5, 1),
-                            child: Icon(
-                              Icons.copyright,
-                              color: Colors.white,
-                              size: 12,
-                            ),
-                          ),
+                  Container(
+                    margin: EdgeInsets.fromLTRB(0, 50, 0, 0),
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(15),
+                      boxShadow: [
+                        BoxShadow(
+                          color: Colors.black.withOpacity(0.2),
+                          offset: Offset(5, 5),
+                        )
+                      ],
+                    ),
+                    child: ElevatedButton(
+                      style: ElevatedButton.styleFrom(
+                        onPrimary: Colors.white,
+                        primary: Color(0xFFFF0088),
+                        minimumSize: Size(220, 65),
+                        padding: EdgeInsets.fromLTRB(0, 13, 0, 13),
+                        shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.all(Radius.circular(15)),
                         ),
-                        TextSpan(
-                          text: '2022 SING Studio',
-                          style: TextStyle(fontSize: 12),
+                      ),
+                      onPressed: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) => const SignInScreen(),
+                          ),
+                        );
+                      },
+                      child: Text(
+                        'ĐĂNG NHẬP',
+                        style: TextStyle(
+                            fontWeight: FontWeight.bold, fontSize: 18),
+                      ),
+                    ),
+                  ),
+                  Container(
+                    margin: EdgeInsets.fromLTRB(0, 20, 0, 0),
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(15),
+                      boxShadow: [
+                        BoxShadow(
+                          color: Colors.black.withOpacity(0.2),
+                          offset: Offset(5, 5),
                         ),
                       ],
                     ),
+                    child: ElevatedButton(
+                      style: ElevatedButton.styleFrom(
+                        onPrimary: Colors.white,
+                        primary: Colors.amber,
+                        minimumSize: Size(220, 65),
+                        padding: EdgeInsets.fromLTRB(0, 13, 0, 13),
+                        shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.all(Radius.circular(15)),
+                        ),
+                      ),
+                      onPressed: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) => const SignUpScreen(),
+                          ),
+                        );
+                      },
+                      child: Text(
+                        'ĐĂNG KÝ',
+                        style: TextStyle(
+                            fontWeight: FontWeight.bold, fontSize: 18),
+                      ),
+                    ),
                   ),
                 ],
               ),
+            ),
+            Column(
+              children: [
+                Container(
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      RichText(
+                        text: TextSpan(
+                          text: 'Copyright',
+                          style: TextStyle(fontSize: 12),
+                          children: [
+                            WidgetSpan(
+                              child: Padding(
+                                padding: EdgeInsets.fromLTRB(0, 0, 5, 1),
+                                child: Icon(
+                                  Icons.copyright,
+                                  color: Colors.white,
+                                  size: 12,
+                                ),
+                              ),
+                            ),
+                            TextSpan(
+                              text: '2022 SING Studio',
+                              style: TextStyle(fontSize: 12),
+                            ),
+                          ],
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+              ],
             ),
           ],
         ),
