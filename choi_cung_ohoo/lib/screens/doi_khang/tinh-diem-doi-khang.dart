@@ -1,6 +1,6 @@
 import 'package:choi_cung_ohoo/screens/giao_dien_dau_tien.dart';
 import 'package:choi_cung_ohoo/screens/giao_dien_sanh.dart';
-import 'package:choi_cung_ohoo/screens/tim-doi-thu.dart';
+import 'package:choi_cung_ohoo/screens/doi_khang/tim-doi-thu.dart';
 import 'package:flutter/material.dart';
 import 'package:choi_cung_ohoo/main.dart';
 

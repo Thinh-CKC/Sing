@@ -1,7 +1,7 @@
 import 'package:choi_cung_ohoo/screens/cai_dat.dart';
 import 'package:choi_cung_ohoo/screens/giao_dien_sanh.dart';
 import 'package:choi_cung_ohoo/screens/ho_so.dart';
-import 'package:choi_cung_ohoo/screens/tinh-diem-ca-nhan.dart';
+import 'package:choi_cung_ohoo/screens/ca_nhan/tinh-diem-ca-nhan.dart';
 import 'package:flutter/material.dart';
 
 class GiaoDienChoiCaNhanScreen extends StatefulWidget {

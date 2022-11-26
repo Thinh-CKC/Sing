@@ -1,5 +1,5 @@
 import 'package:choi_cung_ohoo/screens/cai_dat.dart';
-import 'package:choi_cung_ohoo/screens/tinh-diem-doi-khang.dart';
+import 'package:choi_cung_ohoo/screens/doi_khang/tinh-diem-doi-khang.dart';
 import 'package:flutter/material.dart';
 import 'package:percent_indicator/percent_indicator.dart';
 
