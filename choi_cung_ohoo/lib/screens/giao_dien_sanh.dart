@@ -1,6 +1,7 @@
 import 'package:choi_cung_ohoo/screens/cai_dat.dart';
 import 'package:choi_cung_ohoo/screens/danh_sach_ban_be.dart';
 import 'package:choi_cung_ohoo/screens/giao_dien_choi_ca_nhan.dart';
+import 'package:choi_cung_ohoo/screens/ho_so.dart';
 import 'package:choi_cung_ohoo/screens/tim-doi-thu.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
@@ -37,7 +38,14 @@ class _LobbyScreenState extends State<LobbyScreen> {
                           Column(
                             children: [
                               InkWell(
-                                onTap: () {},
+                                onTap: () {
+                                  Navigator.push(
+                                    context,
+                                    MaterialPageRoute(
+                                      builder: (context) => const HoSoScreen(),
+                                    ),
+                                  );
+                                },
                                 child: Container(
                                   width: 50,
                                   height: 50,

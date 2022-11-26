@@ -10,31 +10,24 @@ class HoSoScreen extends StatefulWidget {
 
 class _HoSostate extends State<HoSoScreen> {
   TabBar get _tabBar => TabBar(
-        labelColor: Colors.black,
-        unselectedLabelColor: Colors.black,
+        indicatorColor: Color(0xFF6560FF),
+        labelStyle: TextStyle(fontSize: 18),
+        labelColor: Color(0xFF6560FF),
+        unselectedLabelColor: Colors.grey,
         tabs: [
           Tab(
             child: Container(
-              child: Text(
-                'Mô tả',
-                style: TextStyle(fontSize: 18, color: Color(0xFF6560FF)),
-              ),
+              child: Text('Mô tả'),
             ),
           ),
           Tab(
             child: Container(
-              child: Text(
-                'Danh hiệu',
-                style: TextStyle(fontSize: 18, color: Color(0xFF6560FF)),
-              ),
+              child: Text('Danh hiệu'),
             ),
           ),
           Tab(
             child: Container(
-              child: Text(
-                'Lịch sử',
-                style: TextStyle(fontSize: 18, color: Color(0xFF6560FF)),
-              ),
+              child: Text('Lịch sử'),
             ),
           ),
         ],
@@ -58,61 +51,69 @@ class _HoSostate extends State<HoSoScreen> {
                     decoration: BoxDecoration(
                         boxShadow: [
                           BoxShadow(
-                              spreadRadius: 2,
-                              blurRadius: 1,
-                              offset: Offset(0, 1),
-                              color: Colors.grey.withOpacity(0.5))
+                            spreadRadius: 2,
+                            blurRadius: 1,
+                            offset: Offset(0, 1),
+                            color: Colors.grey.withOpacity(0.5),
+                          ),
                         ],
                         color: Colors.white,
                         borderRadius: BorderRadius.circular(50)),
-                    child: Row(children: [
-                      Column(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        children: [
-                          IconButton(
-                              onPressed: () {},
+                    child: Row(
+                      children: [
+                        Column(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: [
+                            IconButton(
+                              onPressed: () {
+                                Navigator.pop(context);
+                              },
                               icon: Icon(
                                 Icons.arrow_back,
                                 size: 25,
                                 color: Color(0xFF6560FF),
-                              ))
-                        ],
-                      ),
-                      Column(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        children: [
-                          Container(
-                            margin: EdgeInsets.fromLTRB(100, 0, 0, 0),
-                            child: Text(
-                              'Hồ Sơ',
-                              style: TextStyle(
-                                  color: Color(0xFF6560FF), fontSize: 20),
-                            ),
-                          ),
-                        ],
-                      ),
-                      Column(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        children: [
-                          Container(
-                            margin: EdgeInsets.fromLTRB(85, 0, 0, 0),
-                            child: IconButton(
-                              onPressed: () {
-                                Navigator.push(
-                                    context,
-                                    MaterialPageRoute(
-                                        builder: (context) => SuaHoSoScreen()));
-                              },
-                              icon: Icon(
-                                Icons.edit,
-                                size: 25,
-                                color: Color(0xFF6560FF),
                               ),
                             ),
-                          ),
-                        ],
-                      )
-                    ]),
+                          ],
+                        ),
+                        Column(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: [
+                            Container(
+                              margin: EdgeInsets.fromLTRB(100, 0, 0, 0),
+                              child: Text(
+                                'Hồ Sơ',
+                                style: TextStyle(
+                                    color: Color(0xFF6560FF), fontSize: 20),
+                              ),
+                            ),
+                          ],
+                        ),
+                        Column(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: [
+                            Container(
+                              margin: EdgeInsets.fromLTRB(85, 0, 0, 0),
+                              child: IconButton(
+                                onPressed: () {
+                                  Navigator.push(
+                                    context,
+                                    MaterialPageRoute(
+                                      builder: (context) => SuaHoSoScreen(),
+                                    ),
+                                  );
+                                },
+                                icon: Icon(
+                                  Icons.edit,
+                                  size: 25,
+                                  color: Color(0xFF6560FF),
+                                ),
+                              ),
+                            ),
+                          ],
+                        )
+                      ],
+                    ),
                   ),
                   Column(
                     children: [
@@ -156,7 +157,6 @@ class _HoSostate extends State<HoSoScreen> {
                 ],
               ),
             ),
-
             // the tab bar with two items
             Container(
               margin: EdgeInsets.fromLTRB(0, 65, 0, 0),
@@ -172,194 +172,196 @@ class _HoSostate extends State<HoSoScreen> {
                 backgroundColor: Colors.white,
               ),
             ),
-
             Expanded(
               child: TabBarView(
                 children: [
                   Container(
-                      margin: EdgeInsets.all(40),
+                    margin: EdgeInsets.all(40),
+                    child: Container(
+                      width: 100,
+                      height: 100,
+                      decoration: BoxDecoration(
+                        color: Colors.white,
+                        borderRadius: BorderRadius.circular(20),
+                        boxShadow: [
+                          BoxShadow(
+                            spreadRadius: 0,
+                            blurRadius: 0,
+                            offset: Offset(5, 5),
+                            color: Color(0xFF6560FF),
+                          ),
+                        ],
+                      ),
                       child: Container(
-                        width: 100,
-                        height: 100,
-                        decoration: BoxDecoration(
-                            color: Colors.white,
-                            borderRadius: BorderRadius.circular(20),
-                            boxShadow: [
-                              BoxShadow(
-                                  spreadRadius: 0,
-                                  blurRadius: 0,
-                                  offset: Offset(5, 5),
-                                  color: Color(0xFF6560FF))
-                            ]),
-                        child: Container(
-                          margin: EdgeInsets.fromLTRB(0, 10, 0, 0),
-                          child: Text(
-                            '- Sở thích: chạy xe > 80km/h ',
-                            style: TextStyle(
-                                color: Color(0xFFA2A2A2), fontSize: 15),
+                        margin: EdgeInsets.fromLTRB(10, 10, 10, 0),
+                        child: Text(
+                          '- Sở thích: chạy xe > 80km/h',
+                          style: TextStyle(
+                            color: Color(0xFFA2A2A2),
+                            fontSize: 15,
                           ),
                         ),
-                      )),
+                      ),
+                    ),
+                  ),
                   Container(
-                      margin: EdgeInsets.all(40),
+                    margin: EdgeInsets.all(40),
+                    child: Container(
+                      width: 100,
+                      height: 100,
+                      decoration: BoxDecoration(
+                        color: Colors.white,
+                        borderRadius: BorderRadius.circular(20),
+                        boxShadow: [
+                          BoxShadow(
+                            spreadRadius: 0,
+                            blurRadius: 0,
+                            offset: Offset(5, 5),
+                            color: Color(0xFF6560FF),
+                          ),
+                        ],
+                      ),
                       child: Container(
-                        width: 100,
-                        height: 100,
-                        decoration: BoxDecoration(
-                            color: Colors.white,
-                            borderRadius: BorderRadius.circular(20),
-                            boxShadow: [
-                              BoxShadow(
-                                  spreadRadius: 0,
-                                  blurRadius: 0,
-                                  offset: Offset(5, 5),
-                                  color: Color(0xFF6560FF))
-                            ]),
-                        child: Container(
-                            margin: EdgeInsets.fromLTRB(0, 10, 0, 0),
-                            child: Column(
+                        margin: EdgeInsets.fromLTRB(10, 10, 10, 0),
+                        child: Column(
+                          children: [
+                            Row(
                               children: [
-                                Row(
+                                Column(
                                   children: [
-                                    Column(
+                                    Row(
                                       children: [
-                                        Container(
-                                          margin:
-                                              EdgeInsets.fromLTRB(0, 0, 0, 0),
-                                          // thung chua Danh hieu
-                                          child: Column(
-                                            children: [
-                                              Row(
-                                                children: [
-                                                  Container(
-                                                    width: 50,
-                                                    height: 51,
-                                                    decoration: BoxDecoration(
-                                                        image: DecorationImage(
-                                                      image: AssetImage(
-                                                          'images/rank/thien-tai.png'),
-                                                    )),
-                                                  )
-                                                ],
-                                              ),
-                                              Row(
-                                                children: [
-                                                  Container(
-                                                    margin: EdgeInsets.fromLTRB(
-                                                        0, 5, 0, 0),
-                                                    child: Text(
-                                                      'Thiên tài',
-                                                      style: TextStyle(
-                                                          color:
-                                                              Color(0xFFA2A2A2),
-                                                          fontSize: 20),
-                                                    ),
-                                                  ), //them thanh kinh nghiem o day
-                                                ],
-                                              ),
-                                            ],
+                                        Image(
+                                          width: 50,
+                                          height: 51,
+                                          image: AssetImage(
+                                              'images/rank/thien-tai.png'),
+                                          fit: BoxFit.cover,
+                                        ),
+                                      ],
+                                    ),
+                                    Row(
+                                      children: [
+                                        Padding(
+                                          padding: EdgeInsets.only(top: 5),
+                                          child: Text(
+                                            'Thiên tài',
+                                            style: TextStyle(
+                                              color: Color(0xFFA2A2A2),
+                                              fontSize: 20,
+                                            ),
                                           ),
                                         ),
                                       ],
                                     ),
                                   ],
                                 ),
-                                Container(
-                                  margin: EdgeInsets.fromLTRB(30, 30, 0, 0),
-                                  child: Row(
+                                //Kinh nghiem o day nay
+                                Column(
+                                  children: [],
+                                ),
+                              ],
+                            ),
+                            Container(
+                              margin: EdgeInsets.fromLTRB(15, 30, 15, 0),
+                              child: Row(
+                                mainAxisAlignment:
+                                    MainAxisAlignment.spaceBetween,
+                                children: [
+                                  Column(
                                     children: [
-                                      Column(
+                                      Row(
                                         children: [
-                                          Row(
-                                            children: [
-                                              Container(
-                                                child: Text('Hạng',
-                                                    style: TextStyle(
-                                                        fontSize: 20,
-                                                        color:
-                                                            Color(0xFFA2A2A2))),
-                                              )
-                                            ],
-                                          ),
-                                          Row(
-                                            children: [
-                                              Container(
-                                                margin: EdgeInsets.fromLTRB(
-                                                    10, 15, 0, 0),
-                                                alignment: Alignment.center,
-                                                child: Text(
-                                                  '30',
-                                                  style: TextStyle(
-                                                      color: Color(0xFFFF0088),
-                                                      fontSize: 20),
-                                                ),
-                                              )
-                                            ],
+                                          Container(
+                                            child: Text(
+                                              'Hạng',
+                                              style: TextStyle(
+                                                fontSize: 20,
+                                                color: Color(0xFFA2A2A2),
+                                              ),
+                                            ),
+                                          )
+                                        ],
+                                      ),
+                                      Row(
+                                        children: [
+                                          Container(
+                                            child: Text(
+                                              '30',
+                                              style: TextStyle(
+                                                color: Color(0xFFFF0088),
+                                                fontSize: 20,
+                                              ),
+                                            ),
                                           ),
                                         ],
                                       ),
-                                      Container(
-                                        margin:
-                                            EdgeInsets.fromLTRB(80, 0, 0, 0),
-                                        child: Column(
-                                          children: [
-                                            Row(
-                                              children: [
-                                                Container(
-                                                  child: Text('Trận thắng',
-                                                      style: TextStyle(
-                                                          fontSize: 20,
-                                                          color: Color(
-                                                              0xFFA2A2A2))),
-                                                )
-                                              ],
-                                            ),
-                                            Row(
-                                              children: [
-                                                Container(
-                                                  margin: EdgeInsets.fromLTRB(
-                                                      10, 15, 0, 0),
-                                                  child: Text(
-                                                    '50',
-                                                    style: TextStyle(
-                                                        color:
-                                                            Color(0xFFFF0088),
-                                                        fontSize: 20),
-                                                  ),
-                                                )
-                                              ],
-                                            ),
-                                          ],
-                                        ),
-                                      )
                                     ],
                                   ),
-                                )
-                              ],
-                            )),
-                      )),
+                                  Column(
+                                    children: [
+                                      Row(
+                                        children: [
+                                          Container(
+                                            child: Text(
+                                              'Trận thắng',
+                                              style: TextStyle(
+                                                fontSize: 20,
+                                                color: Color(0xFFA2A2A2),
+                                              ),
+                                            ),
+                                          )
+                                        ],
+                                      ),
+                                      Row(
+                                        children: [
+                                          Container(
+                                            child: Text(
+                                              '50',
+                                              style: TextStyle(
+                                                color: Color(0xFFFF0088),
+                                                fontSize: 20,
+                                              ),
+                                            ),
+                                          ),
+                                        ],
+                                      ),
+                                    ],
+                                  ),
+                                ],
+                              ),
+                            ),
+                          ],
+                        ),
+                      ),
+                    ),
+                  ),
                   Container(
                     margin: EdgeInsets.all(40),
                     child: Container(
-                        width: 100,
-                        height: 100,
-                        decoration: BoxDecoration(
-                            color: Colors.white,
-                            borderRadius: BorderRadius.circular(20),
-                            boxShadow: [
-                              BoxShadow(
-                                  spreadRadius: 0,
-                                  blurRadius: 0,
-                                  offset: Offset(5, 5),
-                                  color: Color(0xFF6560FF))
-                            ]),
-                        child: Container(
-                          child: Column(
-                            children: [
-                              CircularProgressIndicator(),
-                            ],
+                      width: 100,
+                      height: 100,
+                      decoration: BoxDecoration(
+                        color: Colors.white,
+                        borderRadius: BorderRadius.circular(20),
+                        boxShadow: [
+                          BoxShadow(
+                            spreadRadius: 0,
+                            blurRadius: 0,
+                            offset: Offset(5, 5),
+                            color: Color(0xFF6560FF),
                           ),
-                        )),
+                        ],
+                      ),
+                      child: Container(
+                        margin: EdgeInsets.only(top: 50),
+                        child: Column(
+                          children: [
+                            CircularProgressIndicator(),
+                          ],
+                        ),
+                      ),
+                    ),
                   ),
                 ],
               ),

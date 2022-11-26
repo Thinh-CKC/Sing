@@ -23,13 +23,14 @@ class _TinhDiemCaNhanScreenState extends State<TinhDiemCaNhanScreen> {
           child: Column(
             children: [
               Container(
-                margin: EdgeInsets.fromLTRB(20, 40, 0, 0),
+                margin: EdgeInsets.fromLTRB(15, 40, 15, 0),
                 width: 350,
-                height: 500,
+                height: 450,
                 decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(20),
                     image: DecorationImage(
                       image: AssetImage('images/confettibackground.png'),
+                      fit: BoxFit.contain,
                     ),
                     color: Color(0xFF6560FF)),
                 child: Container(
@@ -49,9 +50,11 @@ class _TinhDiemCaNhanScreenState extends State<TinhDiemCaNhanScreen> {
                             width: 150,
                             height: 150,
                             decoration: BoxDecoration(
-                                image: DecorationImage(
-                                    image: AssetImage(
-                                        'images/avatars/avatar-3.png'))),
+                              image: DecorationImage(
+                                image:
+                                    AssetImage('images/avatars/avatar-3.png'),
+                              ),
+                            ),
                           )
                         ],
                       ),
@@ -112,13 +115,14 @@ class _TinhDiemCaNhanScreenState extends State<TinhDiemCaNhanScreen> {
                           Column(
                             children: [
                               Container(
-                                margin: EdgeInsets.fromLTRB(38, 0, 0, 0),
+                                margin: EdgeInsets.fromLTRB(0, 0, 0, 0),
                                 width: 117,
                                 height: 117,
                                 decoration: BoxDecoration(
-                                    image: DecorationImage(
-                                        image:
-                                            AssetImage('images/counter.png'))),
+                                  image: DecorationImage(
+                                    image: AssetImage('images/counter.png'),
+                                  ),
+                                ),
                               )
                             ],
                           ),

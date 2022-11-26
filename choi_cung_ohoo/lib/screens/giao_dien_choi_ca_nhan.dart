@@ -19,86 +19,79 @@ class _GiaoDienChoiCaNhanState extends State<GiaoDienChoiCaNhanScreen> {
       body: Container(
         decoration: BoxDecoration(
           image: DecorationImage(
-              image: AssetImage('images/backgrounds/background.png'),
-              fit: BoxFit.cover),
+            image: AssetImage('images/backgrounds/background.png'),
+            fit: BoxFit.fill,
+          ),
         ),
         child: Column(
           children: [
             Container(
+              margin: EdgeInsets.fromLTRB(10, 20, 0, 0),
               child: Row(children: [
                 Column(
                   children: [
-                    Container(
-                        margin: EdgeInsets.fromLTRB(10, 20, 0, 0),
-                        child: Container(
-                          child: IconButton(
+                    IconButton(
+                      onPressed: () {
+                        showDialog(
+                          context: context,
+                          builder: (ctx) => AlertDialog(
+                            iconPadding: EdgeInsets.fromLTRB(240, 0, 0, 0),
+                            icon: IconButton(
                               onPressed: () {
-                                showDialog(
-                                  context: context,
-                                  builder: (ctx) => AlertDialog(
-                                    iconPadding:
-                                        EdgeInsets.fromLTRB(240, 0, 0, 0),
-                                    icon: IconButton(
-                                      onPressed: () {
-                                        Navigator.pop(context);
-                                      },
-                                      icon: Icon(
-                                        Icons.close,
-                                        color: Color(0xFFFF0088),
-                                        size: 25,
-                                      ),
-                                    ),
-                                    content: Container(
-                                      width: 184,
-                                      height: 55,
-                                      child: Text(
-                                        'Bạn có chắc muốn thoát trận?',
-                                        style: TextStyle(
-                                            color: Color(0xFF707070),
-                                            fontSize: 20),
-                                        textAlign: TextAlign.center,
-                                      ),
-                                    ),
-                                    actions: <Widget>[
-                                      TextButton(
-                                          onPressed: () {
-                                            Navigator.push(
-                                              context,
-                                              MaterialPageRoute(
-                                                builder: (context) =>
-                                                    const LobbyScreen(),
-                                              ),
-                                            );
-                                          },
-                                          child: Container(
-                                            margin: EdgeInsets.fromLTRB(
-                                                0, 0, 65, 0),
-                                            height: 40,
-                                            width: 130,
-                                            alignment: Alignment.center,
-                                            decoration: BoxDecoration(
-                                                borderRadius:
-                                                    BorderRadius.circular(10),
-                                                color: Color(0xFFFF0088)),
-                                            child: Text(
-                                              'Thoát',
-                                              style: TextStyle(
-                                                  color: Colors.white,
-                                                  fontSize: 20),
-                                            ),
-                                          )),
-                                    ],
-                                    actionsPadding:
-                                        EdgeInsets.fromLTRB(0, 0, 0, 20),
-                                  ),
-                                );
+                                Navigator.pop(context);
                               },
                               icon: Icon(
-                                Icons.arrow_back,
+                                Icons.close,
+                                color: Color(0xFFFF0088),
                                 size: 25,
-                                color: Colors.white,
-                              )),
-                        ))
+                              ),
+                            ),
+                            content: Container(
+                              width: 184,
+                              height: 55,
+                              child: Text(
+                                'Bạn có chắc muốn thoát trận?',
+                                style: TextStyle(
+                                    color: Color(0xFF707070), fontSize: 20),
+                                textAlign: TextAlign.center,
+                              ),
+                            ),
+                            actions: <Widget>[
+                              TextButton(
+                                  onPressed: () {
+                                    Navigator.push(
+                                      context,
+                                      MaterialPageRoute(
+                                        builder: (context) =>
+                                            const LobbyScreen(),
+                                      ),
+                                    );
+                                  },
+                                  child: Container(
+                                    margin: EdgeInsets.fromLTRB(0, 0, 65, 0),
+                                    height: 40,
+                                    width: 130,
+                                    alignment: Alignment.center,
+                                    decoration: BoxDecoration(
+                                        borderRadius: BorderRadius.circular(10),
+                                        color: Color(0xFFFF0088)),
+                                    child: Text(
+                                      'Thoát',
+                                      style: TextStyle(
+                                          color: Colors.white, fontSize: 20),
+                                    ),
+                                  )),
+                            ],
+                            actionsPadding: EdgeInsets.fromLTRB(0, 0, 0, 20),
+                          ),
+                        );
+                      },
+                      icon: Icon(
+                        Icons.arrow_back,
+                        size: 25,
+                        color: Colors.white,
+                      ),
+                      ),
                   ],
                 ),
                 Column(

@@ -13,8 +13,8 @@ class _LogoState extends State<Logo> {
     return Row(mainAxisAlignment: MainAxisAlignment.center, children: [
       Image(
         image: AssetImage('images/logo.png'),
-        width: 340,
-        height: 190,
+        width: 339,
+        height: 189,
       ),
     ]);
   }
