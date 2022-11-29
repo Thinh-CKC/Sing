@@ -132,7 +132,9 @@ class _SuaHoSoState extends State<SuaHoSoScreen> {
                         )),
                         backgroundColor: MaterialStateProperty.all<Color>(
                             Color(0xFF6560FF))),
-                    onPressed: () {},
+                    onPressed: () {
+                      Navigator.pop(context);
+                    },
                     child: Container(
                       child: Text(
                         'Xác nhận',
