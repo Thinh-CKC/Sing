@@ -1,4 +1,5 @@
 import 'package:choi_cung_ohoo/screens/ho_so.dart';
+import 'package:choi_cung_ohoo/screens/them_ban.dart';
 import 'package:flutter/material.dart';
 
 class DanhSachBanBeScreen extends StatefulWidget {
@@ -27,7 +28,9 @@ class _DanhSachBanBeState extends State<DanhSachBanBeScreen> {
                   offset: Offset(0, 1),
                   color: Colors.grey.withOpacity(0.5))
             ], color: Colors.white, borderRadius: BorderRadius.circular(50)),
-            child: Row(children: [
+            child: Row(mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+              
               Column(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
@@ -43,10 +46,10 @@ class _DanhSachBanBeState extends State<DanhSachBanBeScreen> {
                 ],
               ),
               Column(
-                mainAxisAlignment: MainAxisAlignment.center,
+                // mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   Container(
-                    margin: EdgeInsets.fromLTRB(95, 0, 0, 0),
+                    margin: EdgeInsets.fromLTRB(0, 10, 0, 0),
                     child: Text(
                       'Bạn bè',
                       style: TextStyle(color: Color(0xFF6560FF), fontSize: 20),
@@ -55,13 +58,17 @@ class _DanhSachBanBeState extends State<DanhSachBanBeScreen> {
                 ],
               ),
               Column(
-                mainAxisAlignment: MainAxisAlignment.center,
+                // mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   Container(
-                    margin: EdgeInsets.fromLTRB(85, 0, 0, 0),
+                    // margin: EdgeInsets.fromLTRB(85, 0, 0, 0),
                     child: IconButton(
                       onPressed: () {
-                        // Navigator.push(context,MaterialPageRoute(builder: (context) => ...Screen()));
+                       Navigator.push(
+                                        context,
+                                        MaterialPageRoute(
+                                            builder: (context) =>
+                                                ThemBanScreen()));
                       },
                       icon: Icon(
                         Icons.person_add,
@@ -148,11 +155,11 @@ class _DanhSachBanBeState extends State<DanhSachBanBeScreen> {
                                         )
                                       ],
                                     ),
-                                    Column(
+                                    Column( mainAxisAlignment: MainAxisAlignment.spaceBetween,
                                       children: [
                                         Container(
                                           margin: EdgeInsets.fromLTRB(
-                                              130, 12, 0, 0),
+                                              120, 0, 0, 0),
                                           child: IconButton(
                                             onPressed: () {},
                                             icon: Icon(
@@ -200,11 +207,11 @@ class _DanhSachBanBeState extends State<DanhSachBanBeScreen> {
                                         )
                                       ],
                                     ),
-                                    Column(
+                                    Column( mainAxisAlignment: MainAxisAlignment.spaceBetween,
                                       children: [
                                         Container(
-                                          margin: EdgeInsets.fromLTRB(
-                                              130, 12, 0, 0),
+                                         margin: EdgeInsets.fromLTRB(
+                                              120, 0, 0, 0),
                                           child: IconButton(
                                             onPressed: () {},
                                             icon: Icon(
@@ -252,11 +259,11 @@ class _DanhSachBanBeState extends State<DanhSachBanBeScreen> {
                                         )
                                       ],
                                     ),
-                                    Column(
+                                    Column( mainAxisAlignment: MainAxisAlignment.spaceBetween,
                                       children: [
                                         Container(
                                           margin: EdgeInsets.fromLTRB(
-                                              130, 12, 0, 0),
+                                              120, 0, 0, 0),
                                           child: IconButton(
                                             onPressed: () {},
                                             icon: Icon(
@@ -304,11 +311,11 @@ class _DanhSachBanBeState extends State<DanhSachBanBeScreen> {
                                         )
                                       ],
                                     ),
-                                    Column(
+                                    Column(mainAxisAlignment: MainAxisAlignment.spaceBetween,
                                       children: [
                                         Container(
                                           margin: EdgeInsets.fromLTRB(
-                                              130, 12, 0, 0),
+                                              120, 0, 0, 0),
                                           child: IconButton(
                                             onPressed: () {},
                                             icon: Icon(
@@ -356,11 +363,11 @@ class _DanhSachBanBeState extends State<DanhSachBanBeScreen> {
                                         )
                                       ],
                                     ),
-                                    Column(
+                                    Column(mainAxisAlignment: MainAxisAlignment.spaceBetween,
                                       children: [
                                         Container(
                                           margin: EdgeInsets.fromLTRB(
-                                              130, 12, 0, 0),
+                                              120, 0, 0, 0),
                                           child: IconButton(
                                             onPressed: () {},
                                             icon: Icon(
@@ -408,11 +415,11 @@ class _DanhSachBanBeState extends State<DanhSachBanBeScreen> {
                                         )
                                       ],
                                     ),
-                                    Column(
+                                    Column(mainAxisAlignment: MainAxisAlignment.spaceBetween,
                                       children: [
                                         Container(
                                           margin: EdgeInsets.fromLTRB(
-                                              130, 12, 0, 0),
+                                              120, 0, 0, 0),
                                           child: IconButton(
                                             onPressed: () {},
                                             icon: Icon(
@@ -421,7 +428,7 @@ class _DanhSachBanBeState extends State<DanhSachBanBeScreen> {
                                               color: Color(0xFFFF0088),
                                             ),
                                           ),
-                                        )
+                                        ),
                                       ],
                                     )
                                   ],
@@ -460,11 +467,11 @@ class _DanhSachBanBeState extends State<DanhSachBanBeScreen> {
                                         )
                                       ],
                                     ),
-                                    Column(
+                                    Column(mainAxisAlignment: MainAxisAlignment.spaceBetween,
                                       children: [
                                         Container(
                                           margin: EdgeInsets.fromLTRB(
-                                              130, 12, 0, 0),
+                                              120, 0, 0, 0),
                                           child: IconButton(
                                             onPressed: () {},
                                             icon: Icon(
@@ -512,11 +519,11 @@ class _DanhSachBanBeState extends State<DanhSachBanBeScreen> {
                                         )
                                       ],
                                     ),
-                                    Column(
+                                    Column(mainAxisAlignment: MainAxisAlignment.spaceBetween,
                                       children: [
                                         Container(
                                           margin: EdgeInsets.fromLTRB(
-                                              130, 12, 0, 0),
+                                              120, 0, 0, 0),
                                           child: IconButton(
                                             onPressed: () {},
                                             icon: Icon(

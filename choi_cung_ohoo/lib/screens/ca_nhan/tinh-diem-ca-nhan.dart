@@ -70,12 +70,12 @@ class _TinhDiemCaNhanScreenState extends State<TinhDiemCaNhanScreen> {
                           )
                         ],
                       ),
-                      Row(
+                      Row(mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [
                           Column(
                             children: [
                               Container(
-                                margin: EdgeInsets.fromLTRB(11, 95, 0, 20),
+                                margin: EdgeInsets.fromLTRB(0, 95, 0, 0),
                                 width: 70,
                                 height: 20,
                                 decoration: BoxDecoration(
@@ -96,7 +96,7 @@ class _TinhDiemCaNhanScreenState extends State<TinhDiemCaNhanScreen> {
                                       children: [
                                         Container(
                                           margin:
-                                              EdgeInsets.fromLTRB(5, 0, 10, 0),
+                                              EdgeInsets.fromLTRB(0, 0, 0, 0),
                                           child: Text(
                                             '2/10',
                                             style: TextStyle(
@@ -129,7 +129,7 @@ class _TinhDiemCaNhanScreenState extends State<TinhDiemCaNhanScreen> {
                           Column(
                             children: [
                               Container(
-                                margin: EdgeInsets.fromLTRB(30, 95, 0, 20),
+                                margin: EdgeInsets.fromLTRB(0, 95, 0, 0),
                                 width: 70,
                                 height: 20,
                                 decoration: BoxDecoration(

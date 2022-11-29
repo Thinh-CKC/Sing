@@ -1,4 +1,6 @@
+import 'package:choi_cung_ohoo/screens/ca_nhan/level_choi_cong_nghe_thong_tin.dart';
 import 'package:choi_cung_ohoo/screens/cai_dat.dart';
+import 'package:choi_cung_ohoo/screens/che_do_du_muc.dart';
 import 'package:choi_cung_ohoo/screens/danh_sach_ban_be.dart';
 import 'package:choi_cung_ohoo/screens/ca_nhan/giao_dien_choi_ca_nhan.dart';
 import 'package:choi_cung_ohoo/screens/ho_so.dart';
@@ -543,7 +545,15 @@ class _LobbyScreenState extends State<LobbyScreen> {
                   Container(
                     margin: EdgeInsets.only(right: 10),
                     child: InkWell(
-                      onTap: () {},
+                      onTap: () {
+                        Navigator.push(
+                                      context,
+                                      MaterialPageRoute(
+                                        builder: (context) =>
+                                            const LevelChoiCongNgheThongTinScreen(),
+                                      ),
+                                    );
+                      },
                       child: Image(
                         image: AssetImage('images/buttons/it.png'),
                       ),
@@ -687,7 +697,14 @@ class _LobbyScreenState extends State<LobbyScreen> {
             Container(
               margin: EdgeInsets.fromLTRB(15, 10, 10, 20),
               child: InkWell(
-                onTap: () {},
+                onTap: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => const CheDoDuMucScreen(),
+                    ),
+                  );
+                },
                 child: Image(
                   image: AssetImage('images/buttons/adventure.png'),
                 ),
