@@ -75,6 +75,8 @@ flutter:
 
     - images/icons/award.png
     - images/icons/chat.png
+    - images/items/exp.png
+    - images/items/exp-danh-hieu.png
 
     - images/rank/bac-hoc.png
     - images/rank/nghiep-du.png
@@ -120,6 +122,12 @@ flutter:
     - images/avatars/avatar-23.png
     - images/avatars/avatar-24.png
     - images/avatars/avatar-25.png
+    - images/chedodumuc/dailoan.png
+    - images/chedodumuc/trungquoc.png
+    - images/chedodumuc/vietnam.png
+    - images/chedodumuc/nhatban.png
+    - images/chedodumuc/thailan.png
+    - images/buttons/ketban.png
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware
