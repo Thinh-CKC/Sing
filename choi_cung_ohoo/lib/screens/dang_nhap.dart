@@ -1,205 +1,238 @@
+import 'package:animated_button/animated_button.dart';
 import 'package:choi_cung_ohoo/screens/dang_ky.dart';
 import 'package:choi_cung_ohoo/screens/giao_dien_dau_tien.dart';
 import 'package:choi_cung_ohoo/screens/giao_dien_sanh.dart';
+import 'package:choi_cung_ohoo/screens/luu_tai_khoan.dart';
 import 'package:flutter/material.dart';
 import '../components/logo.dart';
 
-class SignInScreen extends StatefulWidget {
-  const SignInScreen({Key? key}) : super(key: key);
+class DangNhap extends StatefulWidget {
+  const DangNhap({Key? key}) : super(key: key);
 
   @override
-  State<SignInScreen> createState() => _SignInScreenState();
+  State<DangNhap> createState() => _DangNhapState();
 }
 
-class _SignInScreenState extends State<SignInScreen> {
+class _DangNhapState extends State<DangNhap> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Container(
-        width: MediaQuery.of(context).size.width,
-        height: MediaQuery.of(context).size.height,
-        decoration: BoxDecoration(
-          image: DecorationImage(
+      body: SingleChildScrollView(
+        child: Container(
+          width: MediaQuery.of(context).size.width,
+          height: MediaQuery.of(context).size.height,
+          decoration: BoxDecoration(
+            image: DecorationImage(
               image: AssetImage('images/backgrounds/background.png'),
-              fit: BoxFit.fill),
-        ),
-        child: Column(
-          children: [
-            Container(
-              margin: EdgeInsets.fromLTRB(5, 15, 0, 0),
-              child: Row(
-                children: [
-                  IconButton(
-                    onPressed: () {
-                      Navigator.pop(
-                        context,
-                        MaterialPageRoute(
-                            builder: (context) => const FirstScreen()),
-                      );
-                    },
-                    icon: Icon(
-                      Icons.arrow_back,
-                      color: Colors.white,
-                      shadows: <Shadow>[
-                        Shadow(
-                          color: Colors.black.withOpacity(0.2),
-                          blurRadius: 0,
-                          offset: Offset(2, 2),
-                        ),
-                      ],
-                    ),
-                  ),
-                ],
-              ),
+              fit: BoxFit.fill,
             ),
-            Container(
-              margin: EdgeInsets.only(top: 30),
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  Text(
-                    'ĐĂNG NHẬP',
-                    style: TextStyle(
+          ),
+          child: Column(
+            children: [
+              Container(
+                margin: EdgeInsets.only(top: 20),
+                child: Row(
+                  children: [
+                    IconButton(
+                      onPressed: () {
+                        Navigator.pop(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => const FirstScreen()),
+                        );
+                      },
+                      icon: Icon(
+                        Icons.arrow_back,
+                        color: Colors.white,
+                        shadows: <Shadow>[
+                          Shadow(
+                            color: Colors.black.withOpacity(0.2),
+                            blurRadius: 0,
+                            offset: Offset(2, 2),
+                          ),
+                        ],
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+              Container(
+                margin: EdgeInsets.only(top: 30),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    Text(
+                      'ĐĂNG NHẬP',
+                      style: TextStyle(
                         color: Colors.white,
                         fontWeight: FontWeight.bold,
-                        fontSize: 28),
-                  ),
-                ],
-              ),
-            ),
-            Container(
-              width: 260,
-              height: 43,
-              decoration: BoxDecoration(
-                color: Colors.white,
-                borderRadius: BorderRadius.circular(40),
-                boxShadow: [
-                  BoxShadow(
-                    color: Colors.black.withOpacity(0.5),
-                    offset: Offset(0, 3),
-                    blurRadius: 6,
-                  ),
-                ],
-              ),
-              padding: EdgeInsets.fromLTRB(20, 0, 0, 0),
-              margin: EdgeInsets.only(top: 100),
-              child: TextField(
-                style: TextStyle(
-                  color: Color(0xFFA2A2A2),
-                  fontWeight: FontWeight.bold,
-                  fontSize: 20,
-                ),
-                decoration: InputDecoration(
-                  contentPadding: EdgeInsets.fromLTRB(-10, 0, 30, 0),
-                  border: OutlineInputBorder(
-                    borderSide: BorderSide(width: 0, style: BorderStyle.none),
-                  ),
-                  icon: Icon(Icons.person, color: Color(0xFF6560FF), size: 35),
-                  hintText: 'Tài khoản',
-                  hintStyle: TextStyle(color: Color(0xFFA2A2A2)),
-                ),
-              ),
-            ),
-            Container(
-              width: 260,
-              height: 43,
-              decoration: BoxDecoration(
-                color: Colors.white,
-                borderRadius: BorderRadius.circular(40),
-                boxShadow: [
-                  BoxShadow(
-                    color: Colors.black.withOpacity(0.5),
-                    offset: Offset(0, 3),
-                    blurRadius: 6,
-                  ),
-                ],
-              ),
-              padding: EdgeInsets.fromLTRB(22, 0, 0, 0),
-              margin: EdgeInsets.only(top: 25),
-              child: TextField(
-                obscureText: true,
-                style: TextStyle(
-                  color: Color(0xFFA2A2A2),
-                  fontWeight: FontWeight.bold,
-                  fontSize: 20,
-                ),
-                decoration: InputDecoration(
-                  contentPadding: EdgeInsets.fromLTRB(-8, 0, 0, 0),
-                  border: OutlineInputBorder(
-                    borderSide: BorderSide(width: 0, style: BorderStyle.none),
-                  ),
-                  icon: Icon(Icons.lock, color: Color(0xFF6560FF), size: 32),
-                  hintText: 'Mật khẩu',
-                  hintStyle: TextStyle(color: Color(0xFFA2A2A2)),
-                ),
-              ),
-            ),
-            Container(
-              margin: EdgeInsets.only(top: 50),
-              decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(20),
-                boxShadow: [
-                  BoxShadow(
-                    color: Colors.black.withOpacity(0.2),
-                    offset: Offset(5, 5),
-                  ),
-                ],
-              ),
-              child: ElevatedButton(
-                style: ElevatedButton.styleFrom(
-                  onPrimary: Colors.white,
-                  primary: Color(0xFFFF0088),
-                  minimumSize: Size(183, 70),
-                  shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.all(Radius.circular(20)),
-                  ),
-                ),
-                onPressed: () {
-                  Navigator.push(
-                    context,
-                    MaterialPageRoute(
-                      builder: (context) => const LobbyScreen(),
+                        fontSize: 30,
+                      ),
                     ),
-                  );
-                },
-                child: Text(
-                  'ĐĂNG NHẬP',
-                  style: TextStyle(fontWeight: FontWeight.bold, fontSize: 20),
+                  ],
                 ),
               ),
-            ),
-            Expanded(
-              child: Column(
+              Container(
+                width: 300,
+                height: 45,
+                padding: EdgeInsets.only(left: 20, right: 30),
+                margin: EdgeInsets.only(top: 80),
+                decoration: BoxDecoration(
+                  color: Colors.white,
+                  borderRadius: BorderRadius.circular(40),
+                  boxShadow: [
+                    BoxShadow(
+                      color: Colors.black.withOpacity(0.5),
+                      offset: Offset(0, 3),
+                      blurRadius: 6,
+                    ),
+                  ],
+                ),
+                child: TextField(
+                  style: TextStyle(
+                    color: Color(0xFFA2A2A2),
+                    fontWeight: FontWeight.bold,
+                    fontSize: 20,
+                  ),
+                  cursorColor: Color(0xFFA2A2A2),
+                  decoration: InputDecoration(
+                    contentPadding: EdgeInsets.only(left: -10),
+                    border: OutlineInputBorder(
+                      borderSide: BorderSide(width: 0, style: BorderStyle.none),
+                    ),
+                    icon:
+                        Icon(Icons.person, color: Color(0xFF6560FF), size: 35),
+                    hintText: 'Tài khoản',
+                    hintStyle: TextStyle(color: Color(0xFFA2A2A2)),
+                  ),
+                ),
+              ),
+              Container(
+                width: 300,
+                height: 45,
+                padding: EdgeInsets.only(left: 22, right: 30),
+                margin: EdgeInsets.only(top: 25),
+                decoration: BoxDecoration(
+                  color: Colors.white,
+                  borderRadius: BorderRadius.circular(40),
+                  boxShadow: [
+                    BoxShadow(
+                      color: Colors.black.withOpacity(0.5),
+                      offset: Offset(0, 3),
+                      blurRadius: 6,
+                    ),
+                  ],
+                ),
+                child: TextField(
+                  obscureText: true,
+                  style: TextStyle(
+                    color: Color(0xFFA2A2A2),
+                    fontWeight: FontWeight.bold,
+                    fontSize: 20,
+                  ),
+                  cursorColor: Color(0xFFA2A2A2),
+                  decoration: InputDecoration(
+                    contentPadding: EdgeInsets.only(left: -8),
+                    border: OutlineInputBorder(
+                      borderSide: BorderSide(width: 0, style: BorderStyle.none),
+                    ),
+                    icon: Icon(Icons.lock, color: Color(0xFF6560FF), size: 32),
+                    hintText: 'Mật khẩu',
+                    hintStyle: TextStyle(color: Color(0xFFA2A2A2)),
+                  ),
+                ),
+              ),
+              Container(
+                margin: EdgeInsets.only(top: 50),
+                child: AnimatedButton(
+                  width: 220,
+                  height: 65,
+                  color: Color(0xFFFF0088),
+                  child: Text(
+                    'Đăng nhập',
+                    style: TextStyle(
+                      fontSize: 20,
+                      color: Colors.white,
+                      fontWeight: FontWeight.bold,
+                    ),
+                  ),
+                  onPressed: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => const LuuTaiKhoan(),
+                      ),
+                    );
+                  },
+                ),
+              ),
+              Expanded(
+                child: Column(
+                  children: [
+                    Container(
+                      margin: EdgeInsets.only(top: 10),
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          Text(
+                            'Chưa có tài khoản?',
+                            style: TextStyle(
+                              color: Colors.white,
+                              fontSize: 18,
+                              fontWeight: FontWeight.bold,
+                            ),
+                          ),
+                          TextButton(
+                            onPressed: () {
+                              Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                  builder: (context) => const DangKy(),
+                                ),
+                              );
+                            },
+                            child: Text(
+                              'Đăng ký',
+                              style: TextStyle(
+                                color: Color(0xFFFF0088),
+                                fontSize: 18,
+                                fontWeight: FontWeight.bold,
+                              ),
+                            ),
+                          ),
+                        ],
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+              Column(
                 children: [
                   Container(
-                    margin: EdgeInsets.fromLTRB(0, 10, 0, 0),
+                    margin: EdgeInsets.only(bottom: 5),
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
                         Text(
-                          'Chưa có tài khoản?',
+                          'Copyright',
                           style: TextStyle(
                             color: Colors.white,
-                            fontSize: 20,
-                            fontWeight: FontWeight.bold,
+                            fontSize: 12,
                           ),
                         ),
-                        TextButton(
-                          onPressed: () {
-                            Navigator.push(
-                              context,
-                              MaterialPageRoute(
-                                builder: (context) => const SignUpScreen(),
-                              ),
-                            );
-                          },
-                          child: Text(
-                            'Đăng ký',
-                            style: TextStyle(
-                              color: Color(0xFFFF0088),
-                              fontSize: 20,
-                              fontWeight: FontWeight.bold,
-                            ),
+                        Padding(
+                          padding: EdgeInsets.only(top: 1, right: 3),
+                          child: Icon(
+                            Icons.copyright,
+                            color: Colors.white,
+                            size: 12,
+                          ),
+                        ),
+                        Text(
+                          '2022 SING Studio',
+                          style: TextStyle(
+                            color: Colors.white,
+                            fontSize: 12,
                           ),
                         ),
                       ],
@@ -207,35 +240,8 @@ class _SignInScreenState extends State<SignInScreen> {
                   ),
                 ],
               ),
-            ),
-            Column(
-              children: [
-                Container(
-                  child: Row(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
-                      Text(
-                        'Copyright',
-                        style: TextStyle(color: Colors.white, fontSize: 12),
-                      ),
-                      Padding(
-                        padding: EdgeInsets.fromLTRB(0, 1, 3, 0),
-                        child: Icon(
-                          Icons.copyright,
-                          color: Colors.white,
-                          size: 12,
-                        ),
-                      ),
-                      Text(
-                        '2022 SING Studio',
-                        style: TextStyle(color: Colors.white, fontSize: 12),
-                      ),
-                    ],
-                  ),
-                ),
-              ],
-            ),
-          ],
+            ],
+          ),
         ),
       ),
     );

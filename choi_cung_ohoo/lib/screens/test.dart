@@ -1,32 +1,71 @@
+import 'package:animated_button/animated_button.dart';
 import 'package:flutter/material.dart';
-class Toitest extends StatefulWidget {
-  const Toitest({super.key});
+
+class HomePage extends StatefulWidget {
+  const HomePage({Key? key}) : super(key: key);
 
   @override
-  State<Toitest> createState() => _ToitestState();
+  _HomePageState createState() => _HomePageState();
 }
 
-class _ToitestState extends State<Toitest> {
+class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
+    Color values = Color(0xFF6560FF);
     return Scaffold(
-      appBar: AppBar(
-        title: Text('GeeksforGeeks'),
-        backgroundColor: Color(0xFF4CAF50),
-        centerTitle: true,
-        ),
-      body: Center(
+      backgroundColor: Color(0xFFEEEEEE),
+      body: SingleChildScrollView(
         child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            CircularProgressIndicator(),
-            SizedBox(
-              height: 15,
+            AnimatedButton(
+              color: Colors.white,
+              width: 350,
+              height: 110,
+              child: Container(
+                child: Image(
+                  image: AssetImage('images/backgrounds/ca-nhan.png'),
+                ),
               ),
-            LinearProgressIndicator(),
-            ],
-          ),
+              onPressed: () {},
+            ),
+            AnimatedButton(
+              color: Colors.white,
+              width: 350,
+              height: 110,
+              child: Container(
+                alignment: Alignment.bottomCenter,
+                margin: EdgeInsets.only(left: 30, right: 30),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Image(
+                      image: AssetImage('images/backgrounds/do-vui-1.png'),
+                      width: 120,
+                    ),
+                    Image(
+                      image: AssetImage('images/backgrounds/do-vui-2.png'),
+                      width: 120,
+                    ),
+                  ],
+                ),
+              ),
+              onPressed: () {},
+            ),
+            AnimatedButton(
+              color: Colors.white,
+              width: 350,
+              height: 110,
+              shadowDegree: ShadowDegree.dark,
+              child: Container(
+                child: Image(
+                  image: AssetImage('images/buttons/single.png'),
+                ),
+              ),
+              onPressed: () {},
+            ),
+          ],
         ),
-      );
+      ),
+    );
   }
 }

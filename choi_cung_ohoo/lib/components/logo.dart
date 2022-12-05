@@ -10,12 +10,15 @@ class Logo extends StatefulWidget {
 class _LogoState extends State<Logo> {
   @override
   Widget build(BuildContext context) {
-    return Row(mainAxisAlignment: MainAxisAlignment.center, children: [
-      Image(
-        image: AssetImage('images/logo.png'),
-        width: 339,
-        height: 189,
-      ),
-    ]);
+    return Row(
+      mainAxisAlignment: MainAxisAlignment.center,
+      children: [
+        Image(
+          image: AssetImage('images/logo.png'),
+          width: 339,
+          height: 189,
+        ),
+      ],
+    );
   }
 }

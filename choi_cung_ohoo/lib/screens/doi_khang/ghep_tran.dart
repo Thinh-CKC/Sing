@@ -2,14 +2,14 @@ import 'package:choi_cung_ohoo/main.dart';
 import 'package:choi_cung_ohoo/screens/doi_khang/doi_khang.dart';
 import 'package:flutter/material.dart';
 
-class MoiDoiKhang extends StatefulWidget {
-  const MoiDoiKhang({Key? key}) : super(key: key);
+class GhepTran extends StatefulWidget {
+  const GhepTran({Key? key}) : super(key: key);
 
   @override
-  State<MoiDoiKhang> createState() => _MoiDoiKhangState();
+  State<GhepTran> createState() => _GhepTranState();
 }
 
-class _MoiDoiKhangState extends State<MoiDoiKhang> {
+class _GhepTranState extends State<GhepTran> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -127,15 +127,18 @@ class _MoiDoiKhangState extends State<MoiDoiKhang> {
                   ),
                   Column(
                     children: [
-                      Image(
-                        image: AssetImage('images/avatars/avatar-9.png'),
+                      Container(
+                        decoration: BoxDecoration(
+                          color: Colors.grey,
+                          borderRadius: BorderRadius.circular(100),
+                        ),
                         width: 80,
                         height: 80,
                       ),
                       Padding(
                         padding: EdgeInsets.only(top: 5),
                         child: Text(
-                          'Angle',
+                          '...',
                           style: TextStyle(
                             color: Color(0xFFFF0088),
                             fontSize: 20,
@@ -148,39 +151,12 @@ class _MoiDoiKhangState extends State<MoiDoiKhang> {
               ),
             ),
             Container(
-              margin: EdgeInsets.only(top: 30),
-              decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(10),
-                boxShadow: [
-                  BoxShadow(
-                    color: Colors.black.withOpacity(0.2),
-                    offset: Offset(4, 4),
-                  )
-                ],
-              ),
-              child: ElevatedButton(
-                style: ElevatedButton.styleFrom(
-                  primary: Color(0xFF6560FF),
-                  onPrimary: Colors.white,
-                  minimumSize: Size(145, 50),
-                  shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.all(Radius.circular(10)),
-                  ),
-                ),
-                onPressed: () {
-                  Navigator.push(
-                    context,
-                    MaterialPageRoute(
-                      builder: (context) => const DoiKhang(),
-                    ),
-                  );
-                },
-                child: Text(
-                  'Bắt đầu',
-                  style: TextStyle(
-                    fontSize: 20,
-                    fontWeight: FontWeight.normal,
-                  ),
+              margin: EdgeInsets.all(30),
+              child: Text(
+                'Đang tìm đối thủ...',
+                style: TextStyle(
+                  color: Color(0xFFFF0088),
+                  fontSize: 20,
                 ),
               ),
             ),

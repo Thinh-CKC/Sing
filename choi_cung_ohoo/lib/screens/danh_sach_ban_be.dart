@@ -1,120 +1,134 @@
 import 'package:choi_cung_ohoo/screens/ho_so.dart';
+import 'package:choi_cung_ohoo/screens/tim_kiem_ket_ban.dart';
 import 'package:flutter/material.dart';
 
-class DanhSachBanBeScreen extends StatefulWidget {
-  const DanhSachBanBeScreen({super.key});
+class DanhSachBanBe extends StatefulWidget {
+  const DanhSachBanBe({super.key});
 
   @override
-  State<DanhSachBanBeScreen> createState() => _DanhSachBanBeState();
+  State<DanhSachBanBe> createState() => _DanhSachBanBeState();
 }
 
-class _DanhSachBanBeState extends State<DanhSachBanBeScreen> {
+class _DanhSachBanBeState extends State<DanhSachBanBe> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        body: Container(
-      alignment: Alignment.center,
-      child: Column(
-        children: [
-          Container(
-            margin: EdgeInsets.fromLTRB(0, 30, 0, 0),
-            width: 323,
-            height: 50,
-            decoration: BoxDecoration(boxShadow: [
-              BoxShadow(
-                  spreadRadius: 2,
-                  blurRadius: 1,
-                  offset: Offset(0, 1),
-                  color: Colors.grey.withOpacity(0.5))
-            ], color: Colors.white, borderRadius: BorderRadius.circular(50)),
-            child: Row(children: [
-              Column(
-                mainAxisAlignment: MainAxisAlignment.center,
+      backgroundColor: Color(0xFF6560FF),
+      body: Container(
+        alignment: Alignment.center,
+        child: Column(
+          children: [
+            Container(
+              padding: EdgeInsets.only(right: 5),
+              margin: EdgeInsets.fromLTRB(0, 30, 0, 0),
+              width: 323,
+              height: 50,
+              decoration: BoxDecoration(
+                boxShadow: [
+                  BoxShadow(
+                    blurRadius: 6,
+                    offset: Offset(0, 3),
+                    color: Colors.black.withOpacity(0.2),
+                  ),
+                ],
+                color: Colors.white,
+                borderRadius: BorderRadius.circular(50),
+              ),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
                   IconButton(
-                      onPressed: () {
-                        Navigator.pop(context);
-                      },
-                      icon: Icon(
-                        Icons.arrow_back,
-                        size: 25,
-                        color: Color(0xFF6560FF),
-                      ))
-                ],
-              ),
-              Column(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  Container(
-                    margin: EdgeInsets.fromLTRB(95, 0, 0, 0),
-                    child: Text(
-                      'Bạn bè',
-                      style: TextStyle(color: Color(0xFF6560FF), fontSize: 20),
+                    padding: EdgeInsets.zero,
+                    onPressed: () {
+                      Navigator.pop(context);
+                    },
+                    icon: Icon(
+                      Icons.arrow_back,
+                      size: 25,
+                      color: Color(0xFF6560FF),
+                      shadows: <Shadow>[
+                        Shadow(
+                          color: Colors.black.withOpacity(0.2),
+                          blurRadius: 0,
+                          offset: Offset(2, 2),
+                        ),
+                      ],
+                    ),
+                  ),
+                  Text(
+                    'Bạn bè',
+                    style: TextStyle(
+                      color: Color(0xFF6560FF),
+                      fontSize: 20,
+                    ),
+                  ),
+                  IconButton(
+                    padding: EdgeInsets.zero,
+                    onPressed: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => const TimKiemKetBan(),
+                        ),
+                      );
+                    },
+                    icon: Icon(
+                      Icons.person_add,
+                      size: 25,
+                      color: Color(0xFF6560FF),
+                      shadows: <Shadow>[
+                        Shadow(
+                          color: Colors.black.withOpacity(0.2),
+                          blurRadius: 0,
+                          offset: Offset(2, 2),
+                        ),
+                      ],
                     ),
                   ),
                 ],
               ),
-              Column(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  Container(
-                    margin: EdgeInsets.fromLTRB(85, 0, 0, 0),
-                    child: IconButton(
-                      onPressed: () {
-                        // Navigator.push(context,MaterialPageRoute(builder: (context) => ...Screen()));
-                      },
-                      icon: Icon(
-                        Icons.person_add,
-                        size: 25,
-                        color: Color(0xFF6560FF),
-                      ),
-                    ),
+            ),
+            Container(
+              margin: EdgeInsets.fromLTRB(0, 40, 0, 0),
+              width: 330,
+              height: 500,
+              decoration: BoxDecoration(
+                boxShadow: [
+                  BoxShadow(
+                    spreadRadius: 1,
+                    blurRadius: 6,
+                    offset: Offset(0, 5),
+                    color: Colors.black.withOpacity(0.2),
                   ),
                 ],
+                color: Colors.white,
+                borderRadius: BorderRadius.circular(20),
               ),
-            ]),
-          ),
-          Container(
-            margin: EdgeInsets.fromLTRB(0, 40, 0, 0),
-            width: 330,
-            height: 545,
-            decoration: BoxDecoration(boxShadow: [
-              BoxShadow(
-                  spreadRadius: 1,
-                  blurRadius: 0,
-                  offset: Offset(0, 4),
-                  color: Colors.grey.withOpacity(0.5))
-            ], color: Colors.white, borderRadius: BorderRadius.circular(20)),
-            child: Column(
-              children: [
-                Column(
-                  children: [
-                    Container(
-                      width: 300,
-                      height: 30,
-                      margin: EdgeInsets.fromLTRB(0, 29, 0, 0),
-                      child: TextField(
-                        decoration: InputDecoration(
-                          suffixIcon: Icon(
-                            Icons.search,
-                            color: Color(0xFF6560FF),
-                            size: 20,
+              child: Column(
+                children: [
+                  Column(
+                    children: [
+                      Container(
+                        margin: EdgeInsets.fromLTRB(15, 10, 15, 20),
+                        child: TextField(
+                          decoration: InputDecoration(
+                            suffixIcon: Icon(
+                              Icons.search,
+                              color: Color(0xFF6560FF),
+                              size: 20,
+                            ),
+                            hintText: "10 người bạn",
+                            hintStyle: TextStyle(fontSize: 15),
                           ),
-                          hintText: "10 người bạn",
-                          hintStyle: TextStyle(fontSize: 15),
                         ),
                       ),
-                    ),
-                  ],
-                ),
-                Column(
-                  children: [
-                    Container(
-                      margin: EdgeInsets.fromLTRB(0, 20, 0, 0),
-                      width: 330,
-                      height: 465,
-                      child: SingleChildScrollView(
-                        child: Container(
+                    ],
+                  ),
+                  Column(
+                    children: [
+                      Container(
+                        height: 400,
+                        child: SingleChildScrollView(
                           child: Column(
                             children: [
                               Container(
@@ -152,7 +166,7 @@ class _DanhSachBanBeState extends State<DanhSachBanBeScreen> {
                                       children: [
                                         Container(
                                           margin: EdgeInsets.fromLTRB(
-                                              130, 12, 0, 0),
+                                              120, 12, 0, 0),
                                           child: IconButton(
                                             onPressed: () {},
                                             icon: Icon(
@@ -204,7 +218,7 @@ class _DanhSachBanBeState extends State<DanhSachBanBeScreen> {
                                       children: [
                                         Container(
                                           margin: EdgeInsets.fromLTRB(
-                                              130, 12, 0, 0),
+                                              120, 12, 0, 0),
                                           child: IconButton(
                                             onPressed: () {},
                                             icon: Icon(
@@ -256,7 +270,7 @@ class _DanhSachBanBeState extends State<DanhSachBanBeScreen> {
                                       children: [
                                         Container(
                                           margin: EdgeInsets.fromLTRB(
-                                              130, 12, 0, 0),
+                                              120, 12, 0, 0),
                                           child: IconButton(
                                             onPressed: () {},
                                             icon: Icon(
@@ -308,7 +322,7 @@ class _DanhSachBanBeState extends State<DanhSachBanBeScreen> {
                                       children: [
                                         Container(
                                           margin: EdgeInsets.fromLTRB(
-                                              130, 12, 0, 0),
+                                              120, 12, 0, 0),
                                           child: IconButton(
                                             onPressed: () {},
                                             icon: Icon(
@@ -360,7 +374,7 @@ class _DanhSachBanBeState extends State<DanhSachBanBeScreen> {
                                       children: [
                                         Container(
                                           margin: EdgeInsets.fromLTRB(
-                                              130, 12, 0, 0),
+                                              120, 12, 0, 0),
                                           child: IconButton(
                                             onPressed: () {},
                                             icon: Icon(
@@ -412,7 +426,7 @@ class _DanhSachBanBeState extends State<DanhSachBanBeScreen> {
                                       children: [
                                         Container(
                                           margin: EdgeInsets.fromLTRB(
-                                              130, 12, 0, 0),
+                                              120, 12, 0, 0),
                                           child: IconButton(
                                             onPressed: () {},
                                             icon: Icon(
@@ -464,7 +478,7 @@ class _DanhSachBanBeState extends State<DanhSachBanBeScreen> {
                                       children: [
                                         Container(
                                           margin: EdgeInsets.fromLTRB(
-                                              130, 12, 0, 0),
+                                              120, 12, 0, 0),
                                           child: IconButton(
                                             onPressed: () {},
                                             icon: Icon(
@@ -516,7 +530,7 @@ class _DanhSachBanBeState extends State<DanhSachBanBeScreen> {
                                       children: [
                                         Container(
                                           margin: EdgeInsets.fromLTRB(
-                                              130, 12, 0, 0),
+                                              120, 12, 0, 0),
                                           child: IconButton(
                                             onPressed: () {},
                                             icon: Icon(
@@ -525,9 +539,9 @@ class _DanhSachBanBeState extends State<DanhSachBanBeScreen> {
                                               color: Color(0xFFFF0088),
                                             ),
                                           ),
-                                        )
+                                        ),
                                       ],
-                                    )
+                                    ),
                                   ],
                                 ),
                               ),
@@ -535,14 +549,14 @@ class _DanhSachBanBeState extends State<DanhSachBanBeScreen> {
                           ),
                         ),
                       ),
-                    )
-                  ],
-                )
-              ],
+                    ],
+                  ),
+                ],
+              ),
             ),
-          )
-        ],
+          ],
+        ),
       ),
-    ));
+    );
   }
 }

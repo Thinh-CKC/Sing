@@ -29,7 +29,7 @@ class _BackgroundGreyState extends State<BackgroundGrey> {
   Widget build(BuildContext context) {
     return Image(
       image: AssetImage('images/background-grey.png'),
-      fit: BoxFit.fill,
+      fit: BoxFit.contain,
     );
   }
 }

@@ -1,16 +1,16 @@
 import 'package:choi_cung_ohoo/screens/cai_dat.dart';
-import 'package:choi_cung_ohoo/screens/doi_khang/tinh-diem-doi-khang.dart';
+import 'package:choi_cung_ohoo/screens/doi_khang/tinh_diem_doi_khang.dart';
 import 'package:flutter/material.dart';
-import 'package:percent_indicator/percent_indicator.dart';
+import 'package:percent_indicator/linear_percent_indicator.dart';
 
-class DoiKhangScreen extends StatefulWidget {
-  const DoiKhangScreen({Key? key}) : super(key: key);
+class DoiKhang extends StatefulWidget {
+  const DoiKhang({Key? key}) : super(key: key);
 
   @override
-  State<DoiKhangScreen> createState() => _DoiKhangScreenState();
+  State<DoiKhang> createState() => _DoiKhangState();
 }
 
-class _DoiKhangScreenState extends State<DoiKhangScreen> {
+class _DoiKhangState extends State<DoiKhang> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -50,7 +50,7 @@ class _DoiKhangScreenState extends State<DoiKhangScreen> {
                       Navigator.push(
                         context,
                         MaterialPageRoute(
-                          builder: (context) => const CaiDatScreen(),
+                          builder: (context) => const CaiDat(),
                         ),
                       );
                     },
@@ -75,22 +75,23 @@ class _DoiKhangScreenState extends State<DoiKhangScreen> {
                 children: [
                   Container(
                     width: 353,
-                    height: 515,
-                    margin: EdgeInsets.fromLTRB(15, 30, 15, 0),
+                    height: 480,
+                    margin: EdgeInsets.fromLTRB(15, 10, 15, 0),
+                    padding: EdgeInsets.only(bottom: 10),
                     decoration: BoxDecoration(
                       color: Colors.white,
                       borderRadius: BorderRadius.circular(20),
                       boxShadow: [
                         BoxShadow(
                           color: Colors.black.withOpacity(0.2),
-                          offset: Offset(0, 10),
+                          offset: Offset(0, 5),
                         ),
                       ],
                     ),
                     child: Column(
                       children: [
                         Container(
-                          margin: EdgeInsets.fromLTRB(5, 20, 5, 0),
+                          margin: EdgeInsets.fromLTRB(5, 15, 5, 0),
                           child: LinearPercentIndicator(
                             animation: true,
                             animationDuration: 1000,
@@ -102,7 +103,7 @@ class _DoiKhangScreenState extends State<DoiKhangScreen> {
                           ),
                         ),
                         Container(
-                          margin: EdgeInsets.only(top: 10, bottom: 10),
+                          margin: EdgeInsets.only(top: 5, bottom: 5),
                           child: RichText(
                             text: TextSpan(
                               text: '1',
@@ -118,8 +119,8 @@ class _DoiKhangScreenState extends State<DoiKhangScreen> {
                           color: Color(0xFFEEEEEE),
                           height: 0,
                           thickness: 2,
-                          indent: 20,
-                          endIndent: 20,
+                          indent: 15,
+                          endIndent: 15,
                         ),
                         Expanded(
                           child: Column(
@@ -127,7 +128,7 @@ class _DoiKhangScreenState extends State<DoiKhangScreen> {
                               Row(
                                 children: [
                                   Padding(
-                                    padding: EdgeInsets.fromLTRB(20, 10, 20, 0),
+                                    padding: EdgeInsets.fromLTRB(15, 10, 15, 0),
                                     child: Text(
                                       'Cái gì càng thắng càng thua?',
                                       style: TextStyle(
@@ -144,7 +145,7 @@ class _DoiKhangScreenState extends State<DoiKhangScreen> {
                         Column(
                           children: [
                             Container(
-                              margin: EdgeInsets.fromLTRB(20, 50, 20, 0),
+                              margin: EdgeInsets.fromLTRB(15, 0, 15, 0),
                               child: ElevatedButton(
                                 style: ElevatedButton.styleFrom(
                                   primary: Color(0xFF6560FF),
@@ -162,7 +163,7 @@ class _DoiKhangScreenState extends State<DoiKhangScreen> {
                                     context,
                                     MaterialPageRoute(
                                       builder: (context) =>
-                                          const TinhDiemDoiKhangScreen(),
+                                          const TinhDiemDoiKhang(),
                                     ),
                                   );
                                 },
@@ -176,7 +177,7 @@ class _DoiKhangScreenState extends State<DoiKhangScreen> {
                               ),
                             ),
                             Container(
-                              margin: EdgeInsets.fromLTRB(20, 10, 20, 0),
+                              margin: EdgeInsets.fromLTRB(15, 10, 15, 0),
                               child: ElevatedButton(
                                 style: ElevatedButton.styleFrom(
                                   primary: Color(0xFF6560FF),
@@ -200,7 +201,7 @@ class _DoiKhangScreenState extends State<DoiKhangScreen> {
                               ),
                             ),
                             Container(
-                              margin: EdgeInsets.fromLTRB(20, 10, 20, 0),
+                              margin: EdgeInsets.fromLTRB(15, 10, 15, 0),
                               child: ElevatedButton(
                                 style: ElevatedButton.styleFrom(
                                   primary: Color(0xFF6560FF),
@@ -224,7 +225,7 @@ class _DoiKhangScreenState extends State<DoiKhangScreen> {
                               ),
                             ),
                             Container(
-                              margin: EdgeInsets.fromLTRB(20, 10, 20, 20),
+                              margin: EdgeInsets.fromLTRB(15, 10, 15, 5),
                               child: ElevatedButton(
                                 style: ElevatedButton.styleFrom(
                                   primary: Color(0xFF6560FF),
@@ -260,8 +261,8 @@ class _DoiKhangScreenState extends State<DoiKhangScreen> {
               children: [
                 Container(
                   width: 390,
-                  height: 90,
-                  padding: EdgeInsets.fromLTRB(15, 20, 15, 0),
+                  height: 70,
+                  padding: EdgeInsets.fromLTRB(15, 10, 15, 0),
                   decoration: BoxDecoration(
                     color: Colors.white,
                     borderRadius: BorderRadius.vertical(
@@ -270,7 +271,7 @@ class _DoiKhangScreenState extends State<DoiKhangScreen> {
                     boxShadow: [
                       BoxShadow(
                         color: Colors.black.withOpacity(0.2),
-                        offset: Offset(0, -10),
+                        offset: Offset(0, -5),
                       ),
                     ],
                   ),
@@ -367,7 +368,7 @@ class _DoiKhangScreenState extends State<DoiKhangScreen> {
                                       mainAxisAlignment: MainAxisAlignment.end,
                                       children: [
                                         Text(
-                                          'Bella',
+                                          'Bạn',
                                           style: TextStyle(
                                             color: Color(0xFFFF0088),
                                             fontSize: 18,
@@ -426,3 +427,5 @@ class _DoiKhangScreenState extends State<DoiKhangScreen> {
     );
   }
 }
+
+class QuestionController {}

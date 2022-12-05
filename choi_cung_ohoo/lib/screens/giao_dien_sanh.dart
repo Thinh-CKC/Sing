@@ -1,21 +1,22 @@
+import 'package:choi_cung_ohoo/screens/ca_nhan/ca_nhan.dart';
+import 'package:choi_cung_ohoo/screens/ca_nhan/level_linh_vuc.dart';
 import 'package:choi_cung_ohoo/screens/cai_dat.dart';
+import 'package:choi_cung_ohoo/screens/du_muc/che_do_du_muc.dart';
 import 'package:choi_cung_ohoo/screens/danh_sach_ban_be.dart';
-import 'package:choi_cung_ohoo/screens/ca_nhan/giao_dien_choi_ca_nhan.dart';
 import 'package:choi_cung_ohoo/screens/ho_so.dart';
-import 'package:choi_cung_ohoo/screens/doi_khang/tim-doi-thu.dart';
+import 'package:choi_cung_ohoo/screens/doi_khang/ghep_tran.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
-
 import 'bang_xep_hang.dart';
 
-class LobbyScreen extends StatefulWidget {
-  const LobbyScreen({Key? key}) : super(key: key);
+class Sanh extends StatefulWidget {
+  const Sanh({Key? key}) : super(key: key);
 
   @override
-  State<LobbyScreen> createState() => _LobbyScreenState();
+  State<Sanh> createState() => _SanhState();
 }
 
-class _LobbyScreenState extends State<LobbyScreen> {
+class _SanhState extends State<Sanh> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -42,7 +43,7 @@ class _LobbyScreenState extends State<LobbyScreen> {
                                   Navigator.push(
                                     context,
                                     MaterialPageRoute(
-                                      builder: (context) => const HoSoScreen(),
+                                      builder: (context) => const HoSo(),
                                     ),
                                   );
                                 },
@@ -57,7 +58,7 @@ class _LobbyScreenState extends State<LobbyScreen> {
                                     borderRadius: BorderRadius.circular(10),
                                     image: DecorationImage(
                                       image: AssetImage(
-                                          'images/avatars/avatar-1.png'),
+                                          'images/avatars/avatar-22.png'),
                                     ),
                                   ),
                                 ),
@@ -128,7 +129,7 @@ class _LobbyScreenState extends State<LobbyScreen> {
                           Navigator.push(
                             context,
                             MaterialPageRoute(
-                              builder: (context) => const CaiDatScreen(),
+                              builder: (context) => const CaiDat(),
                             ),
                           );
                         },
@@ -313,7 +314,7 @@ class _LobbyScreenState extends State<LobbyScreen> {
                                       context,
                                       MaterialPageRoute(
                                         builder: (context) =>
-                                            const BangXepHangScreen(),
+                                            const BangXepHang(),
                                       ),
                                     );
                                   },
@@ -355,7 +356,7 @@ class _LobbyScreenState extends State<LobbyScreen> {
                                       context,
                                       MaterialPageRoute(
                                         builder: (context) =>
-                                            const DanhSachBanBeScreen(),
+                                            const DanhSachBanBe(),
                                       ),
                                     );
                                   },
@@ -437,8 +438,24 @@ class _LobbyScreenState extends State<LobbyScreen> {
                       fontSize: 20,
                       fontWeight: FontWeight.bold,
                     ),
-                  )
+                  ),
                 ],
+              ),
+            ),
+            Container(
+              margin: EdgeInsets.fromLTRB(15, 10, 10, 0),
+              child: InkWell(
+                onTap: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => const CaNhan(),
+                    ),
+                  );
+                },
+                child: Image(
+                  image: AssetImage('images/buttons/single.png'),
+                ),
               ),
             ),
             Container(
@@ -543,7 +560,15 @@ class _LobbyScreenState extends State<LobbyScreen> {
                   Container(
                     margin: EdgeInsets.only(right: 10),
                     child: InkWell(
-                      onTap: () {},
+                      onTap: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) =>
+                                const LevelLinhVuc(),
+                          ),
+                        );
+                      },
                       child: Image(
                         image: AssetImage('images/buttons/it.png'),
                       ),
@@ -594,12 +619,12 @@ class _LobbyScreenState extends State<LobbyScreen> {
               margin: EdgeInsets.fromLTRB(15, 10, 10, 0),
               child: InkWell(
                 onTap: () {
-                  Navigator.push(
-                    context,
-                    MaterialPageRoute(
-                      builder: (context) => const GiaoDienChoiCaNhanScreen(),
-                    ),
-                  );
+                  // Navigator.push(
+                  //   context,
+                  //   MaterialPageRoute(
+                  //     builder: (context) => const GiaoDienCheDoChoiScreen(),
+                  //   ),
+                  // );
                 },
                 child: Image(
                   image: AssetImage('images/buttons/funny.png'),
@@ -644,7 +669,7 @@ class _LobbyScreenState extends State<LobbyScreen> {
                   Navigator.push(
                     context,
                     MaterialPageRoute(
-                      builder: (context) => const TimDoiThuScreen(),
+                      builder: (context) => const GhepTran(),
                     ),
                   );
                 },
@@ -687,7 +712,14 @@ class _LobbyScreenState extends State<LobbyScreen> {
             Container(
               margin: EdgeInsets.fromLTRB(15, 10, 10, 20),
               child: InkWell(
-                onTap: () {},
+                onTap: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => const CheDoDuMucScreen(),
+                    ),
+                  );
+                },
                 child: Image(
                   image: AssetImage('images/buttons/adventure.png'),
                 ),
